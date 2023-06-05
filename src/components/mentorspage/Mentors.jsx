@@ -62,7 +62,18 @@ const Mentors = () => {
           </select>
         </div>
       </div>
+      <div className="ui four doubling stackable cards padded container">
       <Mentorscard/>
+      <Mentorscard/>
+      <Mentorscard/>
+      <Mentorscard/>
+      <Mentorscard/>
+      <Mentorscard/>
+      <Mentorscard/>
+      <Mentorscard/>
+      <Mentorscard/>
+      
+      </div>
     </div>
   );
 };

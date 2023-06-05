@@ -23,4 +23,11 @@
     width: 100px; 
     height: 100px;
   }
+  .centered {
+    white-space: nowrap;
+    padding:5px;
+    font-size: 16px;
+    color:rgb(4, 55, 4);
+    font-weight: bold;
+  }
   
