@@ -1,0 +1,26 @@
+
+.custom-select{
+    border-radius:5px;
+    border:none;
+    outline:none;
+    background-color: #dde1e1;
+    width:fit-content;
+    min-width:200px;
+    height:40px;
+    margin:10px;
+    padding:10px;
+    color:black;
+  }
+  .custom-select:hover{
+    background-color: #CBCCCE;
+  }
+  .flex-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ui.circular.image {
+    width: 100px; 
+    height: 100px;
+  }
+  
