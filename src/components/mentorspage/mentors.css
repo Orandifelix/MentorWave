@@ -1,18 +1,19 @@
-
 .custom-select{
     border-radius:5px;
     border:none;
     outline:none;
-    background-color: #dde1e1;
+    background-color: #6feded;
     width:fit-content;
     min-width:200px;
     height:40px;
     margin:10px;
     padding:10px;
     color:black;
+    font-size: 1.2rem;
   }
   .custom-select:hover{
-    background-color: #CBCCCE;
+    background-color: rgb(7, 155, 155);
+    color:rgb(235, 229, 229);
   }
   .flex-container {
     display: flex;
@@ -26,8 +27,8 @@
   .centered {
     white-space: nowrap;
     padding:5px;
-    font-size: 16px;
-    color:rgb(4, 55, 4);
+    font-size: 20px;
+    color:#009E99;
     font-weight: bold;
   }
   

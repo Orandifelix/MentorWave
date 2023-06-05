@@ -1,4 +1,3 @@
-import React from "react";
 import "./mentors.css";
 import Mentorscard from "./Mentorscard";
 
@@ -9,7 +8,7 @@ const Mentors = () => {
         <h1 className="ui header bold">Find Mentors and Connect</h1>
         <h3 className="ui text">
           We have sorted these search results based on your profile. If you see
-          someone who looks like a good fit for you, react out and send a
+          someone who looks like a good fit for you, reach out and send a
           message!
         </h3>
       </div>
@@ -23,7 +22,18 @@ const Mentors = () => {
           <label htmlFor="expertise" className="ui header">
             Expertise:
           </label>
-          <select name="expertise" id="select"multiple="" className="ui select dropdown custom-select">
+          <select
+            name="expertise"
+            id="select"
+            multiple=""
+            className="ui select dropdown custom-select">
+            <option value="" hidden>
+              {" "}
+              Select
+            </option>
+            <option value="" className="ui button">
+              All
+            </option>
             <option value="accounting" className="ui button">
               Accounting and Finance
             </option>
@@ -43,7 +53,18 @@ const Mentors = () => {
           <label htmlFor="industry" className="ui header">
             Industry:
           </label>
-          <select name="industry" id="select"multiple="" className="ui select dropdown custom-select">
+          <select
+            name="industry"
+            id="select"
+            multiple=""
+            className="ui select dropdown custom-select">
+            <option value="" hidden>
+              {" "}
+              Select
+            </option>
+            <option value="" className="ui button">
+              All
+            </option>
             <option value="accounting" className="ui button">
               Accounting/Tax services
             </option>
@@ -62,17 +83,16 @@ const Mentors = () => {
           </select>
         </div>
       </div>
-      <div className="ui four doubling stackable cards padded container">
-      <Mentorscard/>
-      <Mentorscard/>
-      <Mentorscard/>
-      <Mentorscard/>
-      <Mentorscard/>
-      <Mentorscard/>
-      <Mentorscard/>
-      <Mentorscard/>
-      <Mentorscard/>
-      
+      <div className="ui four doubling stackable cards segment">
+        <Mentorscard />
+        <Mentorscard />
+        <Mentorscard />
+        <Mentorscard />
+        <Mentorscard />
+        <Mentorscard />
+        <Mentorscard />
+        <Mentorscard />
+        <Mentorscard />
       </div>
     </div>
   );
