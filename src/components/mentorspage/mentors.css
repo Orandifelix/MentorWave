@@ -14,3 +14,13 @@
   .custom-select:hover{
     background-color: #CBCCCE;
   }
+  .flex-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ui.circular.image {
+    width: 100px; 
+    height: 100px;
+  }
+  

@@ -1,5 +1,6 @@
 import React from "react";
 import "./mentors.css";
+import Mentorscard from "./Mentorscard";
 
 const Mentors = () => {
   return (
@@ -61,6 +62,7 @@ const Mentors = () => {
           </select>
         </div>
       </div>
+      <Mentorscard/>
     </div>
   );
 };
