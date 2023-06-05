@@ -3,7 +3,7 @@ import "./Homecards.css";
 
 function CustomeCard({ title, description, step, icon }) {
   return (
-    <div className="card">
+    <div className="carded">
       <div className="step-container">
         <h4 className="step">{step}</h4>
       </div>
