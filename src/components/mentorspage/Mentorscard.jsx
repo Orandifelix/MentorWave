@@ -1,5 +1,5 @@
-import React from "react";
-import { Card, CardContent, Image } from "semantic-ui-react";
+
+import { Card } from "semantic-ui-react";
 import "./mentors.css";
 
 const imageUrl =
@@ -15,13 +15,12 @@ const Mentorscard = () => {
             src={imageUrl}
             alt="mentor image"
           />
-          <Card.Header className="ui header centered">
-            {" "}
+          <Card.Header className="centered">
             Donvine Mugendi
           </Card.Header>
         </div>
         <Card.Description>
-          <h2>Expertise</h2>
+          <h3>Expertise</h3>
           Software Engineering
         </Card.Description>
         <Card.Content>
@@ -35,6 +34,7 @@ const Mentorscard = () => {
         <h4>
           <i className="ui twitter icon blue large"></i>@donvinemugendi
         </h4>
+        <button className="ui inverted blue button">View Profile</button>
       </Card.Content>
     </Card>
   );
