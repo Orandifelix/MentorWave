@@ -1,5 +1,4 @@
 import "./App.css";
-import Mentordetails from "./components/mentorspage/Mentordetails";
 import Mentors from "./components/mentorspage/Mentors";
 
 
