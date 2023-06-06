@@ -1,33 +1,8 @@
 import "./App.css";
-import react, { useState } from "react";
-// import Mentors from "./components/mentorspage/Mentors";
-import Login from "./Components/LoginSection/Login";
-import Registration from "./Components/LoginSection/Registration";
-// import userdata from "./data/user"
-
-function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [user, setUser] = useState("");
-
-  //function to handle logout
-  const handleLogout = () => {
-    setLoggedIn(false);
-    setUser(null);
-  };
-
-  //function to handle login
-  const handleLogin = (user) => {
-    setLoggedIn(true);
-    setUser(user);
-  };
-
-  //function to handle registration
-  const handleRegistration = (user) => {
-    setLoggedIn(true);
-    setUser(user);
-  };
+import Layout from "./components/home/Layout";
 
   return (
+<<<<<<< HEAD
     <div className="App">
       <h1 className="ui centered header">Hello from MentorWave</h1>
       {/* <Mentors/> */}
@@ -41,6 +16,10 @@ function App() {
           <Login handleLogin={handleLogin} handleRegistration={handleRegistration} />
         </div>
       )}
+=======
+    <div>
+      <Layout />
+>>>>>>> c1671ad0df0c56ccec944ad36a897c44e94da2ff
     </div>
   );
 }
