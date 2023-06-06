@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Menu, Segment, Button } from "semantic-ui-react";
 import "./Navbar.css";
+import {BsSoundwave} from "react-icons/bs"
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Home");
@@ -10,49 +10,46 @@ const Navbar = () => {
   };
 
   return (
-    
-    <div className="ui raised blue segment" >
-      <Menu inverted pointing secondary>
-        <div className="navbar-logo">
-          <h1>
-            Mentor <span>Wave</span>
-          </h1>
-        </div>
-        <div className="navbar-links">
-          <Menu.Item
-            name="Home"
-            active={activeItem === "Home"}
-            onClick={handleItemClick}
-          />
-          <Menu.Item
-            name="About Us"
-            active={activeItem === "About Us"}
-            onClick={handleItemClick}
-          />
-          <Menu.Item
-            name="Find Mentors"
-            active={activeItem === "Find Mentors"}
-            onClick={handleItemClick}
-          />
-          <Menu.Item
-            name="My Account"
-            active={activeItem === "My Account"}
-            onClick={handleItemClick}
-          />
-        </div>
-        <div className="navbar-button">
-          <Menu.Menu position="right">
-            <Button
-              className="ui tiny button navbar-custom-button"
-              positive
-              animated="fade"
-            >
-              <Button.Content visible>Meet Your Mentor/Mentee</Button.Content>
-              <Button.Content hidden>Sign Up</Button.Content>
-            </Button>
-          </Menu.Menu>
-        </div>
-      </Menu>
+    <div className="navbar-container">
+      <div className="navbar-logo">
+        <h1>
+          Mentor <span>Wave</span>
+          <BsSoundwave className="waveicon"/>
+        </h1>
+      </div>
+      <div className="navbar-links">
+        <ul>
+          <li
+            className={activeItem === "Home" ? "active" : ""}
+            onClick={() => handleItemClick("Home")}
+          >
+            Home
+          </li>
+          <li
+            className={activeItem === "About Us" ? "active" : ""}
+            onClick={() => handleItemClick("About Us")}
+          >
+            About Us
+          </li>
+          <li
+            className={activeItem === "Find Mentors" ? "active" : ""}
+            onClick={() => handleItemClick("Find Mentors")}
+          >
+            Find Mentors
+          </li>
+          <li
+            className={activeItem === "My Account" ? "active" : ""}
+            onClick={() => handleItemClick("My Account")}
+          >
+            My Account
+          </li>
+        </ul>
+      </div>
+      <div className="navbar-button">
+        <button className="navbar-custom-button">
+          Meet Your Mentor/Mentee
+        </button>
+      </div>
     </div>
   );
 };
