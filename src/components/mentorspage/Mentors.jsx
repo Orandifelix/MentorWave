@@ -9,6 +9,7 @@ const Mentors = () => {
   if (showDetails) {
     return <Mentordetails handleClick={() => setShowDetails(false)} />;
   }
+ 
   return (
     <div className="ui raised segment ">
       <div className="ui inverted segment teal">
