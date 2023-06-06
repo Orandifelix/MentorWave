@@ -6,12 +6,12 @@ function Organizations() {
   return (
     <>
       <h2 className="organisation-title">
-        New age Mentoring Platform, Powered by People <br/> from World-Renowned
+        New age Mentoring Platform, Powered by People <br /> from World-Renowned
         Organizations
       </h2>
       <div className="organizations-container">
         <img
-          src="https://images.unsplash.com/photo-1590474832723-bb0120875050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+          src="https://images.pexels.com/photos/11035474/pexels-photo-11035474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="Logo 1"
           className="organization-logo"
         />

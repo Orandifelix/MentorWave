@@ -8,7 +8,7 @@ function CustomeCard({ title, description, step, icon }) {
         <h4 className="step">{step}</h4>
       </div>
       <div className="icon-container">
-        <i>{icon}</i>
+        <i className="icon-name">{icon}</i>
       </div>
       <div>
         <h3 className="title">{title}</h3>
