@@ -1,11 +1,13 @@
 .statistics-container {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: center;
   margin: 10px;
   border: 1px solid rgb(245, 239, 239);
   border-radius: 10px;
-  background-color: cadetblue;
+  background-color: rgb(108, 190, 190);
 }
 
 .stat {
