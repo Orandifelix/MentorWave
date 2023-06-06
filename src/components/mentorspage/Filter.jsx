@@ -37,7 +37,7 @@ const Filter = ({
             Sales
           </option>
           <option value="startup" className="ui button">
-            StartUp
+            Startup
           </option>
         </select>
         <label htmlFor="industry" className="ui header">

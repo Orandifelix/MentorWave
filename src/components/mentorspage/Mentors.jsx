@@ -11,8 +11,8 @@ const Mentors = () => {
   const [mentors, setMentors] = useState([]);
   const [selectedMentor, setSelectedMentor] = useState(null);
   const [search, setSearch] = useState("");
-  const [selectedExpertise, setSelectedExpertise]= useState("All");
-  const [selectedIndustry, setSelectedIndustry]= useState("All");
+  const [selectedExpertise, setSelectedExpertise] = useState("All");
+  const [selectedIndustry, setSelectedIndustry] = useState("All");
   //fetch mentors data
   useEffect(() => {
     try {
@@ -27,23 +27,30 @@ const Mentors = () => {
     }
   }, []);
   //function to search for mentors
-  const mentorsToDisplay = useMemo(() => {
+  let mentorsToDisplay = useMemo(() => {
     return mentors.filter((mentor) =>
       mentor.name.toLowerCase().includes(search.toLowerCase())
     );
   }, [mentors, search]);
-  //sort mentors by expertise or industry
-  // useMemo(() => {
-  //   if (selectedExpertise !== "All" && selectedIndustry !== "All") {
-  //     return mentorsToDisplay.filter(
-  //       (mentor) =>
-  //         mentor.industry.toLowerCase().includes(selectedIndustry.toLowerCase()) &&
-  //         mentor.expertise.toLowerCase().includes(selectedExpertise.toLowerCase())
-  //     );
-  //   }
-  //   return mentorsToDisplay
-  // }, [mentorsToDisplay, selectedExpertise, selectedIndustry]);
-  
+
+  // Filter mentors by industry
+  const mentorsFilteredByIndustry = mentorsToDisplay.filter((mentor) => {
+    if(selectedExpertise==="All"){
+      return true;
+    }
+    mentor.industry.toLowerCase() === selectedIndustry.toLowerCase();
+  });
+  mentorsToDisplay = mentorsFilteredByIndustry;
+
+  // Filter mentors by expertise
+  const mentorsFilteredByExpertise = mentorsToDisplay.filter((mentor) => {
+    if (selectedExpertise === "All") {
+      return true;
+    }
+    mentor.expertise.toLowerCase() === selectedExpertise.toLowerCase();
+  });
+  mentorsToDisplay = mentorsFilteredByExpertise;
+
   //function to display mentors profile on click
   if (selectedMentor) {
     return (
@@ -73,7 +80,12 @@ const Mentors = () => {
         />
         <i className="circular search link icon"></i>
       </div>
-      <Filter selectedExpertise={selectedExpertise} selectedIndustry={selectedIndustry} expertiseSort={setSelectedExpertise} industrySort={setSelectedIndustry} />
+      <Filter
+        selectedExpertise={selectedExpertise}
+        selectedIndustry={selectedIndustry}
+        expertiseSort={setSelectedExpertise}
+        industrySort={setSelectedIndustry}
+      />
       <br></br>
       <div className="ui four doubling stackable cards segment">
         {mentorsToDisplay.length < 1 ? (
