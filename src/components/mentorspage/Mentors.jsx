@@ -11,6 +11,8 @@ const Mentors = () => {
   const [mentors, setMentors] = useState([]);
   const [selectedMentor, setSelectedMentor] = useState(null);
   const [search, setSearch] = useState("");
+  const [selectedExpertise, setSelectedExpertise]= useState("All");
+  const [selectedIndustry, setSelectedIndustry]= useState("All");
   //fetch mentors data
   useEffect(() => {
     try {
@@ -24,7 +26,24 @@ const Mentors = () => {
       console.error(error);
     }
   }, []);
-
+  //function to search for mentors
+  const mentorsToDisplay = useMemo(() => {
+    return mentors.filter((mentor) =>
+      mentor.name.toLowerCase().includes(search.toLowerCase())
+    );
+  }, [mentors, search]);
+  //sort mentors by expertise or industry
+  // useMemo(() => {
+  //   if (selectedExpertise !== "All" && selectedIndustry !== "All") {
+  //     return mentorsToDisplay.filter(
+  //       (mentor) =>
+  //         mentor.industry.toLowerCase().includes(selectedIndustry.toLowerCase()) &&
+  //         mentor.expertise.toLowerCase().includes(selectedExpertise.toLowerCase())
+  //     );
+  //   }
+  //   return mentorsToDisplay
+  // }, [mentorsToDisplay, selectedExpertise, selectedIndustry]);
+  
   //function to display mentors profile on click
   if (selectedMentor) {
     return (
@@ -35,15 +54,6 @@ const Mentors = () => {
       />
     );
   }
-  //function to search for mentors
-  const mentorsToDisplay = useMemo(() => {
-    return mentors.filter((mentor) =>
-      mentor.name.toLowerCase().includes(search.toLowerCase())
-    );
-  }, [mentors, search]);
-
-  //function for sorting
-  useMemo(() => {}, [search, mentors]);
   return (
     <div className="ui raised segment ">
       <div className="ui inverted segment teal">
@@ -63,7 +73,7 @@ const Mentors = () => {
         />
         <i className="circular search link icon"></i>
       </div>
-      <Filter />
+      <Filter selectedExpertise={selectedExpertise} selectedIndustry={selectedIndustry} expertiseSort={setSelectedExpertise} industrySort={setSelectedIndustry} />
       <br></br>
       <div className="ui four doubling stackable cards segment">
         {mentorsToDisplay.length < 1 ? (

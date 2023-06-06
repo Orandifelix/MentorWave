@@ -1,6 +1,10 @@
-import React from "react";
 
-const Filter = () => {
+const Filter = ({
+  selectedExpertise,
+  selectedIndustry,
+  expertiseSort,
+  industrySort,
+}) => {
   return (
     <div className="ui segment">
       <h2>Filter Mentors By:</h2>
@@ -10,14 +14,14 @@ const Filter = () => {
         </label>
         <select
           name="expertise"
-          id="select"
-          multiple=""
+          value={selectedExpertise}
+          onChange={(e) => expertiseSort(e.target.value)}
           className="ui select dropdown custom-select">
           <option value="" hidden>
             {" "}
             Select
           </option>
-          <option value="" className="ui button">
+          <option value="All" className="ui button">
             All
           </option>
           <option value="accounting" className="ui button">
@@ -41,14 +45,14 @@ const Filter = () => {
         </label>
         <select
           name="industry"
-          id="select"
-          multiple=""
+          value={selectedIndustry}
+          onChange={(e) => industrySort(e.target.value)}
           className="ui select dropdown custom-select">
           <option value="" hidden>
             {" "}
             Select
           </option>
-          <option value="" className="ui button">
+          <option value="All" className="ui button">
             All
           </option>
           <option value="accounting" className="ui button">
