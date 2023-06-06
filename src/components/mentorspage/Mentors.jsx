@@ -7,7 +7,7 @@ const Mentors = () => {
   const [showDetails, setShowDetails] = useState(false);
 
   if (showDetails) {
-    return <Mentordetails handleClick={()=>(setShowDetails(false))} />;
+    return <Mentordetails handleClick={() => setShowDetails(false)} />;
   }
   return (
     <div className="ui raised segment ">
@@ -90,6 +90,7 @@ const Mentors = () => {
           </select>
         </div>
       </div>
+      <br></br>
       <div className="ui four doubling stackable cards segment">
         <Mentorscard handleClick={() => setShowDetails(true)} />
         <Mentorscard handleClick={() => setShowDetails(true)} />

@@ -4,7 +4,7 @@ const Mentordetails = ({handleClick}) => {
   return (
     <div className="ui fluid segment">
       <div className="ui three column centered stackable padded grid">
-        <div className="row">
+        <div className="row custom-bg">
           <div className="column">
             <img
               src={imageUrl}
@@ -33,10 +33,10 @@ const Mentordetails = ({handleClick}) => {
           <div className="column mentor-content">
             <div className="ui fluid buttons">
               <button className="ui button primary">
-                Start a Conversation
+                <b className="ui colored header">Start a Conversation</b>
               </button>
               <button className="or"></button>
-              <button className="ui teal button">Book a Meeting</button>
+              <button className="ui teal button"><b className="ui colored header">Book a Meeting</b></button>
             </div>
             <div className="ui padded segment centered">
               <div>

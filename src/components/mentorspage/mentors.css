@@ -38,7 +38,12 @@
   color: #009e99;
   font-weight: bolder;
 }
-
+.row.custom-bg {
+  background-image: url("https://img.freepik.com/free-vector/elegant-subtle-triangle-shapes-abstract-banner-design_1017-25887.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .mentor-bio {
   font-size: 1.3rem;
 }
@@ -46,7 +51,7 @@
   font-weight: normal;
   font-size: 1.5em;
   line-height: 1.8em;
-  margin:0px;
+  margin: 0px;
 }
 .mentor-content {
   padding-top: 80px;
@@ -63,13 +68,12 @@
   border-color: #fefefe;
   border-width: 12px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
-
 }
-.large.header{ 
-font-size: 3em;
-font-weight: 900;
-letter-spacing: -0.03em;
-font-family:futura-pt
+.large.header {
+  font-size: 3em;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  font-family: futura-pt;
 }
 
 input {
@@ -84,4 +88,8 @@ input {
 }
 input:hover {
   background-color: #009e99;
+}
+.ui.colored.header {
+  font-weight: bold;
+  color: white;
 }
