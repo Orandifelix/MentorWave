@@ -10,11 +10,13 @@ const Navbar = () => {
   };
 
   return (
-    <Segment inverted>
+    
+    <div className="ui raised blue segment" >
       <Menu inverted pointing secondary>
         <div className="navbar-logo">
-          {/* <img src="mentorwave-logo.png" alt="MentorWave" /> */}
-          <h1>MentorWave</h1>
+          <h1>
+            Mentor <span>Wave</span>
+          </h1>
         </div>
         <div className="navbar-links">
           <Menu.Item
@@ -51,7 +53,7 @@ const Navbar = () => {
           </Menu.Menu>
         </div>
       </Menu>
-    </Segment>
+    </div>
   );
 };
 
