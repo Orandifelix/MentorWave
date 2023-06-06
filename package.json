@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "PORT=8000 react-scripts start",
+    "server": "json-server --watch db.json -p 8001"
   },
   "dependencies": {
     "react": "^18.2.0",
