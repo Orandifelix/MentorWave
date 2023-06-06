@@ -6,6 +6,5 @@ import Layout from "./components/home/Layout";
       <Layout />
     </div>
   );
-}
 
 export default App;
