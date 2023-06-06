@@ -1,3 +1,52 @@
+// import React, { useEffect, useState } from "react";
+
+// function AccountPage() {
+//   const [user, setUser] = useState(null);
+
+//   useEffect(() => {
+//     // Simulating data fetching from a backend API
+//     fetchUserData()
+//       .then((data) => setUser(data))
+//       .catch((error) => console.error(error));
+//   }, []);
+
+//   // Simulated function to fetch user data from a backend API
+//   function fetchUserData() {
+//     return new Promise((resolve, reject) => {
+//       // Simulating an API call delay
+//       setTimeout(() => {
+//         const userData = {
+//           name: "John Doe",
+//           email: "john.doe@example.com",
+//           // Additional user data...
+//         };
+//         resolve(userData);
+//       }, 1000);
+//     });
+//   }
+
+//   if (!user) {
+//     return <p>Loading...</p>;
+//   }
+
+//   return (
+//     <div>
+//       <h2>My Account</h2>
+//       <div>
+//         <label>Name: </label>
+//         <span>{user.name}</span>
+//       </div>
+//       <div>
+//         <label>Email: </label>
+//         <span>{user.email}</span>
+//       </div>
+//       {/* Additional sections for account settings, preferences, etc. */}
+//     </div>
+//   );
+// }
+
+// export default AccountPage;
+
 
 // import React, { useState, useEffect } from 'react';
 
