@@ -1,9 +1,11 @@
 .step-cards {
-  display: flex;
+  /* display: flex; */
   margin: 10px;
   padding: 10px;
   justify-content: space-around;
   align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .work-title {

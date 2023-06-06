@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import {BsSoundwave} from "react-icons/bs"
+import { BsSoundwave } from "react-icons/bs";
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Home");
 
-  const handleItemClick = (e, { name }) => {
+  const handleItemClick = (name) => {
     setActiveItem(name);
   };
 
@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="navbar-logo">
         <h1>
           Mentor <span>Wave</span>
-          <BsSoundwave className="waveicon"/>
+          <BsSoundwave className="waveicon" />
         </h1>
       </div>
       <div className="navbar-links">

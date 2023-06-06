@@ -1,3 +1,4 @@
+
 .navbar-container {
   display: flex;
   align-items: center;
@@ -24,32 +25,54 @@
 }
 
 .navbar-links li {
-  margin-right: 20px;
+  margin: 15px 20px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 400;
+  padding: 0px 10px;
 }
 
 .navbar-links li.active {
   color: #f2cc22;
 }
 
-.navbar-links li:hover {
+.navbar-links li:hover:not(.navbar-button:hover) {
   color: #f2cc22;
 }
 
-.waveicon{
-   font-size: 30px;
-
+.waveicon {
+  font-size: 30px;
+  color: #facc02;
+}
+.navbar-button button.navbar-custom-button {
+  margin: 10px 10px;
+  display: block;
+  padding: 10px 10px;
+  background-color: #49c934;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
+.navbar-button button.navbar-custom-button:hover {
+  background-color: #39b82c;
+  transform: scale(1.05);
+}
 
+.navbar-button button.navbar-custom-button:active,
+.navbar-button button.navbar-custom-button:focus {
+  background-color: #29821e;
+  transform: scale(0.95);
+}
 
-.navbar-button button {
-  background-color: #049e25;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
+.navbar-button button.navbar-custom-button:active:focus {
+  transform: scale(0.95);
+  transition: transform 0.3s ease-out, background-color 0.3s ease;
+}
+
+.navbar-button button.navbar-custom-button:not(:active):focus {
+  transition: transform 0.3s ease-out, background-color 0.3s ease;
 }

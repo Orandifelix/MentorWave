@@ -66,21 +66,6 @@
 form {
   position: relative;
 }
-.row-links button {
-  background-color: #0bcff1;
-  border-radius: 24px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 36px;
-  width: 48px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  margin: 3px;
-}
 
 .text-icon {
   display: flex;
@@ -112,4 +97,43 @@ form {
   footer {
     display: block;
   }
+}
+
+
+.row-links button {
+  background-color: #0bcff1;
+  border-radius: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 36px;
+  width: 48px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 1px 2px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.row-links button:hover {
+  background-color: #09b4d9;
+  transform: scale(1.05);
+}
+
+.row-links button:active,
+.row-links button:focus {
+  background-color: #0891a8;
+  transform: scale(0.95);
+}
+
+.row-links button:active:focus {
+  transform: scale(0.95);
+  transition: transform 0.3s ease-out, background-color 0.3s ease;
+}
+
+.row-links button:not(:active):focus {
+  transition: transform 0.3s ease-out, background-color 0.3s ease;
 }
