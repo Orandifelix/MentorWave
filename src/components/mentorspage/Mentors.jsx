@@ -66,9 +66,8 @@ const Mentors = () => {
       <Filter />
       <br></br>
       <div className="ui four doubling stackable cards segment">
-        Certainly! Here's the updated code:
         {mentorsToDisplay.length < 1 ? (
-          <h1>No mentors match your search</h1>
+          <h1 className="ui red header">No mentors match your search</h1>
         ) : (
           mentorsToDisplay.map((mentor) => (
             <Mentorscard
