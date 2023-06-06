@@ -1,8 +1,6 @@
 import "./App.css";
 import Layout from "./components/home/Layout";
 
-
-function App() {
   return (
     <div>
       <Layout />
