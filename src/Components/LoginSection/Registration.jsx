@@ -47,12 +47,12 @@ const Registration = ({ handleRegistration }) => {
 
   //handle mentor checkbox change
   const handleMentorCheckboxChange = (e) => {
-    setIsMentor(!isMentor);
+    setIsMentor(e.target.checked);
   };
 
   return (
     <div className="ui container">
-      <h2>Registration</h2>
+      <h2 id="register">Registration</h2>
       
       <div className="ui segment">
         <h3>Register as Mentee</h3>
