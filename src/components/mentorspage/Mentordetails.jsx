@@ -14,7 +14,7 @@ const Mentordetails = ({handleClick}) => {
           </div>
           <div className="column mentor-content">
             <div className="flex-container">
-              <h2>Donvine Mugendi</h2>
+              <h2 className="large header">Donvine Mugendi</h2>
               <img
                 className="mentor-badge"
                 src="../public/mentorbadge.png"
