@@ -1,218 +1,98 @@
-import React from 'react'
+import React, { useState } from "react";
 
-function Registration() {
+function Registration({handleRegister}) {
+  const [userData, setUserData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    role: "",
+    agreedToTerms: false,
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setUserData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    console.log(userData);
+  };
+
+  //handle checkbox change
+  const handleCheckboxChange = (event) => {
+    const { checked } = event.target;
+    setUserData((prevData) => ({
+      ...prevData,
+      agreedToTerms: checked,
+    }));
+  };
+
+  //handle submit
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    handleRegister()
+    setUserData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      role: "",
+      agreedToTerms: false,
+    })
+  }
   return (
-    <div>Registration</div>
-  )
+    <div className="ui segment">
+      <div className="ui two column very relaxed grid">
+        <div className="column">
+          <form className="ui form" onSubmit={handleSubmit}>
+            <h3>Register Here</h3>
+            <div className="two fields">
+              <div className="field">
+                <label>First Name</label>
+                <input type="text" name="firstName" value={userData.firstName} onChange={handleChange}/>
+              </div>
+              <div className="field">
+                <label>Last Name</label>
+                <input type="text" name="lastName" value={userData.lastName} onChange={handleChange}/>
+              </div>
+            </div>
+            <div className="ten wide field">
+              <label>Email</label>
+              <input type="email" name="email" value={userData.email} onChange={handleChange}/>
+            </div>
+            <div className="two fields">
+              <div className="field">
+                <label>Password</label>
+                <input type="password" name="password" value={userData.password} onChange={handleChange}/>
+              </div>
+              <div className="field">
+                <label>Confirm Password</label>
+                <input type="password" name="confirmPassword" value={userData.confirmPassword} onChange={handleChange}/>
+              </div>
+            </div>
+            <div className="four wide field">
+              <select name="Role" value={userData.role} onChange={handleChange}>
+                <option value="">Role</option>
+                <option value="1">Mentee</option>
+                <option value="0">Mentor</option>
+              </select>
+            </div>
+            <div className="ui checkbox">
+              <input type="checkbox" tabindex="0" class="hidden" value={userData.agreedToTerms} onChange={handleChange}/>
+              <label>I agree to the terms and conditions</label>
+            </div>
+            <div className="field">
+              <button className="ui primary button">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Registration
+export default Registration;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useState } from "react";
-
-// const Registration = ({ handleRegistration }) => {
-//   const [firstName, setFirstName] = useState("");
-//   const [lastName, setLastName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [confirmPassword, setConfirmPassword] = useState("");
-//   const [expertise, setExpertise] = useState("");
-//   const [isMentor, setIsMentor] = useState(false);
-
-//   //handle mentee registration
-//   const handleMenteeSubmit = (e) => {
-//     e.preventDefault();
-//     if (password !== confirmPassword) {
-//       alert("Passwords do not match");
-//     } else {
-//       const userData = {
-//         firstName,
-//         lastName,
-//         email,
-//         password,
-//         expertise,
-//         isMentor,
-//       };
-//       handleRegistration(userData);
-//     }
-//   };
-
-//   //handle mentor registration
-//   const handleMentorSubmit = (e) => {
-//     e.preventDefault();
-//     if (password !== confirmPassword) {
-//       alert("Passwords do not match");
-//     } else {
-//       const userData = {
-//         firstName,
-//         lastName,
-//         email,
-//         password,
-//         expertise,
-//         isMentor,
-//       };
-//       handleRegistration(userData);
-//     }
-//   };
-
-//   //handle mentor checkbox change
-//   const handleMentorCheckboxChange = (e) => {
-//     setIsMentor(!isMentor);
-//   };
-
-//   return (
-//     <div className="ui container">
-//       <h2>Registration</h2>
-      
-//       <div className="ui segment">
-//         <h3>Register as Mentee</h3>
-//         <form className="ui form" onSubmit={handleMenteeSubmit}>
-//           <div className="field">
-//             <label>First Name</label>
-//             <input
-//               type="text"
-//               name="firstName"
-//               value={firstName}
-//               onChange={(e) => setFirstName(e.target.value)}
-//             />
-//           </div>
-//           <div className="field">
-//             <label>Last Name</label>
-//             <input
-//               type="text"
-//               name="lastName"
-//               value={lastName}
-//               onChange={(e) => setLastName(e.target.value)}
-//             />
-//           </div>
-//           <div className="field">
-//             <label>Email</label>
-//             <input
-//               type="email"
-//               name="email"
-//               value={email}
-//               onChange={(e) => setEmail(e.target.value)}
-//             />
-//           </div>
-//           <div className="field">
-//             <label>Password</label>
-//             <input
-//               type="password"
-//               name="password"
-//               value={password}
-//               onChange={(e) => setPassword(e.target.value)}
-//             />
-//           </div>
-//           <div className="field">
-//             <label>Confirm Password</label>
-//             <input
-//               type="password"
-//               name="confirmPassword"
-//               value={confirmPassword}
-//               onChange={(e) => setConfirmPassword(e.target.value)}
-//             />
-//           </div>
-//           <div className="field">
-//             <label>Expertise</label>
-//             <input
-//               type="text"
-//               name="expertise"
-//               value={expertise}
-//               onChange={(e) => setExpertise(e.target.value)}
-//             />
-//           </div>
-//           <button className="ui button" type="submit">
-//             Register as Mentee
-//           </button>
-//         </form>
-//       </div>
-//       <div className="ui segment">
-//         <h3>Register as Mentor</h3>
-//         <form className="ui form" onSubmit={handleMentorSubmit}>
-//           <div className="field">
-//             <label>First Name</label>
-//             <input
-//               type="text"
-//               name="firstName"
-//               value={firstName}
-//               onChange={(e) => setFirstName(e.target.value)}
-//             />
-//           </div>
-//           <div className="field">
-//             <label>Last Name</label>
-//             <input
-//               type="text"
-//               name="lastName"
-//               value={lastName}
-//               onChange={(e) => setLastName(e.target.value)}
-//             />
-//           </div>
-//           <div className="field">
-//             <label>Email</label>
-//             <input
-//               type="email"
-//               name="email"
-//               value={email}
-//               onChange={(e) => setEmail(e.target.value)}
-//             />
-//           </div>
-//           <div className="field">
-//             <label>Password</label>
-//             <input
-//               type="password"
-//               name="password"
-//               value={password}
-//               onChange={(e) => setPassword(e.target.value)}
-//             />
-//           </div>
-//           <div className="field">
-//             <label>Confirm Password</label>
-//             <input
-//               type="password"
-//               name="confirmPassword"
-//               value={confirmPassword}
-//               onChange={(e) => setConfirmPassword(e.target.value)}
-//             />
-//           </div>
-//           <div className="field">
-//             <label>Expertise</label>
-//             <input
-//               type="text"
-//               name="expertise"
-//               value={expertise}
-//               onChange={(e) => setExpertise(e.target.value)}
-//             />
-//           </div>
-//           <div className="field">
-//             <label>Is Mentor?</label>
-//             <input
-//               type="checkbox"
-//               name="isMentor"
-//               value={isMentor}
-//               onChange={(e) => handleMentorCheckboxChange(e)}
-//             />
-//             <label>I want to Register as a Mentor</label>
-//           </div>
-//           <button className="ui button" type="submit">Register as Mentot</button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Registration;
