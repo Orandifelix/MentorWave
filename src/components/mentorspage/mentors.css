@@ -1,3 +1,11 @@
+
+#custom-overflow {
+  overflow:hidden;
+}
+.swal2-icon.swal2-icon-show {
+  overflow: hidden;
+}
+
 .custom-select {
   border-radius: 5px;
   border: none;
@@ -37,7 +45,6 @@
 .custom-header {
   color: #009e99;
   font-weight: 900;
-
 }
 .row.custom-bg {
   background-image: url("https://img.freepik.com/free-vector/elegant-subtle-triangle-shapes-abstract-banner-design_1017-25887.jpg");
