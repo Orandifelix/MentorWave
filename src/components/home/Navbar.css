@@ -1,0 +1,29 @@
+.navbar-links {
+ flex: 2;
+ display: flex;
+ justify-content: space-evenly;
+ font-size: 2px;
+}
+
+
+.navbar-logo {
+ flex: 1;
+ display: flex;
+ align-items: center;
+}
+
+
+.navbar-button {
+ flex: 1;
+ display: flex;
+ justify-content: flex-end;
+}
+
+
+.navbar-custom-button {
+ height: 36px !important;
+ padding: 5px 8px !important;
+ font-size: 18px !important;
+ border-radius: 26px !important;
+ overflow: hidden !important;
+}
