@@ -1,7 +1,14 @@
+import { useState } from "react";
 import "./mentors.css";
 import Mentorscard from "./Mentorscard";
+import Mentordetails from "./Mentordetails";
 
 const Mentors = () => {
+  const [showDetails, setShowDetails] = useState(false);
+
+  if (showDetails) {
+    return <Mentordetails handleClick={()=>(setShowDetails(false))} />;
+  }
   return (
     <div className="ui raised segment ">
       <div className="ui inverted segment teal">
@@ -84,15 +91,16 @@ const Mentors = () => {
         </div>
       </div>
       <div className="ui four doubling stackable cards segment">
-        <Mentorscard />
-        <Mentorscard />
-        <Mentorscard />
-        <Mentorscard />
-        <Mentorscard />
-        <Mentorscard />
-        <Mentorscard />
-        <Mentorscard />
-        <Mentorscard />
+        <Mentorscard handleClick={() => setShowDetails(true)} />
+        <Mentorscard handleClick={() => setShowDetails(true)} />
+        <Mentorscard handleClick={() => setShowDetails(true)} />
+        <Mentorscard handleClick={() => setShowDetails(true)} />
+        <Mentorscard handleClick={() => setShowDetails(true)} />
+        <Mentorscard handleClick={() => setShowDetails(true)} />
+        <Mentorscard handleClick={() => setShowDetails(true)} />
+        <Mentorscard handleClick={() => setShowDetails(true)} />
+        <Mentorscard handleClick={() => setShowDetails(true)} />
+        <Mentorscard handleClick={() => setShowDetails(true)} />
       </div>
     </div>
   );
