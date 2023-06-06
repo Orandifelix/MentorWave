@@ -27,29 +27,32 @@ const Mentors = () => {
     }
   }, []);
   //function to search for mentors
-  let mentorsToDisplay = useMemo(() => {
-    return mentors.filter((mentor) =>
-      mentor.name.toLowerCase().includes(search.toLowerCase())
-    );
-  }, [mentors, search]);
+  //  mentorsToDisplay = useMemo(() => {
+  //     return mentors.filter((mentor) =>
+  //       mentor.name.toLowerCase().includes(search.toLowerCase())
+  //     );
+  //   }, [mentors, search]);
 
-  // Filter mentors by industry
-  const mentorsFilteredByIndustry = mentorsToDisplay.filter((mentor) => {
-    if(selectedExpertise==="All"){
-      return true;
+  const mentorsToDisplay = useMemo(() => {
+    switch (true) {
+      case search !== ""&& selectedIndustry==="All"&& selectedExpertise==="All":
+        return mentors.filter((mentor) =>
+          mentor.name.toLowerCase().includes(search.toLowerCase())
+        );
+      case selectedIndustry !== "All":
+        return mentors.filter((mentor) =>
+          mentor.industry.toLowerCase().includes(selectedIndustry.toLowerCase())
+        );
+      case selectedExpertise !== "All":
+        return mentors.filter((mentor) =>
+          mentor.expertise
+            .toLowerCase()
+            .includes(selectedExpertise.toLowerCase())
+        );
+      default:
+        return mentors;
     }
-    mentor.industry.toLowerCase() === selectedIndustry.toLowerCase();
-  });
-  mentorsToDisplay = mentorsFilteredByIndustry;
-
-  // Filter mentors by expertise
-  const mentorsFilteredByExpertise = mentorsToDisplay.filter((mentor) => {
-    if (selectedExpertise === "All") {
-      return true;
-    }
-    mentor.expertise.toLowerCase() === selectedExpertise.toLowerCase();
-  });
-  mentorsToDisplay = mentorsFilteredByExpertise;
+  }, [mentors, search, selectedIndustry, selectedExpertise]);
 
   //function to display mentors profile on click
   if (selectedMentor) {
