@@ -45,6 +45,8 @@
 .mentor-content h3 {
   font-weight: normal;
   font-size: 1.5em;
+  line-height: 1.8em;
+  margin:0px;
 }
 .mentor-content {
   padding-top: 80px;
@@ -56,14 +58,18 @@
 .mentor-badge {
   width: 60px;
   height: 60px;
-  margin: 0px;
-  padding: 0px;
 }
 .ui.medium.circular.image {
   border-color: #fefefe;
   border-width: 12px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
 
+}
+.large.header{ 
+font-size: 3em;
+font-weight: 900;
+letter-spacing: -0.03em;
+font-family:futura-pt
 }
 
 input {
