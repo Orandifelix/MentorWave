@@ -1,15 +1,49 @@
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
+import Axios from "axios";
 import "./mentors.css";
 import Mentorscard from "./Mentorscard";
 import Mentordetails from "./Mentordetails";
+import Filter from "./Filter";
+
+const baseUrl = "http://localhost:8001/mentors";
 
 const Mentors = () => {
-  const [showDetails, setShowDetails] = useState(false);
+  const [mentors, setMentors] = useState([]);
+  const [selectedMentor, setSelectedMentor] = useState(null);
+  const [search, setSearch] = useState("");
+  //fetch mentors data
+  useEffect(() => {
+    try {
+      (async () => {
+        const response = await Axios.get(baseUrl);
+        if (response.status === 200) {
+          setMentors(response.data);
+        } else throw new Error("Fetch failed with status " + response.status);
+      })();
+    } catch (error) {
+      console.error(error);
+    }
+  }, []);
 
-  if (showDetails) {
-    return <Mentordetails handleClick={() => setShowDetails(false)} />;
+  //function to display mentors profile on click
+  if (selectedMentor) {
+    return (
+      <Mentordetails
+        mentor={selectedMentor}
+        key={selectedMentor.id}
+        handleClick={() => setSelectedMentor(null)}
+      />
+    );
   }
- 
+  //function to search for mentors
+  const mentorsToDisplay = useMemo(() => {
+    return mentors.filter((mentor) =>
+      mentor.name.toLowerCase().includes(search.toLowerCase())
+    );
+  }, [mentors, search]);
+
+  //function for sorting
+  useMemo(() => {}, [search, mentors]);
   return (
     <div className="ui raised segment ">
       <div className="ui inverted segment teal">
@@ -21,88 +55,29 @@ const Mentors = () => {
         </h3>
       </div>
       <div className="ui large fluid icon input">
-        <input type="search" placeholder="Search for mentors........." />
+        <input
+          type="search"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search for mentors........."
+        />
         <i className="circular search link icon"></i>
       </div>
-      <div className="ui segment">
-        <h2>Filter Mentors By:</h2>
-        <div className="flex container">
-          <label htmlFor="expertise" className="ui header">
-            Expertise:
-          </label>
-          <select
-            name="expertise"
-            id="select"
-            multiple=""
-            className="ui select dropdown custom-select">
-            <option value="" hidden>
-              {" "}
-              Select
-            </option>
-            <option value="" className="ui button">
-              All
-            </option>
-            <option value="accounting" className="ui button">
-              Accounting and Finance
-            </option>
-            <option value="data-science" className="ui button">
-              Data Science
-            </option>
-            <option value="software" className="ui button">
-              Software Engineering
-            </option>
-            <option value="sales" className="ui button">
-              Sales
-            </option>
-            <option value="startup" className="ui button">
-              StartUp
-            </option>
-          </select>
-          <label htmlFor="industry" className="ui header">
-            Industry:
-          </label>
-          <select
-            name="industry"
-            id="select"
-            multiple=""
-            className="ui select dropdown custom-select">
-            <option value="" hidden>
-              {" "}
-              Select
-            </option>
-            <option value="" className="ui button">
-              All
-            </option>
-            <option value="accounting" className="ui button">
-              Accounting/Tax services
-            </option>
-            <option value="data-science" className="ui button">
-              Data Science
-            </option>
-            <option value="software" className="ui button">
-              Computer services/information technology
-            </option>
-            <option value="sales" className="ui button">
-              Business consulting/coaching
-            </option>
-            <option value="startup" className="ui button">
-              Digital marketing/e-commerce
-            </option>
-          </select>
-        </div>
-      </div>
+      <Filter />
       <br></br>
       <div className="ui four doubling stackable cards segment">
-        <Mentorscard handleClick={() => setShowDetails(true)} />
-        <Mentorscard handleClick={() => setShowDetails(true)} />
-        <Mentorscard handleClick={() => setShowDetails(true)} />
-        <Mentorscard handleClick={() => setShowDetails(true)} />
-        <Mentorscard handleClick={() => setShowDetails(true)} />
-        <Mentorscard handleClick={() => setShowDetails(true)} />
-        <Mentorscard handleClick={() => setShowDetails(true)} />
-        <Mentorscard handleClick={() => setShowDetails(true)} />
-        <Mentorscard handleClick={() => setShowDetails(true)} />
-        <Mentorscard handleClick={() => setShowDetails(true)} />
+        Certainly! Here's the updated code:
+        {mentorsToDisplay.length < 1 ? (
+          <h1>No mentors match your search</h1>
+        ) : (
+          mentorsToDisplay.map((mentor) => (
+            <Mentorscard
+              key={mentor.id}
+              mentor={mentor}
+              handleClick={() => setSelectedMentor(mentor)}
+            />
+          ))
+        )}
       </div>
     </div>
   );

@@ -55,7 +55,7 @@
     {
       "id": 6,
       "name": "Muthoni Wanyoike",
-      "image": "http://africawomenexperts.com/lng/en/wp-content/uploads/sites/4/2022/07/muthoni-bon-440x266.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Muthoni_Wanyoike.jpg/640px-Muthoni_Wanyoike.jpg",
       "expertise": "Data Science",
       "industry": "Data Science",
       "bio": "Muthoni Wanyoike is a Kenyan data scientist and artificial intelligence (AI) enthusiast, who has been advocating for years for the practical application of AI in Africa. As the co-founder of “Nairobi Women Learning & Data science”, she also encourages African women to get into Sciences Technologies Engineering and Mathematics (STEM).",
@@ -76,13 +76,13 @@
 
     {
       "id": 8,
-      "name": "Angel Adijah",
+      "name": "Felix Orandi",
       "image": "https://d2win24dv6pngl.cloudfront.net/media/generated/profile-photos/profile-1549334/465d12e43cec1d1c.da54dac9c09f.jpg",
       "expertise": "Sales",
       "industry": "Digital Marketing/E-commerce",
-      "bio": "Angel is a seasoned sales professional with a deep understanding of digital marketing and e-commerce strategies. He helps businesses drive sales and optimize their online presence.",
-      "background": "With years of experience in sales and digital marketing, Angel has worked with both B2B and B2C companies, implementing effective marketing campaigns and optimizing conversion funnels. He is well-versed in SEO, social media marketing, and email marketing.",
-      "twitter": "davidsmith"
+      "bio": "Felix is a seasoned sales professional with a deep understanding of digital marketing and e-commerce strategies. He helps businesses drive sales and optimize their online presence.",
+      "background": "With years of experience in sales and digital marketing, Felix has worked with both B2B and B2C companies, implementing effective marketing campaigns and optimizing conversion funnels. He is well-versed in SEO, social media marketing, and email marketing.",
+      "twitter": "orandifelix"
     }
   ]
 }
