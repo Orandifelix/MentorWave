@@ -33,13 +33,12 @@ function App() {
       {/* <Mentors/> */}
       {loggedIn ? (
         <div>
-          <h1>Welcome {user.username}</h1>
+          <h1>Welcome {user.email}</h1>
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
         <div>
-          <Login handleLogin={handleLogin} />
-          <Registration handleRegistration={handleRegistration} />
+          <Login handleLogin={handleLogin} handleRegistration={handleRegistration} />
         </div>
       )}
     </div>
