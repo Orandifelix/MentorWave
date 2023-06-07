@@ -28,30 +28,34 @@ function Statistics() {
     };
   }, [numbers]);
 
-  const getRandomNumber = (prevNumber, stopNumber) => {
+  const getRandomNumber = (stopNumber) => {
     // Generate a random number up to stopNumber
     return Math.floor(Math.random() * (stopNumber + 1));
   };
 
   return (
-    <div className="statistics-container">
-      <div className="stat">
-        <p className="stat-number">{numbers[0]}</p>
-        <h3 className="stat-title">MENTEES SIGNED UP</h3>
+
+    <div className="ui segment"  style={{backgroundColor:"#269DCC", padding:"20px", margin:"10px"}}>
+    <div className="ui four column stackable grid">
+      <div className="column">
+        <h1>{numbers[0]}+</h1>
+        <h3>Mentees Signed Up</h3>
       </div>
-      <div className="stat">
-        <p className="stat-number">{numbers[1]}</p>
-        <h3 className="stat-title">MENTORS ACROSS THE GLOBE</h3>
+      <div className="column">
+        <h1>{numbers[1]}+</h1>
+        <h3>Mentors Across the Globe</h3>
       </div>
-      <div className="stat">
-        <p className="stat-number">{numbers[2]}</p>
-        <h3 className="stat-title">EMPLOYEES WORLDWIDE</h3>
+      <div className="column">
+        <h1>{numbers[2]}+</h1>
+        <h3>Employees Worldwide</h3>
       </div>
-      <div className="stat">
-        <p className="stat-number">{numbers[3]}</p>
-        <h3 className="stat-title">HOURS OF HARD WORK</h3>
+      <div className="column">
+        <h1>{numbers[3]}+</h1>
+        <h3>Hours of Mentoring</h3>
       </div>
     </div>
+  </div>
+  
   );
 }
 

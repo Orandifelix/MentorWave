@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 import { Icon } from "semantic-ui-react";
+import Swal from "sweetalert2";
 
 function Footer() {
+  const [email, setEmail] = useState("");
+
+  function handleSubscription(event) {
+    event.preventDefault();
+    if (email === "") {
+      Swal.fire({
+        icon: "warning",
+        title: "Action forbidden",
+        text: "Please enter a valid email address before submitting",
+        showCloseButton: true,
+        showCancelButton: true,
+        confirmButtonText: "I understand",
+      });
+      return false;
+    }
+    Swal.fire({
+      icon: "success",
+      title: "Success",
+      text: `${email} has been successfully subscribed to receive notifications`,
+      showCloseButton: true,
+      footer: "Made a mistake? <a href='#'> Click here to unsubscribe </a>",
+    });
+    setEmail("");
+  }
   return (
     <>
       <div className="main">
@@ -53,9 +78,8 @@ function Footer() {
               <a
                 href="https://www.facebook.com/mentorwave/"
                 target="_blank"
-                rel="noreferrer"
-              >
-                <Icon name="facebook" size="large" />
+                rel="noreferrer">
+                <Icon name="facebook" size="large" color="olive" />
               </a>
             </div>
             <div className="text-icon">
@@ -63,18 +87,16 @@ function Footer() {
                 href="https://www.youtube.com/mentorwave/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-white"
-              >
-                <Icon name="youtube" size="large" />
+                className="text-white">
+                <Icon name="youtube" size="large" color="red" />
               </a>
             </div>
             <div className="text-icon">
               <a
                 href="https://twitter.com/mentorwave"
                 target="_blank"
-                rel="noreferrer"
-              >
-                <Icon name="twitter square" size="large" />
+                rel="noreferrer">
+                <Icon name="twitter square" size="large"color="green" />
               </a>
             </div>
             <div className="text-icon">
@@ -82,9 +104,8 @@ function Footer() {
                 href="https://www.instagram.com/mentorwave/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-white"
-              >
-                <Icon name="instagram" size="large" />
+                className="text-white">
+                <Icon name="instagram" size="large" color="pink"/>
               </a>
             </div>
           </div>
@@ -114,21 +135,22 @@ function Footer() {
                 id="email"
                 name="email"
                 placeholder="Enter Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <button type="submit">
+              <button type="submit" onClick={(e) => handleSubscription(e)}>
                 <Icon name="arrow right" size="small" />
               </button>
             </form>
           </div>
         </div>
-
-        <div className="copyright">
-          <hr />
-          <p className="footer">
-            <small>&copy; 2023 MentorWave. All rights reserved</small>
-          </p>
-        </div>
+      </div>
+      <div className="copyright">
+        <hr style={{border: "5px solid rgb(159, 153, 153)" }} />
+        <p className="footer">
+          &copy; 2023 MentorWave. All rights reserved
+        </p>
       </div>
     </>
   );

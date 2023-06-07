@@ -14,11 +14,12 @@ function Organizations() {
   }, []);
 
   return (
-    <>
-      <h2 className="organisation-title">
-        New age Mentoring Platform, Powered by People <br /> from World-Renowned
-        Organizations
+    <div className="ui segment">
+      <h2 className="ui header centered">
+        New age Mentoring Platform  
       </h2>
+      <h2 className="ui green header centered"> Powered by People from World-Renowned
+        Organizations</h2>
       <div
         id="organizations-container"
         className="ui doubling stackable cards segment"
@@ -34,7 +35,7 @@ function Organizations() {
         <img src="/microsoft.png" alt="Logo 1" className="organization-logo" />
         <img src="/who.png" alt="Logo 1" className="organization-logo" />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -89,21 +89,19 @@ function HomeCards() {
           />
         ))}
       </div>
-      <div className="pagination">
+      <div className="ui padded flex container center aligned">
         <button
+          className="ui teal button"
           disabled={currentPage === 1}
-          onClick={handlePrevPage}
-          className="arrow"
-        >
+          onClick={handlePrevPage}>
           &lt;
         </button>
-        <span>{currentPage}</span>
+        <span className="ui header">{currentPage}</span>
         <button
+          className="ui teal button"
           disabled={currentPage === totalPages}
-          onClick={handleNextPage}
-          className="arrow"
-        >
-           &gt;
+          onClick={handleNextPage}>
+          &gt;
         </button>
       </div>
     </>
