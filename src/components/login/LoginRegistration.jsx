@@ -27,7 +27,9 @@ const LoginRegistration = () => {
 
 
   return (
-    <div className='main-login' >
+    <section className='ui raised segment'>
+    <div className='ui inverted teal segment'>
+    <div className='ui container' style={{marginBottom:"25%"}}>
       {!userIsLoggedIn ? (
         userIsRegistered ? (
           <Login handleLogin={handleLogin} handleClick={handleClick}/>
@@ -42,6 +44,8 @@ const LoginRegistration = () => {
       )}
 
     </div>
+    </div>
+    </section>
   )
 }
 

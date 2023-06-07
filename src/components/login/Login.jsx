@@ -1,5 +1,4 @@
 import { useState } from "react";
-import {NavLink} from 'react-router-dom'
 
 // eslint-disable-next-line react/prop-types
 function Login({ handleLogin, handleClick }) {
@@ -28,8 +27,8 @@ function Login({ handleLogin, handleClick }) {
   };
 
   return (
-    <div className="ui placeholder segment center-content" style={{margin:  "10% auto", height:"100%", width:"50%"}}>
-      <div className="ui two column very relaxed stackable grid">
+    <div className="ui placeholder segment center-content" style={{margin:"10% auto",inset:"0", width:"70%"}}>
+      <div className="ui two column stackable grid">
         <div className="column login-column">
           <form className="ui form" onSubmit={handleSubmit}>
             <div className="field">
@@ -58,10 +57,7 @@ function Login({ handleLogin, handleClick }) {
               </div>
             </div>
             <button className="ui blue submit button" type="submit">
-              
-            <NavLink to="/"> Login              
-            </NavLink>
-
+            <i className="key icon"></i>Login
             </button> <br/>
             <div className="field">
               <p className="ui small header">
