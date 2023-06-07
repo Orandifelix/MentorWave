@@ -49,11 +49,11 @@ function handleBooking(){
                 alt="mentors badge"
               />
             </div>
-            <h3>
+            <h3 className="ui header">
               <span>Mentor Industry: </span>
               {mentor.industry}
             </h3>
-            <h3>
+            <h3 className="ui header">
               <span>Mentor Expertise: </span>{mentor.expertise}
             </h3>
             <button className="ui fluid button" onClick={handleClick}> &#8592; Go Back</button>
