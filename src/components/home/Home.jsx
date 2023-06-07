@@ -3,10 +3,10 @@ import Landing from './Landing'
 import HomeCards from './HomeCards'
 import Statistics from './Statistics'
 import Organizations from './Organizations'
-function Home() {
+function Home({handleClick}) {
   return (
     <div> 
-      <Landing />
+      <Landing handleClick={handleClick} />
       <HomeCards />
       <Statistics />
       <Organizations/>

@@ -7,7 +7,7 @@ import Filter from "./Filter";
 
 const baseUrl = "http://localhost:8001/mentors";
 
-const Mentors = () => {
+const Mentors = ({ handleLoginClick }) => {
   const [mentors, setMentors] = useState([]);
   const [selectedMentor, setSelectedMentor] = useState(null);
   const [search, setSearch] = useState("");
@@ -26,16 +26,12 @@ const Mentors = () => {
       console.error(error);
     }
   }, []);
-  //function to search for mentors
-  //  mentorsToDisplay = useMemo(() => {
-  //     return mentors.filter((mentor) =>
-  //       mentor.name.toLowerCase().includes(search.toLowerCase())
-  //     );
-  //   }, [mentors, search]);
 
   const mentorsToDisplay = useMemo(() => {
     switch (true) {
-      case search !== ""&& selectedIndustry==="All"&& selectedExpertise==="All":
+      case search !== "" &&
+        selectedIndustry === "All" &&
+        selectedExpertise === "All":
         return mentors.filter((mentor) =>
           mentor.name.toLowerCase().includes(search.toLowerCase())
         );
@@ -58,6 +54,7 @@ const Mentors = () => {
   if (selectedMentor) {
     return (
       <Mentordetails
+        handleLoginClick={handleLoginClick}
         mentor={selectedMentor}
         key={selectedMentor.id}
         handleClick={() => setSelectedMentor(null)}

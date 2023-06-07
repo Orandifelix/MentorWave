@@ -6,9 +6,11 @@ import Home from "../home/Home";
 import "semantic-ui-css/semantic.min.css";
 import "./LoginRegistration.css";
 
-const LoginRegistration = () => {
-  const [userIsRegistered, setUserIsRegistered] = useState(true);
-  const [userIsLoggedIn, setUserIsLoggedIn] = useState(false);
+const LoginRegistration = ({handleLoginForm}) => {
+
+
+  const [userIsRegistered, setUserIsRegistered] = useState(true)
+  const [userIsLoggedIn, setUserIsLoggedIn] = useState(false)
 
   const handleClick = () => {
     setUserIsRegistered(false);
@@ -27,10 +29,12 @@ const LoginRegistration = () => {
   };
 
   return (
-    <div className="main-login">
+    <section className='ui raised segment'>
+    <div className='ui inverted teal segment'>
+    <div className='ui container' style={{marginBottom:"25%"}}>
       {!userIsLoggedIn ? (
         userIsRegistered ? (
-          <Login handleLogin={handleLogin} handleClick={handleClick} />
+          <Login handleLogin={handleLoginForm} handleClick={handleClick}/>
         ) : (
           <Registration
             handleRegister={handleRegister}
@@ -43,7 +47,9 @@ const LoginRegistration = () => {
         </div>
       )}
     </div>
-  );
-};
+    </div>
+    </section>
+  )
+}
 
 export default LoginRegistration;

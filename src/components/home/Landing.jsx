@@ -1,7 +1,8 @@
 import React from "react";
 import "./Landing.css";
 
-function Landing() {
+function Landing({handleClick}) {
+ 
   return (
     <div className="ui segment">
       <div className="ui two column grid">
@@ -16,7 +17,7 @@ function Landing() {
             Mentorwave, we believe in the limitless possibilities of mentorship,
             creating a space where you can thrive and excel.
           </h3>
-          <button className="ui large teal button"><b>Join Now!</b></button>
+          <button className="ui large teal button" onClick={handleClick}><b>Join Now!</b></button>
         </div>
         <div className="column">
           <img
