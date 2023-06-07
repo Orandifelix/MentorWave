@@ -4,7 +4,7 @@ import "./mentors.css";
 
 const Mentorscard = ({handleClick, mentor}) => {
   return (
-    <Card>
+    <Card id="card">
       <Card.Content>
         <div className="flex-container">
           <img

@@ -1,23 +1,17 @@
-
-
 .footer {
   padding: 10px;
-  margin-top: 10px;
-  font-size: 15px;
-
+  font-size: 1.5em;
+  text-align: center;
+  color:white;
+  background: linear-gradient(to right, teal, green, rgb(21, 96, 182));
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  background-color: #3e3d3d;
+  background: linear-gradient(to right, teal, green);
   color: white;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: sticky;
 }
 
 .links {
@@ -29,6 +23,8 @@
   text-align: center;
   color: white;
   padding: 10px;
+  font-size: 1.2em;
+  
 }
 
 .container {
@@ -49,7 +45,8 @@
 .row-links ul li a {
   text-decoration: none;
   color: white;
-  font-size: 13px;
+  font-size: 1em;
+  line-height: 2em;
 }
 
 .row-links ul li a:hover {
@@ -93,6 +90,8 @@ form {
 
 .row-links h5 {
   margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 @media only screen and (min-height: 100vh) {
@@ -101,25 +100,21 @@ form {
   }
 }
 
-
 .row-links button {
   background-color: #0bcff1;
   border-radius: 24px;
   position: absolute;
   top: 0;
   right: 0;
-  height: 36px;
+  height: 38px;
   width: 48px;
   border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  margin: 1px 2px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
-
+a{
+  text-decoration: none;
+}
 .row-links button:hover {
   background-color: #09b4d9;
   transform: scale(1.05);

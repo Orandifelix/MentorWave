@@ -1,36 +1,14 @@
-.statistics-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  align-items: center;
-  margin: 10px;
-  border: 1px solid rgb(245, 239, 239);
-  border-radius: 10px;
-  background-color: rgb(108, 190, 190);
-}
-
-.stat {
-  text-align: center;
-  padding: 20px;
-  margin: 20px;
-}
-
-.stat-number {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin: 15px;
-  padding: 15px;
-}
-
-.stat-title {
-  font-size: 22px;
-  color: #423c3c;
-  margin-top: 15px;
-  padding: 15px;
+.column{
+  color:white;
+  }
+.column h1{
+  font-size: 2em;
+  font-weight: 900;
+  margin:10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Logos */
-
 .organization-logo:hover {
   transform: scale(1.1);
 }
@@ -58,5 +36,4 @@
   transition: transform 023s ease;
   border-radius: 50%;
   animation: moveRightToLeft 15s linear infinite; /* Add animation properties */
-}
-
+} */
