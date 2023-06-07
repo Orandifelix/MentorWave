@@ -4,24 +4,26 @@
   padding: 10px;
   margin-top: 10px;
   font-size: 15px;
+
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #3e3d3d;
   color: white;
   left: 0;
   bottom: 0;
   right: 0;
+  position: sticky;
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
   text-align: center;

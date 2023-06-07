@@ -60,11 +60,3 @@
   animation: moveRightToLeft 15s linear infinite; /* Add animation properties */
 }
 
-@keyframes moveRightToLeft {
-  0% {
-    transform: translateX(100%); /* Start position */
-  }
-  100% {
-    transform: translateX(-100%); /* End position */
-  }
-}

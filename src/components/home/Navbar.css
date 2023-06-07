@@ -1,4 +1,4 @@
-.navbar-container {
+/* .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -75,4 +75,48 @@
 
 .navbar-button button.navbar-custom-button:not(:active):focus {
   transition: transform 0.3s ease-out, background-color 0.3s ease;
+} */
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
 }
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navbar-logo span {
+  color: #00c2cb;
+}
+
+.waveicon {
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.navbar-custom-button {
+  margin: 10px;
+}
+
