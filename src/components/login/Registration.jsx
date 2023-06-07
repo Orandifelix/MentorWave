@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import './Registration.css'
+import  { useState } from "react";
+// import './Registration.css'
 
+// eslint-disable-next-line react/prop-types
 function Registration({handleRegister}) {
   const [userData, setUserData] = useState({
     firstName: "",
@@ -51,11 +52,11 @@ function Registration({handleRegister}) {
           <form className="ui form" onSubmit={handleSubmit}>
             <h3>Register Here</h3>
             <div className="two fields">
-              <div className="field">
+              <div className="twelve wide field">
                 <label>First Name</label>
                 <input type="text" name="firstName" value={userData.firstName} onChange={handleChange}/>
               </div>
-              <div className="field">
+              <div className="twelve wide field">
                 <label>Last Name</label>
                 <input type="text" name="lastName" value={userData.lastName} onChange={handleChange}/>
               </div>

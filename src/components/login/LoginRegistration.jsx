@@ -2,6 +2,7 @@ import {useState} from 'react'
 import Login from './Login'
 import Registration from './Registration'
 import 'semantic-ui-css/semantic.min.css';
+import './LoginRegistration.css'
 
 const LoginRegistration = () => {
 
