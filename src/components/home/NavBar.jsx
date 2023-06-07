@@ -7,10 +7,10 @@ import { NavLink } from "react-router-dom";
 const Navbar = ({handleClick}) => {
   return (
      <nav className="navbar">
-      <div className="ui fluid secondary menu">
+      <div className="ui secondary fluid menu">
         <div className="menu item">
         <div className="navbar-logo">
-          <NavLink to="/"className='ui header '>Mentor<span>Wave</span> <BsSoundwave className="pink large item" /></NavLink>
+          <NavLink to="/"className='ui header '>Mentor<span>Wave</span><BsSoundwave/></NavLink>
         </div>
         </div>
         <NavLink to="/" className="ui header item" activeClassName="active">
@@ -35,7 +35,7 @@ const Navbar = ({handleClick}) => {
           My Account
         </NavLink>       
         <div class="right menu">
-         <Button  onClick={handleClick} animated="fade" className="ui primary padded large button" style={{margin:"20px"}}>
+         <Button  onClick={handleClick} animated="fade" className="ui primary large button" style={{margin:"10px, 0"}}>
             <Button.Content visible>Meet Your Mentor/Mentee</Button.Content>
             <Button.Content hidden>Sign In</Button.Content>
           </Button>
