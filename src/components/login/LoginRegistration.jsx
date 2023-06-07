@@ -27,7 +27,7 @@ const LoginRegistration = () => {
 
 
   return (
-    <div className='main-login'>
+    <div className='main-login' >
       {!userIsLoggedIn ? (
         userIsRegistered ? (
           <Login handleLogin={handleLogin} handleClick={handleClick}/>
