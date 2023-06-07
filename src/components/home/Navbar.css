@@ -1,123 +1,19 @@
-/* .navbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #000000;
-  color: #ffffff;
-  padding: 20px 20px;
+.navbar{
+  background: linear-gradient(45deg,teal, #405DE6, #5851DB)
 }
-
-.navbar-logo h1 {
-  font-size: 24px;
-  margin: 0;
+.navbar-logo{
+  border-bottom: 2px solid rgb(242, 241, 241);
+  border-right: 2px solid rgb(92, 7, 55);
+  background-color: teal;
+  padding:5px;
+  font-size: 2em;
+  font-weight: 900;
+  border-radius: 10px 16px 2px 16px;
 }
-
-.navbar-logo span {
-  color: #f2cc22;
+.navbar-logo span{
+  color:goldenrod;
+  font-family: cursive;
 }
-
-.navbar-links ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+.ui.header.item{
+  color:white;
 }
-
-.navbar-links li {
-  margin: 15px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 0px 10px;
-}
-
-.navbar-links li.active {
-  color: #f2cc22;
-}
-
-.navbar-links li:hover:not(.navbar-button:hover) {
-  color: #f2cc22;
-}
-
-.waveicon {
-  font-size: 30px;
-  color: #facc02;
-}
-.navbar-button button.navbar-custom-button {
-  margin: 10px 10px;
-  display: block;
-  padding: 10px 10px;
-  background-color: #49c934;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-}
-
-.navbar-button button.navbar-custom-button:hover {
-  background-color: #39b82c;
-  transform: scale(1.05);
-  color: #ffffff;
-}
-
-.navbar-button button.navbar-custom-button:active,
-.navbar-button button.navbar-custom-button:focus {
-  background-color: #29821e;
-  transform: scale(0.95);
-}
-
-.navbar-button button.navbar-custom-button:active:focus {
-  transform: scale(0.95);
-  transition: transform 0.3s ease-out, background-color 0.3s ease;
-}
-
-.navbar-button button.navbar-custom-button:not(:active):focus {
-  transition: transform 0.3s ease-out, background-color 0.3s ease;
-} */
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding: 10px;
-  color: #fff;
-}
-
-.navbar-logo {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-logo h1 {
-  margin: 0;
-  font-size: 24px;
-  border-color:5px solid #1e0404;
-}
-
-.navbar-logo span {
-  color: #00c2cb;
-}
-
-.waveicon {
-  margin-left: 5px;
-  font-size: 20px;
-}
-
-.navbar-links {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-links a {
-  color: #fff;
-  text-decoration: none;
-  margin: 10px;
-}
-
-.navbar-custom-button {
-  margin: 10px;
-}
-
