@@ -39,7 +39,7 @@ import { BsSoundwave } from "react-icons/bs";
 import { Button, Menu } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({handleClick}) => {
   return (
     <Menu className="navbar-container" inverted>
       <Menu.Item>
@@ -63,12 +63,10 @@ const Navbar = () => {
         <NavLink to="/account" className="item">
           My Account
         </NavLink>
-        <NavLink to="/login" className="item">
-          <Button animated="fade" className="navbar-custom-button">
+          <Button animated="fade" className="navbar-custom-button" onClick={handleClick}>
             <Button.Content visible>Meet Your Mentor/Mentee</Button.Content>
             <Button.Content hidden>Sign In</Button.Content>
           </Button>
-        </NavLink>
       </Menu.Item>
     </Menu>
   );
