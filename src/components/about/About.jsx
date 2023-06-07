@@ -7,10 +7,10 @@ import TeamMembers from "./TeamMembers";
 import Testimonials from "./Testimonials";
 
 
-function AboutUs() {
+function App() {
   return (
-    <div className="about-us-container">
-      <h1>About Us</h1>
+    <div>
+     
       <Mission/>
       <Vision/>
       <Values/>
@@ -22,4 +22,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default App;
