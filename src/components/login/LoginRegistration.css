@@ -1,6 +1,8 @@
-body {
-  background-image: url("https://images.unsplash.com/photo-1519817914152-22d216bb9170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80");
+.main-login {
+  background-image: url("https://th.bing.com/th/id/OIP.880NrUEXDIq2yN_oePPgXAHaEK?pid=ImgDet&rs=1");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -8,6 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: none;
 }
 
 .ui.segment {
@@ -37,6 +40,8 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
+
 
 /*  */
 

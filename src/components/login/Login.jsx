@@ -1,5 +1,4 @@
 import { useState } from "react";
-import './Login.css'
 
 // eslint-disable-next-line react/prop-types
 function Login({ handleLogin, handleClick }) {
