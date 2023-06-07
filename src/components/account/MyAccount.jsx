@@ -316,8 +316,7 @@ const MyAccount = () => {
 
   return (
     <div className="my-account-container">
-      {/* <h2>Join The MentorWave Community</h2> */}
-      <h2 class="ui header">Second header</h2>
+      <h2>Join The MentorWave Community</h2>
       <h3>Kindly fill this form to continue</h3>
       <form className= "ui form"onSubmit={handleSubmit}>
       <div className="form-group">
