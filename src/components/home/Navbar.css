@@ -1,29 +1,79 @@
-.navbar-links {
- flex: 2;
- display: flex;
- justify-content: space-evenly;
- font-size: 2px;
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 20px;
 }
 
-
-.navbar-logo {
- flex: 1;
- display: flex;
- align-items: center;
+.navbar-logo h1 {
+  font-size: 24px;
+  margin: 0;
 }
 
-
-.navbar-button {
- flex: 1;
- display: flex;
- justify-content: flex-end;
+.navbar-logo span {
+  color: #f2cc22;
 }
 
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
-.navbar-custom-button {
- height: 36px !important;
- padding: 5px 8px !important;
- font-size: 18px !important;
- border-radius: 26px !important;
- overflow: hidden !important;
+.navbar-links li {
+  margin: 15px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0px 10px;
+}
+
+.navbar-links li.active {
+  color: #f2cc22;
+}
+
+.navbar-links li:hover:not(.navbar-button:hover) {
+  color: #f2cc22;
+}
+
+.waveicon {
+  font-size: 30px;
+  color: #facc02;
+}
+.navbar-button button.navbar-custom-button {
+  margin: 10px 10px;
+  display: block;
+  padding: 10px 10px;
+  background-color: #49c934;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-button button.navbar-custom-button:hover {
+  background-color: #39b82c;
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+.navbar-button button.navbar-custom-button:active,
+.navbar-button button.navbar-custom-button:focus {
+  background-color: #29821e;
+  transform: scale(0.95);
+}
+
+.navbar-button button.navbar-custom-button:active:focus {
+  transform: scale(0.95);
+  transition: transform 0.3s ease-out, background-color 0.3s ease;
+}
+
+.navbar-button button.navbar-custom-button:not(:active):focus {
+  transition: transform 0.3s ease-out, background-color 0.3s ease;
 }

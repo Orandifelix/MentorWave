@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from './NavBar'
 import Footer from './Footer'
-import Content from './Content'
+import Home from './Home'
 
 function Layout() {
   return (
     <div>
         <Navbar />
-        <Content />
+        <Home />
         <Footer />
     </div>
   )

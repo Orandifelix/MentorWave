@@ -1,9 +1,11 @@
 .step-cards {
-  display: flex;
+  /* display: flex; */
   margin: 10px;
   padding: 10px;
   justify-content: space-around;
   align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .work-title {
@@ -66,13 +68,13 @@
   }
 }
 
-i {
-  font-size: 40px;
+.icon-name{
+  font-size: 30px;
   color: white;
   font-weight: 900;
   padding: 9px 3px;
-  margin: auto 1px;
-  transform: rotate(158deg);
+  margin: auto 8px;
+  transform: rotate(318deg);
 }
 
 .title {
@@ -129,5 +131,7 @@ i {
   font-size: 16px;
 
 }
+
+
 
 

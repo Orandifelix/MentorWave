@@ -11,7 +11,7 @@ function MentorPicture({ image }) {
 
 function MentorInfo({ name, profession }) {
   return (
-    <div className="card-name">
+    <div className="card-name" >
       <h3>{name}</h3>
       <p>{profession}</p>
     </div>
