@@ -51,7 +51,7 @@ function HomeCards() {
 
   return (
     <>
-      <h2 className="work-title"> How It Works</h2>
+      <h2 className="ui centered header"> How It Works</h2>
       <div className="step-cards">
         <CustomeCard
           icon={<Icon name="sign-in alternate" />}
@@ -78,16 +78,18 @@ function HomeCards() {
           }
         />
       </div>
-      <h2 className="work-title">Meet our Mentors</h2>
-      <div className="mentor-cards">
-        {currentMentorCards.map((card, index) => (
-          <MentorCard
-            key={index}
-            image={card.image}
-            name={card.name}
-            profession={card.profession}
-          />
-        ))}
+      <h2 className="ui centered header">Meet our Mentors</h2>
+      <div className="ui segment" style={{color:"black"}}>
+        <div className="mentor-cards">
+          {currentMentorCards.map((card, index) => (
+            <MentorCard
+              key={index}
+              image={card.image}
+              name={card.name}
+              profession={card.profession}
+            />
+          ))}
+        </div>
       </div>
       <div className="ui padded flex container center aligned">
         <button
