@@ -2,16 +2,11 @@ import React, { useState } from "react";
 import "./Homecards.css";
 
 function MentorCard({ name, image, profession }) {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleHover = () => {
-    setIsHovered(!isHovered)
-    
-  };
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <div className="ui card" onMouseEnter={handleHover} onMouseLeave={handleHover}>
-      {isHovered ? (
+    <div className="ui card" onClick={(()=>setIsClicked(!isClicked))}>
+      {isClicked ? (
         <div className="ui card">
           <div className="card-name">
             <h3>{name}</h3>

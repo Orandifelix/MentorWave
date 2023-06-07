@@ -1,50 +1,85 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import {NavLink} from 'react-router-dom'
 
-const Login = ({ handleLogin }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+// eslint-disable-next-line react/prop-types
+function Login({ handleLogin, handleClick }) {
+  const [loginData, setLoginData] = useState({
+    username: "",
+    password: "",
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setLoginData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-    if (email === "" || password === "") {
-      setError("Please fill in all fields");
-    } else {
-      const userdata = { email: email, password: password };
-      handleLogin(userdata);
-    }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Perform login action with loginData
+    handleLogin();
+    // Reset the form after submission
+    setLoginData({
+      username: "",
+      password: "",
+    });
   };
 
   return (
-    <div className="ui container">
-    <h2>Login</h2>
-    <form className = "ui form">
-        <div className="field">
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+    <div className="ui placeholder segment center-content" style={{margin:  "10% auto", height:"100%", width:"50%"}}>
+      <div className="ui two column very relaxed stackable grid">
+        <div className="column login-column">
+          <form className="ui form" onSubmit={handleSubmit}>
+            <div className="field">
+              <label>Username</label>
+              <div className="ui left icon input">
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="Username"
+                  value={loginData.username}
+                  onChange={handleChange}
+                />
+                <i className="user icon"></i>
+              </div>
+            </div>
+            <div className="field">
+              <label>Password</label>
+              <div className="ui left icon input">
+                <input
+                  type="password"
+                  name="password"
+                  value={loginData.password}
+                  onChange={handleChange}
+                />
+                <i className="lock icon"></i>
+              </div>
+            </div>
+            <button className="ui blue submit button" type="submit">
+              
+            <NavLink to="/"> Login              
+            </NavLink>
+
+            </button> <br/>
+            <div className="field">
+              <p className="ui small header">
+                Forgot password? <a href="#reset">Click here</a>
+              </p>
+            </div>
+          </form>
         </div>
-        <div className="field">
-          <label>Password</label>
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+        <div className="middle aligned column">
+          <div className="ui big secondary positive button" onClick={handleClick}>
+            <i className="signup icon"></i>
+            Sign Up
+          </div>
         </div>
-        <button className="ui button" type="submit" onClick={handleSubmit}>
-          Login
-        </button>
-        {error && <p>{error}</p>}
-    </form>
-  </div>
+      </div>
+      <div className="ui vertical divider">OR</div>
+    </div>
   );
-};
+}
 
 export default Login;
