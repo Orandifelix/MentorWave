@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { BsSoundwave } from "react-icons/bs";
+import { Button } from "semantic-ui-react";
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Home");
@@ -46,9 +47,10 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-button">
-        <button className="navbar-custom-button">
-          Meet Your Mentor/Mentee
-        </button>
+        <Button animated="fade" className="navbar-custom-button">
+          <Button.Content visible>Meet Your Mentor/Mentee</Button.Content>
+          <Button.Content hidden>Sign In</Button.Content>
+        </Button>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ function Landing() {
           Mentorwave, we believe in the limitless possibilities of mentorship,
           creating a space where you can thrive and excel.
         </p>
-        <button className="landing-button">Sign up for free</button>
+        <button className="landing-button">Join Now</button>
       </Container>
       <img
         src="https://www.mentor-pro.com/wp-content/uploads/2020/11/Desktop-1.jpg"

@@ -60,6 +60,7 @@
 .navbar-button button.navbar-custom-button:hover {
   background-color: #39b82c;
   transform: scale(1.05);
+  color: #ffffff;
 }
 
 .navbar-button button.navbar-custom-button:active,
