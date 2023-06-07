@@ -34,7 +34,7 @@ const Navbar = ({handleClick}) => {
           activeClassName="active">
           My Account
         </NavLink>       
-        <div class="right menu">
+        <div className="right menu">
          <Button  onClick={handleClick} animated="fade" className="ui primary button" style={{margin:"20px"}}>
             <Button.Content visible>Meet Your Mentor/Mentee</Button.Content>
             <Button.Content hidden>Sign In</Button.Content>

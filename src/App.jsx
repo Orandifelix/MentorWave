@@ -1,31 +1,31 @@
-
 import NavBar from "./components/home/NavBar";
-import Layout from "./components/home/Layout";
 import Footer from "./components/home/Footer";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Mentors from "./components/mentorspage/Mentors";
-// import Login from "./components/login/Login";
 import { useState } from "react";
 import LoginRegistration from "./components/login/LoginRegistration";
+import Home from "./components/home/Home";
 // import About from "./components/about/About";
 // import UserProfile from "./components/account/Account";
 
-
 function App() {
-const [login, setLogin]= useState("false");
+  const [login, setLogin] = useState(false);
+  const navigate = useNavigate();
 
-if(login==="true"){
-  return <LoginRegistration />;
-}
-  
+  const handleLoginClick = () => {
+    setLogin(!login);
+    navigate("/login");
+  };
+  if (login) {
+    return <LoginRegistration />;
+  }
   return (
     <>
-      <NavBar handleClick={()=>setLogin("true")}  />
+      <NavBar handleClick={handleLoginClick} />
       <Routes>
-        <Route path="/" element={<Layout />} />
+        <Route path="/" element={<Home handleClick={handleLoginClick} />} />
         {/* <Route path="/about" element={<About />} /> */}
-        <Route path="/mentors" element={<Mentors />} />
-        {/* <Route path="/login" element={<Login/>} /> */}
+        <Route path="/mentors" element={<Mentors handleLoginClick={handleLoginClick} />} />
         {/* <Route path="/account" element={<UserProfile />} /> */}
       </Routes>
       <Footer />
