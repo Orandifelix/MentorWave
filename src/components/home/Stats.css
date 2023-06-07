@@ -1,0 +1,70 @@
+.statistics-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  margin: 10px;
+  border: 1px solid rgb(245, 239, 239);
+  border-radius: 10px;
+  background-color: rgb(108, 190, 190);
+}
+
+.stat {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 15px;
+  padding: 15px;
+}
+
+.stat-title {
+  font-size: 22px;
+  color: #423c3c;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+/* Logos */
+
+.organization-logo:hover {
+  transform: scale(1.1);
+}
+
+.organisation-title {
+  font-size: 30px;
+  text-align: center;
+  margin: 30px;
+  padding: 20px;
+}
+
+#organizations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.organization-logo {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: transform 023s ease;
+  border-radius: 50%;
+  animation: moveRightToLeft 15s linear infinite; /* Add animation properties */
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(100%); /* Start position */
+  }
+  100% {
+    transform: translateX(-100%); /* End position */
+  }
+}

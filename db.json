@@ -1,0 +1,88 @@
+{
+  "mentors": [
+    {
+      "id": 1,
+      "name": "Donvine Mugendi",
+      "image": "https://d2win24dv6pngl.cloudfront.net/media/generated/profile-photos/profile-1298663/60cc7564d4a37d90.af828114ed82.jpg",
+      "expertise": "Software Engineering",
+      "industry": "Computer services/information technology",
+      "bio": "Donvine is a software engineer with over 10 years experience building scalable and efficient websites. He is an expert in Javascript ES6, React, Ruby and Rust.",
+      "background": "Donvine is a seasoned software engineer with over 10 years of experience specializing in web development. He has a strong passion for mentoring and sharing his expertise in Javascript ES6, React, Ruby, and Rust. With a focus on scalability and efficiency. Donvine has a proven track record of building robust websites. His deep understanding of Javascript ES6 allows him to develop clean and maintainable code, ensuring optimal performance and readability. As a mentor, Donvine is dedicated to guiding aspiring developers in their learning journey. He excels in explaining complex concepts in a simple and approachable manner, making him an ideal mentor for those seeking to enhance their skills in Javascript ES6, React, Ruby, and Rust. Donvine's experience includes working with notable companies and receiving endorsements from industry professionals. This recognition speaks to his expertise and commitment to delivering high-quality solutions. By choosing Donvine as your mentor, you can benefit from his extensive knowledge and gain valuable insights into software engineering best practice.",
+      "twitter": "donvinemugendi"
+    },
+    {
+      "id": 2,
+      "name": "Cynthia Onzere",
+      "image": "https://d2win24dv6pngl.cloudfront.net/media/generated/profile-photos/profile-1551473/166e33ee6beef4c4.65c6a5a56b36.jpeg",
+      "expertise": "Startup",
+      "industry": "Business consulting/coaching",
+      "bio": "Cynthia is a business consultant with over three years experience helping startup businesses achieve their potential.",
+      "background": "I am a business improvement consultant with 3 years work experience. I am also a trainer in 5s methodology, Kaizen, inventory management, waste elimination and quality control circle concepts and fundamentals. Most businesses I have worked with have experienced engaged employees through quality control circle activities, more sales, profitability and higher process efficiency.",
+      "twitter": "onzere_cynthia"
+    },
+    {
+      "id": 3,
+      "name": "Kelvin Kimaru",
+      "image": "https://d2win24dv6pngl.cloudfront.net/media/generated/profile-photos/profile-1416014/513e93905cbbef7c.d88c6442a8a9.jpg",
+      "expertise": "Accounting and Finance",
+      "industry": "Accounting/Tax Services",
+      "bio": "Kelvin is a certified public accountant with extensive experience in financial accounting and tax planning. He specializes in helping businesses manage their finances and maximize their tax efficiency.",
+      "background": "With over 15 years of experience in the accounting industry, Kelvin has worked with various small and large organizations, providing expert financial advice and ensuring compliance with tax regulations. He is passionate about helping businesses achieve financial success through sound accounting practices.",
+      "twitter": "MentorKim"
+    },
+
+    {
+      "id": 4,
+      "name": "Wilder Ondieki",
+      "image": "https://d2win24dv6pngl.cloudfront.net/media/generated/profile-photos/profile-1544129/c71907abd8fe61c3.2ee03bb59f47.jpg",
+      "expertise": "Sales",
+      "industry": "Digital marketing/e-commerce",
+      "bio": "I am an ANC Cadre, an advocate against Societal Pressure, business analyst, I have hosted entrepreneurship classes for start ups and taught them how to market and promote their businesses on social media",
+      "background": "With a wealth of experience in the accounting field, Jane has worked with multinational corporations, providing expert guidance on tax planning, transfer pricing, and international tax issues. She is committed to helping businesses minimize their tax liabilities and achieve financial growth.",
+      "twitter": "ondiekithementor"
+    },
+
+    {
+      "id": 5,
+      "name": "Kennedy Wangari",
+      "image": "https://media.licdn.com/dms/image/C5603AQFKLF_iHQMTbw/profile-displayphoto-shrink_800_800/0/1641103098842?e=2147483647&v=beta&t=24NmEB4hahgZHKZJ9MrEmt5eKklZ0lSiT5dH8ZEX8bQ",
+      "expertise": "Data science",
+      "industry": "Data Science",
+      "bio": "Kennedy Wangari is an award-winning Data Scientist, and Developer Advocate. He is building better data products and informing intelligent biodiversity and climatic change policy design and development at UNEP",
+      "background": "Kennedy Wangari is an award-winning Data Scientist, and Developer Advocate. He is building better data products and informing intelligent biodiversity and climatic change policy design and development at UNEP.He is the catalyst that brings your brand, stakeholders, data, technology and decisions together to deliver better data products and create delightful customer experiences, resulting in accelerated💰 growth 📈 and impact. Previously, he has worked at NVIDIA, Xetova and SafeBoda to deliver high-impact data products and services –from data strategy consulting to end-to-end project implementation across the marketing, supply chain, finance and environment fields",
+      "twitter": "kennedywangari"
+    },
+    {
+      "id": 6,
+      "name": "Muthoni Wanyoike",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Muthoni_Wanyoike.jpg/640px-Muthoni_Wanyoike.jpg",
+      "expertise": "Data science",
+      "industry": "Data Science",
+      "bio": "Muthoni Wanyoike is a Kenyan data scientist and artificial intelligence (AI) enthusiast, who has been advocating for years for the practical application of AI in Africa. As the co-founder of “Nairobi Women Learning & Data science”, she also encourages African women to get into Sciences Technologies Engineering and Mathematics (STEM).",
+      "background": "Muthoni holds a Bachelor degree in Actuarial sciences from Dedan Kimathi University of Technology in 2015. Soon after her graduation, she co-founded “Nairobi Women Learning & Data Science”, an initiative aiming at encouraging Kenyan women to get into STEM careers. She launched a 4 month-program teaching women how to do data science in R and Python. The program focuses especially on coding. Up to now, it has introduced several Kenyan women to coding.In addition to her commitment to promoting african women in STEM, she also works towards a better adaptation of AI in Africa. Given her experiences, namely as assistant program Manager at « Code for Africa » and Team lead of InstaDeep, a company specialising in AI-based decision making for companies, she has become aware of the challenges of applying AI in Africa. For the data scientist, Africa has actual problems that need to be solved using AI.",
+      "twitter": "wanyoikeKE"
+    },
+
+    {
+      "id": 7,
+      "name": "Sheilah Birgen",
+      "image": "https://media.licdn.com/dms/image/C4D03AQGNkilkf0N3BQ/profile-displayphoto-shrink_800_800/0/1619494200205?e=2147483647&v=beta&t=g0Z02HmdPdmdnAi2Cr93mx_Hf3J9mZ7Cm80pLm_dHYM",
+      "expertise": "Startup",
+      "industry": "Business consulting/coaching",
+      "bio": "Sheilah is an ecosystem builder, Startup and SME growth coach, community convener, and innovation and Strategy Specialist. She has 13+ years of experience in entrepreneurship, innovation, and technology in Africa.",
+      "background": "Sheilah is currently the country Lead of IUK KTN Global Alliance Africa. A part-time Managing Director of Founder's Institute Nairobi and a mentor to several startups across Africa. She developed and executed mLab and iHub developer training, incubation, and acceleration programmes for East African entrepreneurs, iHub Fellows, and mLab incubated startups. Mentored 1,000+ entrepreneurs across the continent. She was named by Root magazine among the top six black women in leading the charge to grow the technology sector across the African continent. Under her leadership in 2015, m: Lab was listed in the top 10 best accelerators 2015-2017 in the World by UBI Global Benchmark, the only accelerator from a developing country.Sheilah is also a Guest Lecturer on Entrepreneurship. Has spoken on African Startup Support, Digital transformation, and community building in Africa in 100+ International Conferences. She has also worked with 20+ international organizations as partners; including World Bank, Spider, USAID, Hivos, Intel, Samsung, Nokia, Google, Facebook, and Governments (Kenya, Finland) to mention a few. She holds an MBA in Global Business & Sustainability: Impact Entrepreneurship and a Master’s Degree in Management",
+      "twitter": "Sheilah Birgen"
+    },
+
+    {
+      "id": 8,
+      "name": "Felix Orandi",
+      "image": "https://d2win24dv6pngl.cloudfront.net/media/generated/profile-photos/profile-1549334/465d12e43cec1d1c.da54dac9c09f.jpg",
+      "expertise": "Sales",
+      "industry": "Digital marketing/e-commerce",
+      "bio": "Felix is a seasoned sales professional with a deep understanding of digital marketing and e-commerce strategies. He helps businesses drive sales and optimize their online presence.",
+      "background": "With years of experience in sales and digital marketing, Felix has worked with both B2B and B2C companies, implementing effective marketing campaigns and optimizing conversion funnels. He is well-versed in SEO, social media marketing, and email marketing.",
+      "twitter": "orandifelix"
+    }
+  ]
+}
