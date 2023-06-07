@@ -1,0 +1,61 @@
+.my-account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  font-weight:500;
+  border:2px solid black;
+ 
+}
+
+
+.form {
+  flex-direction: row;
+  align-items:center;
+  padding: 2rem;
+  /* border-radius: 5px; */
+  /* border:2px solid black; */
+
+
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width:100%;
+}
+.ui.circular.image{
+  border:1px solid rgb(195, 193, 193);
+  border-width:5px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1)
+}
+/* .avatar-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 
+} */
+
+.no-avatar {
+  margin-top: 1rem;
+  font-style: italic;
+  color: gray;
+  border-radius: 50%;
+}
+
+textarea {
+  height: 150px;
+  width: 200px;
+
+}
+  img {
+    width: 30%; 
+    height: auto; 
+  }
+.my-account-container h2{
+
+}
+
+
+  
