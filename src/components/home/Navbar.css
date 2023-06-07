@@ -1,6 +1,3 @@
-
-<<<<<<< HEAD
-=======
 .navbar-container {
   display: flex;
   align-items: center;
@@ -79,4 +76,3 @@
 .navbar-button button.navbar-custom-button:not(:active):focus {
   transition: transform 0.3s ease-out, background-color 0.3s ease;
 }
->>>>>>> 5fea7c83027bc7deaadb8716c6f98bc6cf1ca141
