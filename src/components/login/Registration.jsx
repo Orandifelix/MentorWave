@@ -1,6 +1,4 @@
 import  { useState } from "react";
-// import './Registration.css'
-
 // eslint-disable-next-line react/prop-types
 function Registration({handleRegister}) {
   const [userData, setUserData] = useState({
@@ -46,7 +44,7 @@ function Registration({handleRegister}) {
     })
   }
   return (
-    <div className="ui segment">
+    <div className="ui segment ">
       <div className="ui two column very relaxed grid">
         <div className="column">
           <form className="ui form" onSubmit={handleSubmit}>
@@ -83,7 +81,7 @@ function Registration({handleRegister}) {
               </select>
             </div>
             <div className="ui checkbox">
-              <input type="checkbox" tabindex="0" class="hidden" value={userData.agreedToTerms} onChange={handleChange}/>
+              <input type="checkbox" tabindex="0"  value={userData.agreedToTerms} onChange={handleCheckboxChange}/>
               <label>I agree to the terms and conditions</label>
             </div>
             <div className="field">
