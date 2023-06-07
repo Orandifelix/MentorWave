@@ -1,5 +1,5 @@
 .navbar{
-  background: linear-gradient(45deg,teal, #405DE6, #5851DB)
+  background: linear-gradient(45deg,teal, #405DE6, #5851DB);
 }
 .navbar-logo{
   border-bottom: 2px solid rgb(242, 241, 241);
