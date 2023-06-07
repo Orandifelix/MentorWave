@@ -1,45 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CustomeCard from "./CustomeCard";
 import { Icon } from "semantic-ui-react";
-
-import "./Homecards.css";
 import MentorCard from "./MentorCard";
 
 function HomeCards() {
-  const mentorCards = [
-    {
-      image:
-        "https://plus.unsplash.com/premium_photo-1675967838197-1e91fba82b54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-      name: "Orandi",
-      profession: "Software Engineer",
-    },
-    {
-      image:
-        "https://plus.unsplash.com/premium_photo-1675967838197-1e91fba82b54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-      name: "Orandi",
-      profession: "Software Engineer",
-    },
-    {
-      image:
-        "https://plus.unsplash.com/premium_photo-1675967838197-1e91fba82b54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-      name: "Orandi",
-      profession: "Software Engineer",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-      name: "Orandi",
-      profession: "Software Engineer",
-    },
-  ];
+  const [data, setData] = useState([]);
+  const url = "http://localhost:8001/mentors";
+
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 3;
-  const totalPages = Math.ceil(mentorCards.length / cardsPerPage);
+  const totalPages = Math.ceil(data.length / cardsPerPage);
 
   const startIndex = (currentPage - 1) * cardsPerPage;
   const endIndex = startIndex + cardsPerPage;
-  const currentMentorCards = mentorCards.slice(startIndex, endIndex);
+  const currentMentorCards = data.slice(startIndex, endIndex);
 
   const handlePrevPage = () => {
     setCurrentPage((prevPage) => prevPage - 1);
@@ -79,14 +62,14 @@ function HomeCards() {
         />
       </div>
       <h2 className="ui centered header">Meet our Mentors</h2>
-      <div className="ui segment" style={{color:"black"}}>
+      <div className="ui segment" style={{ color: "black" }}>
         <div className="mentor-cards">
-          {currentMentorCards.map((card, index) => (
+          {currentMentorCards.map((mentor) => (
             <MentorCard
-              key={index}
-              image={card.image}
-              name={card.name}
-              profession={card.profession}
+              key={mentor.id}
+              image={mentor.image}
+              name={mentor.name}
+              profession={mentor.expertise}
             />
           ))}
         </div>
@@ -95,14 +78,16 @@ function HomeCards() {
         <button
           className="ui teal button"
           disabled={currentPage === 1}
-          onClick={handlePrevPage}>
+          onClick={handlePrevPage}
+        >
           &lt;
         </button>
         <span className="ui header">{currentPage}</span>
         <button
           className="ui teal button"
           disabled={currentPage === totalPages}
-          onClick={handleNextPage}>
+          onClick={handleNextPage}
+        >
           &gt;
         </button>
       </div>
@@ -111,3 +96,4 @@ function HomeCards() {
 }
 
 export default HomeCards;
+
