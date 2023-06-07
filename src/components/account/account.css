@@ -1,10 +1,10 @@
 .my-account-container {
-  display: flex;
+  display:flex;
   flex-direction: column;
   align-items: center;
   font-size: 50px;
   font-weight:600;
- 
+
 }
 
 
@@ -42,44 +42,26 @@
     width: 30%; 
     height: auto; 
   }
-  .account-details-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .account-card {
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 400px;
-  }
-  
-  .account-card h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .avatar-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .avatar {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  
-  .details-container p {
-    margin-bottom: 10px;
-    color: #555;
-  }
-  
-  .details-container strong {
+ 
+  .my-account-container h2 {
+    font-style: italic;
     font-weight: bold;
-    color: #222;
+    font-size: 32px;
+    color:rgb(224, 64, 181);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
+  
+  .my-account-container h3 {
+    font-style: italic;
+    font-size: 24px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+.input{
+  border:1px solid black;
+}

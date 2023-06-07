@@ -1,5 +1,5 @@
 import "./App.css";
-// import Layout from "./components/home/Layout";
+import Layout from "./components/home/Layout";
 import MyAccount from "./components/account/MyAccount"
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div>
-      {/* <Layout /> */}
+      <Layout />
       <MyAccount/>
     </div>
   );
