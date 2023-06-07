@@ -1,65 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Stats.css";
-// import '../home./component./src./pu'
 
 function Organizations() {
+  useEffect(() => {
+    const logos = document.querySelectorAll(".organization-logo");
+
+    // Reset animation for each logo when the component mounts
+    logos.forEach((logo) => {
+      logo.style.animation = "none";
+      logo.offsetHeight; // Trigger a reflow, resetting the animation
+      logo.style.animation = null;
+    });
+  }, []);
+
   return (
     <>
       <h2 className="organisation-title">
-        New age Mentoring Platform, Powered by People <br/> from World-Renowned
+        New age Mentoring Platform, Powered by People <br /> from World-Renowned
         Organizations
       </h2>
-      <div className="organizations-container">
-        <img
-          src="https://images.unsplash.com/photo-1590474832723-bb0120875050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-          alt="Logo 1"
-          className="organization-logo"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1590474832723-bb0120875050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-          alt="Logo 1"
-          className="organization-logo"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1590474832723-bb0120875050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-          alt="Logo 1"
-          className="organization-logo"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1590474832723-bb0120875050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-          alt="Logo 1"
-          className="organization-logo"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1590474832723-bb0120875050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-          alt="Logo 1"
-          className="organization-logo"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1590474832723-bb0120875050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-          alt="Logo 1"
-          className="organization-logo"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1590474832723-bb0120875050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-          alt="Logo 1"
-          className="organization-logo"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1590474832723-bb0120875050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-          alt="Logo 1"
-          className="organization-logo"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1590474832723-bb0120875050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-          alt="Logo 1"
-          className="organization-logo"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1590474832723-bb0120875050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-          alt="Logo 1"
-          className="organization-logo"
-        />
+      <div
+        id="organizations-container"
+        className="ui doubling stackable cards segment"
+      >
+        <img src="/apple.png" alt="Logo 1" className="organization-logo" />
+        <img src="/google.png" alt="Logo 1" className="organization-logo" />
+        <img src="/equity.png" alt="Logo 1" className="organization-logo" />
+        <img src="/amazon.png" alt="Logo 1" className="organization-logo" />
+        <img src="/kcb.png" alt="Logo 1" className="organization-logo" />
+        <img src="/safaricom.png" alt="Logo 1" className="organization-logo" />
+        <img src="/stanibic.png" alt="Logo 1" className="organization-logo" />
+        <img src="/moringa.png" alt="Logo 1" className="organization-logo" />
+        <img src="/microsoft.png" alt="Logo 1" className="organization-logo" />
+        <img src="/who.png" alt="Logo 1" className="organization-logo" />
       </div>
     </>
   );

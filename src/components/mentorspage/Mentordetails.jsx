@@ -1,20 +1,48 @@
-import { imageUrl } from "./Mentorscard";
+import Swal from "sweetalert2";
 
-const Mentordetails = ({handleClick}) => {
+
+const Mentordetails = ({handleClick, mentor}) => {
+function handleConversation(){
+  Swal.fire({
+    title:"<b>Sign in Required</b>",
+    icon:"warning",
+    text:"Only registered users can perform this action.",
+    showCloseButton: true,
+    confirmButtonText:"Sign In",
+    confirmButtonColor:"#0F73BD",
+    showCancelButton: true,
+    cancelButtonColor:"red",
+    footer:"Not a registered user?  <a href='#'>Join MentorWave today!</a>"
+  })
+}
+function handleBooking(){
+  Swal.fire({
+    title:"<b>Sign in Required</b>",
+    icon:"warning",
+    text:"Only registered users can perform this action.",
+    showCloseButton: true,
+    confirmButtonText:"Sign In",
+    confirmButtonColor:"#0F73BD",
+    showCancelButton: true,
+    cancelButtonColor:"red",
+    footer:"Not a registered user?  <a href='#'>Join MentorWave today!</a>"
+  })
+}
+
   return (
     <div className="ui fluid segment">
       <div className="ui three column centered stackable padded grid">
         <div className="row custom-bg">
           <div className="column">
             <img
-              src={imageUrl}
+              src={mentor.image}
               alt="mentor image"
               className="ui medium circular image"
             />
           </div>
           <div className="column mentor-content">
             <div className="flex-container">
-              <h2 className="large header">Donvine Mugendi</h2>
+              <h2 className="large header">{mentor.name}</h2>
               <img
                 className="mentor-badge"
                 src="../public/mentorbadge.png"
@@ -23,20 +51,20 @@ const Mentordetails = ({handleClick}) => {
             </div>
             <h3>
               <span>Mentor Industry: </span>
-              Computer services/information technology
+              {mentor.industry}
             </h3>
             <h3>
-              <span>Mentor Expertise: </span>Software engineering
+              <span>Mentor Expertise: </span>{mentor.expertise}
             </h3>
             <button className="ui fluid button" onClick={handleClick}> &#8592; Go Back</button>
           </div>
           <div className="column mentor-content">
             <div className="ui fluid buttons">
-              <button className="ui button primary">
+              <button className="ui button primary" onClick={handleConversation}>
                 <b className="ui colored header">Start a Conversation</b>
               </button>
               <button className="or"></button>
-              <button className="ui teal button"><b className="ui colored header">Book a Meeting</b></button>
+              <button className="ui teal button" onClick={handleBooking}><b className="ui colored header">Book a Meeting</b></button>
             </div>
             <div className="ui padded segment centered">
               <div>
@@ -56,34 +84,8 @@ const Mentordetails = ({handleClick}) => {
       <div className="ui segment">
         <h1 className="custom-header">How i can help</h1>
         <h2>My Professional Background</h2>
-        <div className="mentor-bio">
-          <p>
-            Donvine is a seasoned software engineer with over 10 years of
-            experience specializing in web development. He has a strong passion
-            for mentoring and sharing his expertise in Javascript ES6, React,
-            Ruby, and Rust. With a focus on scalability and efficiency.
-          </p>
-          <p>
-            Donvine has a proven track record of building robust websites. His
-            deep understanding of Javascript ES6 allows him to develop clean and
-            maintainable code, ensuring optimal performance and readability.
-          </p>
-          <p>
-            As a mentor, Donvine is dedicated to guiding aspiring developers in
-            their learning journey. He excels in explaining complex concepts in
-            a simple and approachable manner, making him an ideal mentor for
-            those seeking to enhance their skills in Javascript ES6, React,
-            Ruby, and Rust.
-          </p>
-          <p>
-            {" "}
-            Donvine's experience includes working with notable companies and
-            receiving endorsements from industry professionals. This recognition
-            speaks to his expertise and commitment to delivering high-quality
-            solutions. By choosing Donvine as your mentor, you can benefit from
-            his extensive knowledge and gain valuable insights into software
-            engineering best practice
-          </p>
+        <div className="mentor-bio"id="custom-overflow">
+          {mentor.background}
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
 .statistics-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: center;
   margin: 10px;
   border: 1px solid rgb(245, 239, 239);
   border-radius: 10px;
-  background-color: cadetblue;
+  background-color: rgb(108, 190, 190);
 }
 
 .stat {
@@ -29,32 +29,34 @@
   padding: 15px;
 }
 
-
 /* Logos */
-
-.organizations-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  margin: 20px;
-  padding: 20px;
-}
-
-.organization-logo {
-  width: 180px;
-  height: 180px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
 
 .organization-logo:hover {
   transform: scale(1.1);
 }
 
-
-.organisation-title{
-    font-size: 26px;
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
+.organisation-title {
+  font-size: 30px;
+  text-align: center;
+  margin: 30px;
+  padding: 20px;
 }
+
+#organizations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.organization-logo {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: transform 023s ease;
+  border-radius: 50%;
+  animation: moveRightToLeft 15s linear infinite; /* Add animation properties */
+}
+

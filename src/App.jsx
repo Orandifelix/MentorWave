@@ -1,5 +1,9 @@
 import "./App.css";
+
+
 import LoginRegistration from "./components/login/LoginRegistration";
+
+
 
 function App() {
 
@@ -8,5 +12,6 @@ function App() {
       <LoginRegistration />
     </div>
   );
-  }
+}
+
 export default App;

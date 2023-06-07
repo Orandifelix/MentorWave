@@ -1,16 +1,12 @@
-import React from 'react'
-import Navbar from './NavBar'
-import Footer from './Footer'
-import Content from './Content'
+import React from "react";
+import Home from "./Home";
 
 function Layout() {
   return (
     <div>
-        <Navbar />
-        <Content />
-        <Footer />
+      <Home />
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

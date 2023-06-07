@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Registration.css'
 
 function Registration({handleRegister}) {
   const [userData, setUserData] = useState({

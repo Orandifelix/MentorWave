@@ -1,4 +1,5 @@
 import  { useState } from 'react';
+import './Login.css'
 
 // eslint-disable-next-line react/prop-types
 function Login({ handleLogin, handleClick }) {
@@ -27,7 +28,7 @@ function Login({ handleLogin, handleClick }) {
   };
 
   return (
-    <div className="ui placeholder segment">
+    <div className="ui centred placeholder segment">
       <div className="ui two column very relaxed stackable grid">
         <div className="column">
           <form className="ui form" onSubmit={handleSubmit}>

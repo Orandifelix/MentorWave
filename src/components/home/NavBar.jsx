@@ -1,58 +1,78 @@
-import React, { useState } from "react";
-import { Menu, Segment, Button } from "semantic-ui-react";
+// import React from "react";
+// import "./Navbar.css";
+// import { BsSoundwave } from "react-icons/bs";
+// import { Button } from "semantic-ui-react";
+// import { NavLink } from "react-router-dom";
+
+
+// const Navbar = () => {
+
+//   return (
+//     <div className="navbar-container">
+//       <div className="navbar-logo">
+//         <h1>
+//           Mentor <span>Wave</span>
+//           <BsSoundwave className="waveicon" />
+//         </h1>
+//       </div>
+//       <div className="navbar-links">
+//         <NavLink to="/">Home</NavLink>
+//         <NavLink to="/about">About Us</NavLink>
+//         <NavLink to="/mentors">Find Mentors</NavLink>
+//         <NavLink to="/account">My Account</NavLink>
+//       </div>
+//       <NavLink to="/login" className="navbar-button">
+//         <Button animated="fade" className="navbar-custom-button">
+//           <Button.Content visible>Meet Your Mentor/Mentee</Button.Content>
+//           <Button.Content hidden>Sign In</Button.Content>
+//         </Button>
+//       </NavLink>
+//     </div>
+//   );
+// };
+
+// export default Navbar;
+
+import React from "react";
 import "./Navbar.css";
+import { BsSoundwave } from "react-icons/bs";
+import { Button, Menu } from "semantic-ui-react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [activeItem, setActiveItem] = useState("Home");
-
-  const handleItemClick = (e, { name }) => {
-    setActiveItem(name);
-  };
-
   return (
-    <Segment inverted>
-      <Menu inverted pointing secondary>
+    <Menu className="navbar-container" inverted>
+      <Menu.Item>
         <div className="navbar-logo">
-          {/* <img src="mentorwave-logo.png" alt="MentorWave" /> */}
-          <h1>MentorWave</h1>
+          <h1>
+            Mentor <span>Wave</span>
+            <BsSoundwave className="waveicon" />
+          </h1>
         </div>
-        <div className="navbar-links">
-          <Menu.Item
-            name="Home"
-            active={activeItem === "Home"}
-            onClick={handleItemClick}
-          />
-          <Menu.Item
-            name="About Us"
-            active={activeItem === "About Us"}
-            onClick={handleItemClick}
-          />
-          <Menu.Item
-            name="Find Mentors"
-            active={activeItem === "Find Mentors"}
-            onClick={handleItemClick}
-          />
-          <Menu.Item
-            name="My Account"
-            active={activeItem === "My Account"}
-            onClick={handleItemClick}
-          />
-        </div>
-        <div className="navbar-button">
-          <Menu.Menu position="right">
-            <Button
-              className="ui tiny button navbar-custom-button"
-              positive
-              animated="fade"
-            >
-              <Button.Content visible>Meet Your Mentor/Mentee</Button.Content>
-              <Button.Content hidden>Sign Up</Button.Content>
-            </Button>
-          </Menu.Menu>
-        </div>
-      </Menu>
-    </Segment>
+      </Menu.Item>
+      <Menu.Item position="right" className="navbar-links" fluid>
+        <NavLink to="/" className="item">
+          Home
+        </NavLink>
+        <NavLink to="/about" className="item">
+          About Us
+        </NavLink>
+        <NavLink to="/mentors" className="item">
+          Find Mentors
+        </NavLink>
+        <NavLink to="/account" className="item">
+          My Account
+        </NavLink>
+        <NavLink to="/login" className="item">
+          <Button animated="fade" className="navbar-custom-button">
+            <Button.Content visible>Meet Your Mentor/Mentee</Button.Content>
+            <Button.Content hidden>Sign In</Button.Content>
+          </Button>
+        </NavLink>
+      </Menu.Item>
+    </Menu>
   );
 };
 
 export default Navbar;
+
