@@ -16,8 +16,12 @@ function App() {
     setLogin(!login);
     navigate("/login");
   };
+  const handleLoginForm = () => {
+    setLogin(!login);
+    navigate("/");
+  };
   if (login) {
-    return <LoginRegistration />;
+    return <LoginRegistration handleLoginForm={handleLoginForm}/>;
   }
   return (
     <>

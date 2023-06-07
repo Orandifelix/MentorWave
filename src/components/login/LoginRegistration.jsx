@@ -4,7 +4,7 @@ import Registration from './Registration'
 import 'semantic-ui-css/semantic.min.css';
 import './LoginRegistration.css'
 
-const LoginRegistration = () => {
+const LoginRegistration = ({handleLoginForm}) => {
 
 
   const [userIsRegistered, setUserIsRegistered] = useState(true)
@@ -32,7 +32,7 @@ const LoginRegistration = () => {
     <div className='ui container' style={{marginBottom:"25%"}}>
       {!userIsLoggedIn ? (
         userIsRegistered ? (
-          <Login handleLogin={handleLogin} handleClick={handleClick}/>
+          <Login handleLogin={handleLoginForm} handleClick={handleClick}/>
         ) : (
           <Registration handleRegister={handleRegister} handleClick={handleClick}/>
         )
