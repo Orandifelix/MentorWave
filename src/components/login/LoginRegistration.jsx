@@ -2,7 +2,6 @@ import { useState } from "react";
 // import {NavLink} from 'react-router-dom'
 import Login from "./Login";
 import Registration from "./Registration";
-import Layout from "../home/Layout";
 import Home from "../home/Home";
 import "semantic-ui-css/semantic.min.css";
 import "./LoginRegistration.css";
