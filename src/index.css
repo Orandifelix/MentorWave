@@ -6,7 +6,6 @@
   font-family: "Source Sans Pro", Helvetica, Roboto, Arial, sans-serif;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
 :root {
@@ -25,3 +24,11 @@ ul li {
   list-style: none;
 }
 
+#card{
+  overflow: hidden;
+  height: auto;
+} 
+.landing-image{
+  width: 250px;
+
+}
