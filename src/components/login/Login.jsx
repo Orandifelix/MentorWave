@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
+// eslint-disable-next-line react/prop-types
 function Login({ handleLogin, handleClick }) {
   const [loginData, setLoginData] = useState({
     username: '',

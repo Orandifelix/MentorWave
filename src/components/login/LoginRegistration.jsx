@@ -1,11 +1,11 @@
-import React,{useState} from 'react'
+import {useState} from 'react'
 import Login from './Login'
 import Registration from './Registration'
 import 'semantic-ui-css/semantic.min.css';
 
 const LoginRegistration = () => {
 
-  
+
   const [userIsRegistered, setUserIsRegistered] = useState(true)
   const [userIsLoggedIn, setUserIsLoggedIn] = useState(false)
 
