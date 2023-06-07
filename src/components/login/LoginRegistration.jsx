@@ -5,6 +5,7 @@ import 'semantic-ui-css/semantic.min.css';
 
 const LoginRegistration = () => {
 
+  
   const [userIsRegistered, setUserIsRegistered] = useState(true)
   const [userIsLoggedIn, setUserIsLoggedIn] = useState(false)
 
