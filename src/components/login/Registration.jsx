@@ -1,6 +1,8 @@
-import  { useState } from "react";
-// eslint-disable-next-line react/prop-types
-function Registration({handleRegister}) {
+import { useState } from "react";
+// import './Registration.css'
+
+
+function Registration({ handleRegister, handleLoginForm }) {
   const [userData, setUserData] = useState({
     firstName: "",
     lastName: "",
