@@ -11,10 +11,10 @@ function TeamMembers() {
         {teamMembers.map((member, index) => (
           <div key={index} className="ui card">
             <div className='card content'>
-              <div className='flex-container'>
+              <div className='ui flex container custom-flex-container'>
             <img src={member.image} className='ui circular image' id='custom-image'/>
             <h2 className='custom-h2'>{member.name}</h2>
-            <h4 className='custom-h2'>{member.role}</h4>
+            <h4>{member.role}</h4>
             </div>
             </div>
             <p className="card content">{member.background}</p>

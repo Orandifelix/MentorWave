@@ -1,5 +1,5 @@
 
-.flex-container{
+.custom-flex-container{
   display: flex;
   justify-content: center;
   text-align: center;
@@ -34,4 +34,8 @@
   font-size: 1.3em;
   margin: 0 38%;
   line-height: 1.8;
+}
+.custom-h2{
+  font-size: 20px;
+  text-align: center;
 }
