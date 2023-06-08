@@ -10,34 +10,34 @@ const Navbar = ({handleClick}) => {
       <div className="ui secondary fluid menu">
         <div className="menu item">
         <div className="navbar-logo">
-          <NavLink to="/"className='ui header '>Mentor<span>Wave</span><BsSoundwave/></NavLink>
+          <NavLink to="/"className='ui header'>Mentor<span>Wave</span><BsSoundwave/></NavLink>
         </div>
         </div>
         <NavLink to="/" className="ui header item" activeClassName="active">
-          Home
+          <b>Home</b>
         </NavLink>
         <NavLink
           to="/about"
           className="ui header item"
           activeClassName="active">
-          About
+          <b>About</b>
         </NavLink>
         <NavLink
           to="/mentors"
           className="ui header item"
           activeClassName="active">
-          Find Mentors
+         <b>Mentors</b>
         </NavLink>        
         <NavLink
-          to="/login"
+          to="/account"
           className="ui header item"
           activeClassName="active">
-          My Account
+          <b>My Account</b>
         </NavLink>       
         <div className="right menu">
          <Button  onClick={handleClick} animated="fade" className="ui primary button" style={{margin:"20px"}}>
             <Button.Content visible>Meet Your Mentor/Mentee</Button.Content>
-            <Button.Content hidden>Sign In</Button.Content>
+            <Button.Content hidden><i className="lock icon"></i>Sign In</Button.Content>
           </Button>
         </div>
       </div>

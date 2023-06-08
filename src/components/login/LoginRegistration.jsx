@@ -36,10 +36,7 @@ const LoginRegistration = ({handleLoginForm}) => {
         userIsRegistered ? (
           <Login handleLogin={handleLoginForm} handleClick={handleClick}/>
         ) : (
-          <Registration
-            handleRegister={handleRegister}
-            handleClick={handleClick}
-          />
+          <Registration handleRegister={handleRegister}handleLogin={handleLoginForm} handleClick={handleClick}/>
         )
       ) : (
         <div>
