@@ -74,7 +74,7 @@ function Registration({handleRegister}) {
               </div>
             </div>
             <div className="four wide field">
-              <select name="Role" value={userData.role} onChange={handleChange}>
+              <select name="role" value={userData.role} onChange={handleChange}>
                 <option value="">Role</option>
                 <option value="1">Mentee</option>
                 <option value="0">Mentor</option>
