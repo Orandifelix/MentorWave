@@ -7,7 +7,7 @@ import { useState } from "react";
 import LoginRegistration from "./components/login/LoginRegistration";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
-// import UserProfile from "./components/account/Account";
+import MyAccount from "./components/account/MyAccount";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -31,7 +31,7 @@ function App() {
         <Route path="/" element={<Home handleClick={handleLoginClick} />} />
         <Route path="/about" element={<About />} />
         <Route path="/mentors" element={<Mentors handleLoginClick={handleLoginClick} />} />
-        {/* <Route path="/account" element={<UserProfile />} /> */}
+        <Route path="/account" element={<MyAccount />} />
       </Routes>
       <Footer />
     </>
