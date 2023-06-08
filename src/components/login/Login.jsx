@@ -40,6 +40,7 @@ function Login({ handleLogin, handleClick }) {
                   placeholder="Username"
                   value={loginData.username}
                   onChange={handleChange}
+                  required
                 />
                 <i className="user icon"></i>
               </div>
@@ -52,6 +53,7 @@ function Login({ handleLogin, handleClick }) {
                   name="password"
                   value={loginData.password}
                   onChange={handleChange}
+                  required
                 />
                 <i className="lock icon"></i>
               </div>

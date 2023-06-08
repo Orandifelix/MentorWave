@@ -5,12 +5,23 @@ import Registration from "./Registration";
 import Home from "../home/Home";
 import "semantic-ui-css/semantic.min.css";
 import "./LoginRegistration.css";
+import Swal from "sweetalert2";
 
+// eslint-disable-next-line react/prop-types
 const LoginRegistration = ({handleLoginForm}) => {
 
 
   const [userIsRegistered, setUserIsRegistered] = useState(true)
   const [userIsLoggedIn, setUserIsLoggedIn] = useState(false)
+  const [userData, setUserData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    role: "",
+    agreedToTerms: false,
+  });
 
   const handleClick = () => {
     setUserIsRegistered(false);
@@ -24,8 +35,15 @@ const LoginRegistration = ({handleLoginForm}) => {
     setUserIsLoggedIn(false);
   };
   const handleRegister = () => {
-    setUserIsRegistered(true);
-    // setUserIsLoggedIn(true)
+    if(userData.password ===userData.confirmPassword) {
+      setUserIsRegistered(true);
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Passwords do not match",
+      });
+    }
   };
 
   return (
@@ -36,10 +54,7 @@ const LoginRegistration = ({handleLoginForm}) => {
         userIsRegistered ? (
           <Login handleLogin={handleLoginForm} handleClick={handleClick}/>
         ) : (
-          <Registration
-            handleRegister={handleRegister}
-            handleClick={handleClick}
-          />
+          <Registration handleRegister={handleRegister}handleLogin={handleLoginForm} handleClick={handleClick} userData={userData} setUserData={setUserData}/>
         )
       ) : (
         <div>
