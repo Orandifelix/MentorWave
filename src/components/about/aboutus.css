@@ -1,0 +1,79 @@
+/* 
+.team-members-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-size: 15px;
+}
+
+.member-role {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.member-background {
+  margin-top: 10px;
+  color: #666;
+} */
+
+/* .custom-h2{
+  text-align: center;
+}
+
+#custom-image{
+  margin: auto;
+  inset: 0;
+} */
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.ui.italized.header {
+  font-style: italic;
+  color: rgb(2, 34, 2);
+}
+.card.content.header {
+  font-weight: bold;
+  color: rgb(113, 5, 39);
+  text-align: center;
+}
+.ui.bold.header {
+  color: white;
+}
+.ui.header strong {
+  color: rgb(6, 175, 175);
+  font-weight: 900;
+}
+.content-list p {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: cursive;
+}
+.content-list ul li {
+  text-align: justified;
+  font-size: 1.3em;
+  margin: 0 38%;
+  line-height: 1.8;
+}

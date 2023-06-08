@@ -101,6 +101,7 @@
   align-items: center;
   margin: 20px;
   flex-wrap: wrap;
+  transition: all 0.3s ease-out;
 }
 
 .card-name h3 {
