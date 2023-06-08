@@ -6,7 +6,6 @@
   font-family: "Source Sans Pro", Helvetica, Roboto, Arial, sans-serif;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  transition: all 0.3s ease;
 }
 
 :root {

@@ -62,7 +62,7 @@ function HomeCards() {
         />
       </div>
       <h2 className="ui centered header">Meet our Mentors</h2>
-      <div className="ui segment" style={{ color: "black" }}>
+      <div className="ui segment">
         <div className="mentor-cards">
           {currentMentorCards.map((mentor) => (
             <MentorCard
