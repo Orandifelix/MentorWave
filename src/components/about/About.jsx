@@ -6,20 +6,16 @@ import Values from "./Values";
 import TeamMembers from "./TeamMembers";
 import Testimonials from "./Testimonials";
 
-
-function App() {
+function About() {
   return (
     <div>
-     
       <Mission/>
       <Vision/>
       <Values/>
       <TeamMembers/>
       <Testimonials/>
-
-
     </div>
   );
 }
 
-export default App;
+export default About;

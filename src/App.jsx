@@ -5,7 +5,7 @@ import Mentors from "./components/mentorspage/Mentors";
 import { useState } from "react";
 import LoginRegistration from "./components/login/LoginRegistration";
 import Home from "./components/home/Home";
-// import About from "./components/about/About";
+import About from "./components/about/About";
 // import UserProfile from "./components/account/Account";
 import "./App.css";
 
@@ -28,7 +28,7 @@ function App() {
       <NavBar handleClick={handleLoginClick} />
       <Routes>
         <Route path="/" element={<Home handleClick={handleLoginClick} />} />
-        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/about" element={<About />} />
         <Route path="/mentors" element={<Mentors handleLoginClick={handleLoginClick} />} />
         {/* <Route path="/account" element={<UserProfile />} /> */}
       </Routes>
