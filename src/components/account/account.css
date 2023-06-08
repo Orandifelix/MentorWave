@@ -38,16 +38,17 @@
 .flex.container h4 p {
   color: black;
 }
-.ui.segment.form {
-  margin: 20px auto;
+.custom-account-form {
+  margin: 20px 25%;
   width: 50%;
   inset: 0;
+  padding: 20px;
   border: 0.5px solid rgb(204, 197, 197);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-}
+} 
 .ui.form {
   border: 0.5px solid rgb(236, 228, 228);
-}
+} 
 #mentee-image {
   max-width: 400px;
   max-height: 400px;

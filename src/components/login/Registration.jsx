@@ -35,7 +35,7 @@ function Registration({ handleRegister, handleLoginForm, userData, setUserData }
   return (
     <div
       className="ui padded container"
-      style={{ margin: "20px auto", width: "50%" }}>
+      style={{width: "70%" }}>
       <h2 className="ui padded header centered">Sign Up</h2>
       <div className="ui attached message">
         <div><h1>Welcome to MentorWave</h1></div>

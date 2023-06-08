@@ -41,7 +41,7 @@ const MyAccount = () => {
           </div>
         
           <form className="ui form" onSubmit={handleSubmit}>
-            <div className="ui segment form">
+            <div className="custom-account-form">
             <div className="form-group">
               {avatar ? (
                 <img className="ui circular image" src={avatar} alt="Avatar" />
