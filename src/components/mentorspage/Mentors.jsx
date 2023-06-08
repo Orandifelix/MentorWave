@@ -5,7 +5,7 @@ import Mentorscard from "./Mentorscard";
 import Mentordetails from "./Mentordetails";
 import Filter from "./Filter";
 
-const baseUrl = "http://localhost:8001/mentors";
+const baseUrl = "https://api.jsonbin.io/v3/b/6481e2bf8e4aa6225eab25c4";
 
 const Mentors = ({ handleLoginClick }) => {
   const [mentors, setMentors] = useState([]);
@@ -19,7 +19,7 @@ const Mentors = ({ handleLoginClick }) => {
       (async () => {
         const response = await Axios.get(baseUrl);
         if (response.status === 200) {
-          setMentors(response.data);
+          setMentors(response.data.record.mentors);
         } else throw new Error("Fetch failed with status " + response.status);
       })();
     } catch (error) {

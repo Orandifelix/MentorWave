@@ -5,12 +5,12 @@ import MentorCard from "./MentorCard";
 
 function HomeCards() {
   const [data, setData] = useState([]);
-  const url = "http://localhost:8001/mentors";
+  const url = "https://api.jsonbin.io/v3/b/6481e2bf8e4aa6225eab25c4";
 
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setData(data))
+      .then((data) => setData(data.record.mentors))
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
