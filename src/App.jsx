@@ -1,3 +1,4 @@
+
 import NavBar from "./components/home/NavBar";
 import Footer from "./components/home/Footer";
 import { Route, Routes, useNavigate } from "react-router-dom";
@@ -7,6 +8,12 @@ import LoginRegistration from "./components/login/LoginRegistration";
 import Home from "./components/home/Home";
 // import About from "./components/about/About";
 // import UserProfile from "./components/account/Account";
+import "./App.css";
+
+
+
+function App() {
+
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -24,6 +31,7 @@ function App() {
     return <LoginRegistration handleLoginForm={handleLoginForm}/>;
   }
   return (
+
     <>
       <NavBar handleClick={handleLoginClick} />
       <Routes>
@@ -36,5 +44,7 @@ function App() {
     </>
   );
 }
+
+  }
 
 export default App;
