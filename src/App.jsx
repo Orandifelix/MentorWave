@@ -7,11 +7,11 @@ import LoginRegistration from "./components/login/LoginRegistration";
 import Home from "./components/home/Home";
 // import About from "./components/about/About";
 // import UserProfile from "./components/account/Account";
+import "./App.css";
 
 function App() {
   const [login, setLogin] = useState(false);
   const navigate = useNavigate();
-
   const handleLoginClick = () => {
     setLogin(!login);
     navigate("/login");
