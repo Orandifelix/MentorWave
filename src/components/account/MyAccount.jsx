@@ -417,12 +417,17 @@ const MyAccount = () => {
             </div>
             <div className="form-group">
               <label htmlFor="mentor-preferences">Mentor preferences:</label>
-              <input
+               <select
                 id="mentor-preferences"
-                type="text"
                 value={mentorPreference}
                 onChange={(e) => setMentorPreference(e.target.value)}
-              />
+              >
+                <option value="">Select a preference</option>
+                <option value="software developer">Software Developer</option>
+                <option value="finance analyst">Finance Analyst</option>
+                <option value="accountant">Accountant</option>
+                <option value="advocate">Advocate</option>
+              </select>
             </div>
             <div className="form-group">
               <button className="ui fluid primary button" type="submit">

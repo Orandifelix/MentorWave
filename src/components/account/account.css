@@ -4,16 +4,10 @@
   align-items: center;
   font-size: 50px;
   font-weight:600;
+  font-size: 100px;
 
 }
 
-
-.form {
-  flex-direction: row;
-  align-items:center;
-  padding: 2rem;
-
-}
 .form-group {
   display: flex;
   flex-direction: column;
@@ -47,7 +41,7 @@
     font-style: italic;
     font-weight: bold;
     font-size: 32px;
-    color:rgb(224, 64, 181);
+    color:rgb(4, 162, 147);
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -60,8 +54,6 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
-.input{
-  border:1px solid black;
-}
