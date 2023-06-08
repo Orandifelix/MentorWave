@@ -1,0 +1,27 @@
+#landing h1{
+  margin:auto;
+  font-size: 2.5em;
+  color:rgb(7, 56, 7);
+  padding:20px;
+}
+#landing h1 span{
+  color:goldenrod;
+  font-weight: 900;
+}
+#landing h3{
+  margin:auto;
+  padding:20px;
+  font-size: 1.6em;
+  font-weight: normal;
+  font-family:Roboto, Helvetica, sans-serif;
+  line-height: 1.8em;
+}
+#landing button{
+  margin:0 35%;
+  padding:20px;
+  border-radius: 10px;
+
+}
+b{
+  font-size: 1.3em;
+}

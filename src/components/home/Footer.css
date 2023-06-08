@@ -1,0 +1,136 @@
+.footer {
+  padding: 10px;
+  font-size: 1.5em;
+  text-align: center;
+  color:white;
+  background: linear-gradient(to right, teal, green, rgb(21, 96, 182));
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, teal, green);
+  color: white;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-size: 1.2em;
+  
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.row-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 10px;
+}
+
+.row-links ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  line-height: 2em;
+}
+
+.row-links ul li a:hover {
+  color: #f2cc22;
+}
+
+.row-links ul li a:active {
+  color: #0d88f4;
+}
+
+.row-links ul li {
+  margin: 3px;
+  padding: 2px;
+}
+
+form {
+  position: relative;
+}
+
+.text-icon {
+  display: flex;
+  align-items: center;
+}
+
+.text-icon a {
+  margin: 5px;
+}
+
+.text-icon p {
+  margin: 5px;
+  font-size: 14px;
+}
+
+.row-links input {
+  background-color: #ffffff;
+  color: black;
+  border-radius: 20px;
+  padding: 9px;
+  width: 100%;
+}
+
+.row-links h5 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+@media only screen and (min-height: 100vh) {
+  footer {
+    display: block;
+  }
+}
+
+.row-links button {
+  background-color: #0bcff1;
+  border-radius: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 38px;
+  width: 48px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+}
+.row-links button:hover {
+  background-color: #09b4d9;
+  transform: scale(1.05);
+}
+
+.row-links button:active,
+.row-links button:focus {
+  background-color: #0891a8;
+  transform: scale(0.95);
+}
+
+.row-links button:active:focus {
+  transform: scale(0.95);
+  transition: transform 0.3s ease-out, background-color 0.3s ease;
+}
+
+.row-links button:not(:active):focus {
+  transition: transform 0.3s ease-out, background-color 0.3s ease;
+}

@@ -1,0 +1,19 @@
+.navbar{
+  background: linear-gradient(45deg,teal, #405DE6, #5851DB);
+}
+.navbar-logo{
+  border-bottom: 2px solid rgb(242, 241, 241);
+  border-right: 2px solid rgb(92, 7, 55);
+  background-color: teal;
+  padding:5px;
+  font-size: 2em;
+  font-weight: 900;
+  border-radius: 10px 16px 2px 16px;
+}
+.navbar-logo span{
+  color:goldenrod;
+  font-family: cursive;
+}
+.navbar b{
+  color:white;
+}

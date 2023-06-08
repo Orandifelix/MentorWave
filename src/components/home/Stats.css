@@ -1,0 +1,39 @@
+.column{
+  color:white;
+  }
+.column h1{
+  font-size: 2em;
+  font-weight: 900;
+  margin:10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logos */
+.organization-logo:hover {
+  transform: scale(1.1);
+}
+
+.organisation-title {
+  font-size: 30px;
+  text-align: center;
+  margin: 30px;
+  padding: 20px;
+}
+
+#organizations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.organization-logo {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: transform 023s ease;
+  border-radius: 50%;
+  animation: moveRightToLeft 15s linear infinite; /* Add animation properties */
+} */
