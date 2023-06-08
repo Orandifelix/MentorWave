@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
-import './account.css';
-import Swal from 'sweetalert2';
-import AccountDetails from './AccountDetails';
+import React, { useState } from "react";
+import "./account.css";
+import Swal from "sweetalert2";
+import AccountDetails from "./AccountDetails";
 
 const MyAccount = () => {
-  const [avatar, setAvatar] = useState("https://media.istockphoto.com/id/1016744004/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=mB6A9idhtEtsFXphs1WVwW_iPBt37S2kJp6VpPhFeoA=");
-  const [userName, setUserName] = useState('');
-  const [profession, setProfession] = useState('');
-  const [menteeBio, setMenteeBio] = useState('');
-  const [menteeGoal, setMenteeGoal] = useState('');
-  const [mentorPreference, setMentorPreference] = useState('');
+  const [avatar, setAvatar] = useState(
+    "https://media.istockphoto.com/id/1016744004/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=mB6A9idhtEtsFXphs1WVwW_iPBt37S2kJp6VpPhFeoA="
+  );
+  const [userName, setUserName] = useState("");
+  const [profession, setProfession] = useState("");
+  const [menteeBio, setMenteeBio] = useState("");
+  const [menteeGoal, setMenteeGoal] = useState("");
+  const [mentorPreference, setMentorPreference] = useState("");
   const [showDetails, setShowDetails] = useState(false);
 
   const handlePhotoUpload = (e) => {
@@ -23,19 +25,23 @@ const MyAccount = () => {
       text: "Your account details have been updated successfully",
       title: "Welcome To MentorWave!",
       icon: "success",
-      showCloseButton: true
+      showCloseButton: true,
     });
-
     setShowDetails(true);
   };
 
   return (
     <div className="my-account-container">
-      {!showDetails ? (
+      {!showDetails?   (
         <>
-          <h2>Join The MentorWave Community</h2>
-          <h3>Kindly fill this form to continue</h3>
+        <div className="ui raised segment">
+        <div className="ui inverted teal segment">
+            <h2>Join The MentorWave Community</h2>
+            <h3>Tell us more about yourself. Kindly fill this form to continue</h3>
+          </div>
+        
           <form className="ui form" onSubmit={handleSubmit}>
+            <div className="ui segment form">
             <div className="form-group">
               {avatar ? (
                 <img className="ui circular image" src={avatar} alt="Avatar" />
@@ -77,8 +83,7 @@ const MyAccount = () => {
                 id="mentee-bio"
                 className="ui fluid container"
                 value={menteeBio}
-                onChange={(e) => setMenteeBio(e.target.value)}
-              ></textarea>
+                onChange={(e) => setMenteeBio(e.target.value)}></textarea>
             </div>
             <div className="form-group">
               <label htmlFor="mentee-goal">Mentoring Goal:</label>
@@ -91,25 +96,31 @@ const MyAccount = () => {
             </div>
             <div className="form-group">
               <label htmlFor="mentor-preferences">Mentor preferences:</label>
-               <select
+              <select
                 id="mentor-preferences"
                 value={mentorPreference}
-                onChange={(e) => setMentorPreference(e.target.value)}
-              >
+                onChange={(e) => setMentorPreference(e.target.value)}>
                 <option value="">Select a preference</option>
-                <option value="software developer">Accounting/Tax services</option>
+                <option value="software developer">
+                  Accounting/Tax services
+                </option>
                 <option value="finance analyst">Data Science</option>
-                <option value="accountant">Computer services/information technology</option>
+                <option value="accountant">
+                  Computer services/information technology
+                </option>
                 <option value="advocate">Business consulting/coaching</option>
                 <option value="advocate">Digital marketing/e-commerce</option>
               </select>
             </div>
+            <br></br>
             <div className="form-group">
               <button className="ui fluid primary button" type="submit">
                 Save Changes
               </button>
             </div>
+            </div>
           </form>
+          </div>
         </>
       ) : (
         <AccountDetails
@@ -118,7 +129,7 @@ const MyAccount = () => {
             profession,
             menteeBio,
             menteeGoal,
-            mentorPreference
+            mentorPreference,
           }}
           avatar={avatar}
         />
