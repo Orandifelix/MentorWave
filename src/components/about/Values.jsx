@@ -15,7 +15,7 @@ function Values() {
             drive meaningful results.
           </li>
           <li className="ui header">
-            <strong>Excellence: </strong>Fostering a culture of empathy and
+            <strong>Empathy: </strong>Fostering a culture of empathy and
             understanding towards the needs, challenges, and aspirations of
             mentees. MentorWave recognizes the importance of empathy in building
             strong mentor-mentee relationships and creating a supportive
@@ -29,7 +29,7 @@ function Values() {
             diverse perspectives lead to greater innovation and success.
           </li>
           <li className="ui header">
-            <strong>Collaboration: </strong>Striving to make a positive and
+            <strong>Impact: </strong>Striving to make a positive and
             meaningful impact on the lives of mentees, companies, and the
             broader community. MentorWave is driven by the desire to empower
             individuals, drive growth, and contribute to positive change in the
