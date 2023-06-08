@@ -29,7 +29,7 @@ const Navbar = ({handleClick}) => {
          <b>Mentors</b>
         </NavLink>        
         <NavLink
-          to="/login"
+          to="/account"
           className="ui header item"
           activeClassName="active">
           <b>My Account</b>
