@@ -27,13 +27,12 @@ const MyAccount = () => {
       icon: "success",
       showCloseButton: true,
     });
-
     setShowDetails(true);
   };
 
   return (
     <div className="my-account-container">
-      {!showDetails ? (
+      {!showDetails?   (
         <>
         <div className="ui raised segment">
         <div className="ui inverted teal segment">
