@@ -104,12 +104,12 @@ const MyAccount = () => {
                 <option value="software developer">
                   Accounting/Tax services
                 </option>
-                <option value="finance analyst">Data Science</option>
-                <option value="accountant">
+                <option value="Data Science">Data Science</option>
+                <option value="Computer services/information technology">
                   Computer services/information technology
                 </option>
-                <option value="advocate">Business consulting/coaching</option>
-                <option value="advocate">Digital marketing/e-commerce</option>
+                <option value="Business consulting/coaching">Business consulting/coaching</option>
+                <option value="Digital marketing /e-commerce">Digital marketing/e-commerce</option>
               </select>
             </div>
             <br></br>
