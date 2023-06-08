@@ -9,9 +9,9 @@ const AccountDetails = ({ details, avatar }) => {
         </h1>
       </div>
       {/* parent container for the two divs */}
-      <div className="flex container">
+      <div className="flex container custom-container">
         {/* first column for the grid */}
-        <div className="column">
+        <div className="custom-column">
           <div className="image-bio">
             <img className="ui fluid circular image" id="mentee-image" src={avatar} alt="Avatar" />
             <h2 className="ui header">About Me</h2>
@@ -26,28 +26,28 @@ const AccountDetails = ({ details, avatar }) => {
           </div>
         </div>
         {/* second column for the grid */}
-        <div className="column">
+        <div className="custom-column">
           <div className="info">
             <h4>
-              Username: <span className="custom-container">{details.userName}</span>
+              Username: <span className="custom-account-container">{details.userName}</span>
             </h4>
-            <h4>Email: <span className="custom-container"> thismentor@gmail.com</span></h4>
+            <h4>Email: <span className="custom-account-container"> thismentor@gmail.com</span></h4>
             <h4>
-              Profession: <span className="custom-container">{details.profession}</span>{" "}
+              Profession: <span className="custom-account-container">{details.profession}</span>{" "}
             </h4>
             <h4>
-              My Mentoring Goals:<span className="custom-container"> {details.menteeGoal}</span>
+              My Mentoring Goals:<span className="custom-account-container"> {details.menteeGoal}</span>
             </h4>
             <h4>
               My Mentor Preferences
               <span>
-                <ul className="custom-container">
+                <ul className="custom-account-container">
                   <li>{details.mentorPreference}</li>
                 </ul>
               </span>
             </h4>
             <h4>
-              My Meetings: <span className="custom-container">No Scheduled Meetings Available</span>
+              My Meetings: <span className="custom-account-container">No Scheduled Meetings Available</span>
             </h4>
             <h4>My Socials:
             </h4>
