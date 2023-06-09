@@ -28,7 +28,16 @@ const LoginRegistration = ({handleLoginForm}) => {
   };
   //handle login
   const handleLogin = () => {
-    setUserIsLoggedIn(true);
+    //logic to authenticate user
+    if (userData.password === userData.confirmPassword) {
+      setUserIsLoggedIn(true);
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Passwords do not match",
+      });
+    }
   };
   //handle logout
   const handleLogout = () => {
@@ -36,6 +45,11 @@ const LoginRegistration = ({handleLoginForm}) => {
   };
   const handleRegister = () => {
     if(userData.password ===userData.confirmPassword) {
+      Swal({
+        icon: "success",
+        title: "Registration Successful",
+        text: "Please login to continue",
+      })
       setUserIsRegistered(true);
     } else {
       Swal.fire({
