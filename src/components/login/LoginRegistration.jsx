@@ -43,20 +43,19 @@ const LoginRegistration = ({handleLoginForm}) => {
   const handleLogout = () => {
     setUserIsLoggedIn(false);
   };
+
+
   const handleRegister = () => {
-    if(userData.password ===userData.confirmPassword) {
-      Swal({
-        icon: "success",
-        title: "Registration Successful",
-        text: "Please login to continue",
-      })
+    if (userData.password === userData.confirmPassword) {
       setUserIsRegistered(true);
+      return true; // Indicate successful registration
     } else {
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "Passwords do not match, please try again",
       });
+      return false; // Indicate registration failure
     }
   };
 

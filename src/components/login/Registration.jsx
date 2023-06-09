@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 // import { useState } from "react";
 // import './Registration.css'
-
+import Swal from "sweetalert2";
 
 // eslint-disable-next-line react/prop-types
 function Registration({ handleRegister, handleLoginForm, userData, setUserData }) {
@@ -18,19 +18,25 @@ function Registration({ handleRegister, handleLoginForm, userData, setUserData }
 
 
 
-  //handle submit
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleRegister();
-    setUserData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      role: "",
-      agreedToTerms: false,
-    });
+    const isRegistered = handleRegister();
+    if (isRegistered) {
+      Swal.fire({
+        icon: "success",
+        title: "Registration Successful",
+        text: "Thank you for registering!",
+      });
+      setUserData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        role: "",
+        agreedToTerms: false,
+      });
+    }
   };
   return (
     <div
