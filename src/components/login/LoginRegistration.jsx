@@ -41,7 +41,7 @@ const LoginRegistration = ({handleLoginForm}) => {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Passwords do not match",
+        text: "Passwords do not match, please try again",
       });
     }
   };
