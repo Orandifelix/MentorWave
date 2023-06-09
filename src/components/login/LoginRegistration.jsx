@@ -8,11 +8,9 @@ import "./LoginRegistration.css";
 import Swal from "sweetalert2";
 
 // eslint-disable-next-line react/prop-types
-const LoginRegistration = ({handleLoginForm}) => {
-
-
-  const [userIsRegistered, setUserIsRegistered] = useState(true)
-  const [userIsLoggedIn, setUserIsLoggedIn] = useState(false)
+const LoginRegistration = ({ handleLoginForm }) => {
+  const [userIsRegistered, setUserIsRegistered] = useState(true);
+  const [userIsLoggedIn, setUserIsLoggedIn] = useState(false);
   const [userData, setUserData] = useState({
     firstName: "",
     lastName: "",
@@ -35,7 +33,7 @@ const LoginRegistration = ({handleLoginForm}) => {
     setUserIsLoggedIn(false);
   };
   const handleRegister = () => {
-    if(userData.password ===userData.confirmPassword) {
+    if (userData.password === userData.confirmPassword) {
       setUserIsRegistered(true);
     } else {
       Swal.fire({
@@ -47,24 +45,30 @@ const LoginRegistration = ({handleLoginForm}) => {
   };
 
   return (
-    <section className='ui raised segment'>
-    <div className='ui inverted teal segment'>
-    <div className='ui container' style={{marginBottom:"25%"}}>
-      {!userIsLoggedIn ? (
-        userIsRegistered ? (
-          <Login handleLogin={handleLoginForm} handleClick={handleClick}/>
-        ) : (
-          <Registration handleRegister={handleRegister}handleLogin={handleLoginForm} handleClick={handleClick} userData={userData} setUserData={setUserData}/>
-        )
-      ) : (
-        <div>
-          <Home handleLogout={handleLogout} />
+    <section className="ui raised segment">
+      <div className="ui inverted teal segment">
+        <div className="ui container" style={{ marginBottom: "25%" }}>
+          {!userIsLoggedIn ? (
+            userIsRegistered ? (
+              <Login handleLogin={handleLoginForm} handleClick={handleClick} />
+            ) : (
+              <Registration
+                handleRegister={handleRegister}
+                handleLogin={handleLoginForm}
+                handleClick={handleClick}
+                userData={userData}
+                setUserData={setUserData}
+              />
+            )
+          ) : (
+            <div>
+              <Home handleLogout={handleLogout} />
+            </div>
+          )}
         </div>
-      )}
-    </div>
-    </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
 export default LoginRegistration;
