@@ -28,21 +28,34 @@ const LoginRegistration = ({handleLoginForm}) => {
   };
   //handle login
   const handleLogin = () => {
-    setUserIsLoggedIn(true);
-  };
-  //handle logout
-  const handleLogout = () => {
-    setUserIsLoggedIn(false);
-  };
-  const handleRegister = () => {
-    if(userData.password ===userData.confirmPassword) {
-      setUserIsRegistered(true);
+    //logic to authenticate user
+    if (userData.password === userData.confirmPassword) {
+      setUserIsLoggedIn(true);
     } else {
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "Passwords do not match",
       });
+    }
+  };
+  //handle logout
+  const handleLogout = () => {
+    setUserIsLoggedIn(false);
+  };
+
+
+  const handleRegister = () => {
+    if (userData.password === userData.confirmPassword) {
+      setUserIsRegistered(true);
+      return true; // Indicate successful registration
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Passwords do not match, please try again",
+      });
+      return false; // Indicate registration failure
     }
   };
 
