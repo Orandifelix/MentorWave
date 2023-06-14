@@ -29,7 +29,7 @@ const Mentorscard = ({handleClick, mentor}) => {
         <h4>
           <i className="ui twitter icon blue large"></i>{mentor.twitter}
         </h4>
-        <button className="ui inverted blue button" onClick={handleClick}>View Profile</button>
+        <button className="ui inverted secondary button" onClick={handleClick}>View Profile</button>
       </Card.Content>
     </Card>
   );

@@ -1,39 +1,11 @@
-import React, { useState, useEffect } from "react";
+
 import CustomeCard from "./CustomeCard";
 import { Icon } from "semantic-ui-react";
-import MentorCard from "./MentorCard";
 
 function HomeCards() {
-  const [data, setData] = useState([]);
-  const url = "https://api.jsonbin.io/v3/b/6481e2bf8e4aa6225eab25c4";
-
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => setData(data.record.mentors))
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const cardsPerPage = 3;
-  const totalPages = Math.ceil(data.length / cardsPerPage);
-
-  const startIndex = (currentPage - 1) * cardsPerPage;
-  const endIndex = startIndex + cardsPerPage;
-  const currentMentorCards = data.slice(startIndex, endIndex);
-
-  const handlePrevPage = () => {
-    setCurrentPage((prevPage) => prevPage - 1);
-  };
-
-  const handleNextPage = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
-  };
-
+ 
   return (
-    <>
+    <div className="steps-container">
       <h2 className="ui centered header"> How It Works</h2>
       <div className="step-cards">
         <CustomeCard
@@ -61,37 +33,7 @@ function HomeCards() {
           }
         />
       </div>
-      <h2 className="ui centered header">Meet our Mentors</h2>
-      <div className="ui segment">
-        <div className="mentor-cards">
-          {currentMentorCards.map((mentor) => (
-            <MentorCard
-              key={mentor.id}
-              image={mentor.image}
-              name={mentor.name}
-              profession={mentor.expertise}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="ui padded flex container center aligned">
-        <button
-          className="ui teal button"
-          disabled={currentPage === 1}
-          onClick={handlePrevPage}
-        >
-          &lt;
-        </button>
-        <span className="ui header">{currentPage}</span>
-        <button
-          className="ui teal button"
-          disabled={currentPage === totalPages}
-          onClick={handleNextPage}
-        >
-          &gt;
-        </button>
-      </div>
-    </>
+    </div>
   );
 }
 

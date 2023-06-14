@@ -3,7 +3,7 @@ import React from "react";
 const AccountDetails = ({ details, avatar }) => {
   return (
     <div className="ui segment">
-      <div className="ui inverted teal segment">
+      <div className="ui inverted segment">
         <h1 className="ui centered header">
           Welcome to MentorWave {details.userName}!
         </h1>

@@ -27,6 +27,7 @@ function App() {
 
     <>
       <NavBar handleClick={handleLoginClick} />
+      <hr/>
       <Routes>
         <Route path="/" element={<Home handleClick={handleLoginClick} />} />
         <Route path="/about" element={<About />} />

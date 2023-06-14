@@ -1,13 +1,12 @@
 import React from "react";
-import './Stats.css'
+import "./Stats.css";
 
 function Statistics() {
-
   return (
     <div
-      className="ui segment"
-      style={{ backgroundColor: "#269DCC", padding: "20px", margin: "10px" }}
-    >
+      className="statistics"
+      style={{ backgroundColor: "#16163F", padding: "20px", margin: "10px" }}>
+      <h1 className="emphasis">We are Good With Numbers</h1>
       <div className="ui four column stackable grid">
         <div className="column">
           <h1>1500+</h1>

@@ -10,6 +10,7 @@ const Filter = ({
       <h2>Filter Mentors By:</h2>
       <div className="flex container">
         <label htmlFor="expertise" className="ui header">
+          <br/>
           Expertise:
         </label>
         <select

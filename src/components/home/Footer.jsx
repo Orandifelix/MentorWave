@@ -79,7 +79,7 @@ function Footer() {
                 href="https://www.facebook.com/mentorwave/"
                 target="_blank"
                 rel="noreferrer">
-                <Icon name="facebook" size="large" color="olive" />
+                <Icon name="facebook" size="large" color="blue" />
               </a>
             </div>
             <div className="text-icon">
@@ -96,7 +96,7 @@ function Footer() {
                 href="https://twitter.com/mentorwave"
                 target="_blank"
                 rel="noreferrer">
-                <Icon name="twitter square" size="large"color="green" />
+                <Icon name="twitter square" size="large"color="blue" />
               </a>
             </div>
             <div className="text-icon">
@@ -147,7 +147,7 @@ function Footer() {
         </div>
       </div>
       <div className="copyright">
-        <hr style={{border: "5px solid rgb(159, 153, 153)" }} />
+        <hr/>
         <p className="footer">
           &copy; 2023 MentorWave. All rights reserved
         </p>

@@ -26,12 +26,13 @@
   cursor: pointer;
 }
 
+
 .carded:hover {
   transform: translateY(-5px);
 }
 
 .icon-container {
-  background-color: rgb(38, 157, 204);
+  background-color: #AC6FFD;
   height: 70px;
   width: 70px;
   border-radius: 5px;
@@ -83,7 +84,7 @@
   font-size: 21px;
 }
 
-.descritpion {
+.step-cards .description {
   text-align: center;
   margin: 20px;
   padding: 20px;
@@ -93,32 +94,7 @@
   font-size: 20px;
 }
 
-/* mentor Cards */
-
-.mentor-cards {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 20px;
-  flex-wrap: wrap;
-  transition: all 0.3s ease-out;
+.steps-container{
+  background-color:#F7F3FE;
+  margin-top: 10px;
 }
-
-.card-name h3 {
-  text-align: center;
-  font-size: 18px;
-}
-.ui.card {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-.card-name {
-  margin: 25% 10px;
-}
-
-.card-name p {
-  text-align: center;
-  font-size: 16px;
-}
-
-

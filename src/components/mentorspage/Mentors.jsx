@@ -63,7 +63,7 @@ const Mentors = ({ handleLoginClick }) => {
   }
   return (
     <div className="ui raised segment ">
-      <div className="ui inverted segment teal">
+      <div className="ui inverted segment" style={{backgroundColor:"#16163F"}}>
         <h1 className="ui header bold">Find Mentors and Connect</h1>
         <h3 className="ui text">
           We have sorted these search results based on your profile. If you see
@@ -78,7 +78,7 @@ const Mentors = ({ handleLoginClick }) => {
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search for mentors........."
         />
-        <i className="circular search link icon"></i>
+        <i className="circular search link icon" style={{backgroundColor:"#16163F", color:"white"}}></i>
       </div>
       <Filter
         selectedExpertise={selectedExpertise}

@@ -3,7 +3,7 @@ import "./aboutus.css";
 
 const Testimonials = () => {
   return (
-    <>
+    <div id="testimonials">
       <h1 className="ui centered header">What Our Mentees Say</h1>
       <div className="ui four doubling stackable padded cards segment">
         <div className="ui card">
@@ -60,7 +60,7 @@ const Testimonials = () => {
           </h3>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

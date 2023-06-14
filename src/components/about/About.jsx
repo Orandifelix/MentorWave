@@ -8,7 +8,7 @@ import Testimonials from "./Testimonials";
 
 function About() {
   return (
-    <div>
+    <div className='about'>
       <Mission/>
       <Vision/>
       <Values/>

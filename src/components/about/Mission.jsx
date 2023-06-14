@@ -3,8 +3,7 @@ import "./aboutus.css";
 
 function Mission() {
   return (
-    <div className="ui raised segment">
-      <div className="ui inverted teal segment">
+    <div className="section">
         <h2 className="ui centered header">Our Mission</h2>
         <div className="ui content">
           <p className="ui bold header">
@@ -15,19 +14,7 @@ function Mission() {
             connections, sharing knowledge, and cultivating a culture of growth
             and success.
           </p>
-          <div className="content-list">
-          <p>
-            Key elements of our mission:</p>
-            <ul className="">
-              <li>Empowering the Next Generation</li>
-              <li>Bridging the Gap</li>
-              <li>Cultivating Meaningful Connections</li>
-              <li>Sharing Knowledge and Experience</li>
-              <li>Creating a Culture of Growth and Success</li>
-            </ul>
-            </div>
         </div>
-      </div>
     </div>
   );
 }

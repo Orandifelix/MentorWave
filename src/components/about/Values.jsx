@@ -3,8 +3,7 @@ import "./aboutus.css";
 
 function Values() {
   return (
-    <div className="ui padded segment">
-      <div className="ui segment">
+      <div className="section">
         <h2 className="ui centered header">Our Values</h2>
         <ul className="ui content">
           <li className="ui header">
@@ -37,7 +36,6 @@ function Values() {
           </li>
         </ul>
       </div>
-    </div>
   );
 }
 

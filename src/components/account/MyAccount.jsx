@@ -35,7 +35,7 @@ const MyAccount = () => {
       {!showDetails?   (
         <>
         <div className="ui raised segment">
-        <div className="ui inverted teal segment">
+        <div className="ui inverted segment" style={{backgroundColor:"#16163F"}}>
             <h2>Join The MentorWave Community</h2>
             <h3>Tell us more about yourself. Kindly fill this form to continue</h3>
           </div>
@@ -114,7 +114,7 @@ const MyAccount = () => {
             </div>
             <br></br>
             <div className="form-group">
-              <button className="ui fluid primary button" type="submit">
+              <button className="ui fluid secondary button" type="submit">
                 Save Changes
               </button>
             </div>

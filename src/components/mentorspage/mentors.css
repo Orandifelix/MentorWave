@@ -1,16 +1,9 @@
 
-#custom-overflow {
-  overflow:hidden;
-}
-.swal2-icon.swal2-icon-show {
-  overflow: hidden;
-}
-
 .custom-select {
   border-radius: 5px;
   border: none;
   outline: none;
-  background-color: #6feded;
+  background-color:ghostwhite;
   width: fit-content;
   min-width: 200px;
   height: 40px;
@@ -20,8 +13,8 @@
   font-size: 1.2rem;
 }
 .custom-select:hover {
-  background-color: rgb(7, 155, 155);
-  color: rgb(235, 229, 229);
+  background-color: rgb(128, 106, 150);
+  color: white;
 }
 .flex-container {
   display: flex;
@@ -38,12 +31,12 @@
   padding: 5px;
   margin: 5px;
   font-size: 20px;
-  color: #009e99;
+  color: #16163F;
   font-weight: bold;
-  border-bottom: 8px solid #4adfda;
+  border-bottom: 8px solid #640fb9;
 }
 .custom-header {
-  color: #009e99;
+  color: #16163F;
   font-weight: 900;
 }
 .row.custom-bg {
@@ -55,6 +48,8 @@
 }
 .mentor-bio {
   font-size: 1.3rem;
+  line-height: 2em;
+  font-family: futura-pt;
 }
 .mentor-content h3 {
   font-weight: normal;
@@ -67,11 +62,7 @@
 }
 .mentor-content h3 span {
   font-weight: bold;
-  color: #009e99;
-}
-.mentor-badge {
-  width: 60px;
-  height: 60px;
+  color: #16163F;
 }
 .ui.medium.circular.image {
   border-color: #fefefe;
@@ -102,4 +93,7 @@ input:hover {
 .ui.colored.header {
   font-weight: bold;
   color: white;
+}
+label{
+  color:#16163F
 }

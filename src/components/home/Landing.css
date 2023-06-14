@@ -1,27 +1,33 @@
-#landing h1{
-  margin:auto;
-  font-size: 2.5em;
-  color:rgb(7, 56, 7);
+.sign-up{
+  background-color: #9E3FFD;
+  padding:15px;
+  border-radius: 20px;
+  color:white;
+  border:none;
+  font-size: 1.5em;
+}
+.sign-up:hover{
+  background-color: #16163F;
+}
+.landing{
+  height:100vh;
+  background-image: url(../../../public/hero-section.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.landing-content {
+  margin-left:5%;
   padding:20px;
+ 
 }
-#landing h1 span{
-  color:goldenrod;
-  font-weight: 900;
+.landing-content h1{
+  font-size:5em;
+  font-weight: bolder;
+  font-family:sans-serif
+  
 }
-#landing h3{
-  margin:auto;
-  padding:20px;
-  font-size: 1.6em;
-  font-weight: normal;
-  font-family:Roboto, Helvetica, sans-serif;
-  line-height: 1.8em;
-}
-#landing button{
-  margin:0 35%;
-  padding:20px;
-  border-radius: 10px;
-
-}
-b{
-  font-size: 1.3em;
+.landing-content p{
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
 }

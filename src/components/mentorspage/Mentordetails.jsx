@@ -50,11 +50,6 @@ const Mentordetails = ({ handleClick, mentor, handleLoginClick }) => {
           <div className="column mentor-content">
             <div className="flex-container">
               <h2 className="large header">{mentor.name}</h2>
-              <img
-                className="mentor-badge"
-                src="../public/mentorbadge.png"
-                alt="mentors badge"
-              />
             </div>
             <h3 className="ui header">
               <span>Mentor Industry: </span>
@@ -97,7 +92,7 @@ const Mentordetails = ({ handleClick, mentor, handleLoginClick }) => {
           </div>
         </div>
       </div>
-      <hr style={{ borderTop: "5px solid #4adfda" }}></hr>
+      
       <div className="ui segment">
         <h1 className="custom-header">How i can help</h1>
         <h2>My Professional Background</h2>

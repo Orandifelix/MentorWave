@@ -2,16 +2,15 @@
   padding: 10px;
   font-size: 1.5em;
   text-align: center;
-  color:white;
-  background: linear-gradient(to right, teal, green, rgb(21, 96, 182));
+  color:black;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to right, teal, green);
-  color: white;
+  background: #F7F3FE;
+  color: black;
 }
 
 .links {
@@ -21,7 +20,7 @@
   align-items: flex-start;
   gap: 10px;
   text-align: center;
-  color: white;
+  color:black;
   padding: 10px;
   font-size: 1.2em;
   
@@ -44,7 +43,7 @@
 
 .row-links ul li a {
   text-decoration: none;
-  color: white;
+  color:black;
   font-size: 1em;
   line-height: 2em;
 }
@@ -81,13 +80,11 @@ form {
 }
 
 .row-links input {
-  background-color: #ffffff;
-  color: black;
+  background-color: white;
   border-radius: 20px;
   padding: 9px;
   width: 100%;
 }
-
 .row-links h5 {
   margin-bottom: 10px;
   font-size: 1.2em;
@@ -101,7 +98,7 @@ form {
 }
 
 .row-links button {
-  background-color: #0bcff1;
+  background-color: rgb(121, 38, 199);
   border-radius: 24px;
   position: absolute;
   top: 0;
@@ -116,13 +113,13 @@ a{
   text-decoration: none;
 }
 .row-links button:hover {
-  background-color: #09b4d9;
+  background-color: #222222;
   transform: scale(1.05);
 }
 
 .row-links button:active,
 .row-links button:focus {
-  background-color: #0891a8;
+  background-color: #be87c0;
   transform: scale(0.95);
 }
 

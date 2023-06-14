@@ -1,39 +1,49 @@
-.column{
-  color:white;
-  }
-.column h1{
-  font-size: 2em;
-  font-weight: 900;
-  margin:10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.statistics {
+  color: white;
 }
-
-/* Logos */
-.organization-logo:hover {
-  transform: scale(1.1);
-}
-
-.organisation-title {
-  font-size: 30px;
+.emphasis {
   text-align: center;
-  margin: 30px;
-  padding: 20px;
-}
-
-#organizations-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  font-size: 3em;
   margin: 20px;
-  padding: 20px;
-  overflow: hidden;
 }
 
-.organization-logo {
-  width: 150px;
-  height: 150px;
-  cursor: pointer;
-  transition: transform 023s ease;
-  border-radius: 50%;
-  animation: moveRightToLeft 15s linear infinite; /* Add animation properties */
-} */
+.column {
+  color: white;
+  margin:50px 0px 50px 0px;
+}
+
+.column h1 {
+  font-size: 3em;
+  font-weight: 900;
+  margin: 10px;
+}
+
+#organizations{
+  background-color: #F8F0FF;
+  margin-top: 20px;
+}
+#organizations h2{
+  font-weight: normal;
+  text-align: center;
+}
+.safaricom{
+  margin-top: 30%;
+  max-width: 300px;
+}
+.quote blockquote, .quote h2{
+  font-size: 1.5em;
+  text-align: center;
+  line-height:2em;
+  font-weight: bold;
+  margin:auto 25%;
+}
+.testimonials {
+  background-color: #640fb9;
+  color:white;
+  border:none;
+  padding:40px;
+}
+.testimonials h1{
+  text-align:center;
+  margin: 20px;
+}
