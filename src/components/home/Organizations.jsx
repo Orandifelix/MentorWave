@@ -9,7 +9,7 @@ function Organizations() {
           {" "}
           <img
             className="safaricom"
-            src="../public/safaricom-logo.png"
+            src="https://github.com/Donvine254/MentorWave/blob/main/public/safaricom-logo.png?raw=true"
             alt="safaricom-logo"
           />
         </div>
@@ -17,7 +17,7 @@ function Organizations() {
           {" "}
           <img
             className="logos"
-            src="../public/moringa.png"
+            src="https://github.com/Donvine254/MentorWave/blob/main/public/moringa.png?raw=true"
             alt="moringa-logo"
           />
         </div>
@@ -25,16 +25,16 @@ function Organizations() {
         <div className="ui card">
           <img
             className="logos"
-            src="../public/stanibic.png"
-            alt="stanibic-logo"
+            src="https://github.com/Donvine254/MentorWave/blob/main/public/stanibic.png?raw=true"
+            alt="stanbic-logo"
           />
         </div>
 
         <div className="ui card">
           <img
             className="logos"
-            src="../public/equity.png"
-            alt="stanibic-logo"
+            src="https://github.com/Donvine254/MentorWave/blob/main/public/equity.png?raw=true"
+            alt="equity-logo"
           />
         </div>
       </div>
