@@ -7,6 +7,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+.steps-container h3{
+  text-align: center;
+}
 
 .ui.centered.header {
   font-size: 2.5em;

@@ -9,41 +9,67 @@
 
 .column {
   color: white;
-  margin:50px 0px 50px 0px;
+  margin: 50px 0px 50px 0px;
 }
 
 .column h1 {
   font-size: 3em;
   font-weight: 900;
-  margin: 10px;
 }
 
-#organizations{
-  background-color: #F8F0FF;
+#organizations {
+  background-color: #fff;
   margin-top: 20px;
 }
-#organizations h2{
+#organizations h2 {
   font-weight: normal;
   text-align: center;
 }
-.safaricom{
-  margin-top: 30%;
-  max-width: 300px;
+#organizations div img{
+  height:160px;
+  width:160px;
+  vertical-align: middle;
+  margin: 50px;
 }
-.quote blockquote, .quote h2{
+.quote img {
+  margin: auto 50%;
+}
+.quote blockquote,
+.quote h2 {
   font-size: 1.5em;
   text-align: center;
-  line-height:2em;
+  line-height: 2em;
   font-weight: bold;
-  margin:auto 25%;
+  margin: auto 25%;
 }
 .testimonials {
   background-color: #640fb9;
-  color:white;
-  border:none;
-  padding:40px;
+  color: white;
+  border: none;
+  padding: 40px;
 }
-.testimonials h1{
-  text-align:center;
+.testimonials h1 {
+  text-align: center;
   margin: 20px;
+}
+.number {
+  border-radius: 50%;
+  border: 10px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+}
+.number.first, .number.fourth{
+  border-bottom-color:rgb(13, 189, 48);
+  border-left-color: rgb(13, 189, 48);
+  border-top-color: rgb(13, 189, 48);
+}
+.number.second{
+  border-bottom-color:rgb(13, 189, 48);
+  border-left-color: rgb(13, 189, 48);
+}
+.number.third{
+  border-left-color: rgb(13, 189, 48);
 }

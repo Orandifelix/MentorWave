@@ -6,7 +6,8 @@ function HomeCards() {
  
   return (
     <div className="steps-container">
-      <h2 className="ui centered header"> How It Works</h2>
+      <h2 className="ui centered header"> How does MentorWave work?</h2>
+      <h3>See how our mentorship program connects mentors and mentees from all over the world to help them thrive</h3>
       <div className="step-cards">
         <CustomeCard
           icon={<Icon name="sign-in alternate" />}

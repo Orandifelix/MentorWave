@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Stats.css"
+import "./Stats.css";
 
 class Carousel extends React.Component {
   render() {
@@ -14,12 +14,17 @@ class Carousel extends React.Component {
       slidesToScroll: 1,
       arrows: false,
       autoplay: true,
-      autoplaySpeed: 3000, 
+      autoplaySpeed: 3000,
     };
 
     return (
       <Slider {...settings}>
         <div className="quote">
+          <img
+            src="https://media.licdn.com/dms/image/C4D03AQHnKjkiFjj_UA/profile-displayphoto-shrink_800_800/0/1618228243299?e=2147483647&v=beta&t=WN5lpWQXU-kVug0035UmkJ8IzuH9kYTSBnT5aJ64jko"
+            alt="Sarah"
+            className="ui circular image image"
+          />
           <blockquote>
             <i className="quote left large blue icon centered"></i>I had the
             privilege of being mentored by an incredible professional through
@@ -28,11 +33,14 @@ class Carousel extends React.Component {
             MentorWave to anyone seeking mentorship opportunities.
             <i className="quote right blue icon centered"></i>
           </blockquote>
-          <h2>
-            - Sarah
-          </h2>
+          <h2>- Sarah</h2>
         </div>
         <div className="quote">
+          <img
+            src="https://media.licdn.com/dms/image/C4D03AQFcDcYxlhryWA/profile-displayphoto-shrink_800_800/0/1579422164659?e=2147483647&v=beta&t=Dl4MTnr6C8U-EWBQ08fW8qQWWXqgLywT3Oz1rurLxvs"
+            alt="John"
+            className="ui circular image image"
+          />
           <blockquote>
             <i className="quote left icon large red centered"></i>
             MentorWave has been a game-changer for me. Our mentoring sessions
@@ -42,11 +50,14 @@ class Carousel extends React.Component {
             fostering meaningful mentor-mentee relationships.{" "}
             <i className="quote right red icon centered"></i>
           </blockquote>
-          <h2>
-            - John
-          </h2>
+          <h2>- John</h2>
         </div>
         <div className="quote">
+          <img
+            src="https://kenyanwallstreet.com/wp-content/uploads/2022/06/unnamed.png"
+            alt="Michael"
+            className="ui circular image image"
+          />
           <blockquote>
             <i className="quote left icon pink large centered"></i>Being part of
             MentorWave has been an incredible experience. The platform not only
@@ -57,9 +68,7 @@ class Carousel extends React.Component {
             growth were truly remarkable.{" "}
             <i className="quote right pink icon centered"></i>
           </blockquote>
-          <h2>
-            - Michael
-          </h2>
+          <h2>- Michael</h2>
         </div>
       </Slider>
     );
@@ -69,7 +78,7 @@ class Carousel extends React.Component {
 function Testimony() {
   return (
     <div className="testimonials">
-      <h1>Testimonials</h1>
+      <h1>Hear what our mentees say</h1>
       <Carousel />
     </div>
   );
