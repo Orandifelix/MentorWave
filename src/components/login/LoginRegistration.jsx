@@ -60,9 +60,8 @@ const LoginRegistration = ({handleLoginForm}) => {
   };
 
   return (
-    <section className='ui raised segment'>
-    <div className='ui inverted teal segment'>
-    <div className='ui container' style={{marginBottom:"25%"}}>
+    
+    <div className="login-page">
       {!userIsLoggedIn ? (
         userIsRegistered ? (
           <Login handleLogin={handleLoginForm} handleClick={handleClick}/>
@@ -75,8 +74,7 @@ const LoginRegistration = ({handleLoginForm}) => {
         </div>
       )}
     </div>
-    </div>
-    </section>
+  
   )
 }
 

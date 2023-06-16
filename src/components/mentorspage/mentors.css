@@ -40,11 +40,18 @@
   font-weight: 900;
 }
 .row.custom-bg {
-  background-image: url("https://img.freepik.com/free-vector/elegant-subtle-triangle-shapes-abstract-banner-design_1017-25887.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: multiply;
+  background-color: #f7f3fe;
+  opacity: 0.9;
+  background-image: radial-gradient(circle at center center, #ffffff, #fff),
+    repeating-radial-gradient(
+      circle at center center,
+      #ffffff,
+      #925CC4,
+      10px,
+      transparent 20px,
+      transparent 10px
+    );
+  background-blend-mode: color-burn;
 }
 .mentor-bio {
   font-size: 1.3rem;

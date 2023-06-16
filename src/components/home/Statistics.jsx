@@ -4,8 +4,7 @@ import "./Stats.css";
 function Statistics() {
   return (
     <div
-      className="statistics"
-      style={{ backgroundColor: "#16163F", padding: "20px", margin: "10px" }}>
+      className="statistics">
       <h1 className="emphasis">We are Good With Numbers</h1>
       <div className="ui four column stackable grid">
         <div className="column">

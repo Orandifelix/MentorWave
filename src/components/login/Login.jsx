@@ -27,7 +27,8 @@ function Login({ handleLogin, handleClick }) {
   };
 
   return (
-    <div className="ui placeholder segment center-content" style={{margin:"10% auto",inset:"0", width:"70%"}}>
+    <div style={{height:"100vh"}} className="login-page">
+    <div className="ui placeholder segment center-content" style={{margin:"10% auto", width:"50%"}}>
       <div className="ui two column stackable grid">
         <div className="column login-column">
           <form className="ui form" onSubmit={handleSubmit}>
@@ -79,6 +80,7 @@ function Login({ handleLogin, handleClick }) {
         </div>
       </div>
       <div className="ui vertical divider">OR</div>
+    </div>
     </div>
   );
 }
