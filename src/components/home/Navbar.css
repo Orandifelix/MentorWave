@@ -1,22 +1,89 @@
-
-.navbar-logo{
-  font-weight: bolder;
-  color:white;
-  font-size:1.5em;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 5%;
 }
-.navbar-logo span{
-  color:goldenrod;
+
+#menu-icon,
+.close.icon {
+  display: none;
+  cursor: pointer;
+}
+
+.window.close.icon {
+  font-size: 30px;
+}
+.window.close.icon:hover, #menu-icon:hover {
+  transition: transform 0.3s;
+  transform: scale(1.2);
+}
+#menu.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  background: linear-gradient( #6439ba,rgb(170, 124, 214));
+  position: fixed;
+  top: 0;
+  right:0;
+  width: 70%;
+  transition: transform 0.3s;
+  padding: 20px;
+  z-index: 999;
+  .ui.header.item:hover {
+    color: blue;
+  }
+  .ui.header.item {
+    color: white;
+    font-size: 1.5em;
+  }
+}
+
+#menu.open .close.icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: white;
+}
+.my-menu .ui.header.item:not(:last-child) {
+  margin-right: 20px;
+}
+
+@media (max-width: 900px) {
+  #menu {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+    font-size: 2em;
+  }
+  .close.icon {
+    display: block;
+  }
+}
+
+.navbar-logo {
+  font-weight: bolder;
+  color: white;
+  font-size: 1.5em;
+}
+.navbar-logo span {
+  color: goldenrod;
   font-family: cursive;
 }
-.sign-in.btn{
-  background-color: rgb(146, 92, 196);
-  margin:20px;
-  padding:10px;
-  font-size: 1.2em;
-  border:none;
-  border-radius: 10px;
-  color:white;
+
+.sign-in:hover {
+  background-color: #16163f;
 }
-.sign-in:hover{
-  background-color: #16163F;
+.sign-in.btn {
+  background-color: rgb(146, 92, 196);
+  margin: 20px;
+  padding: 10px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  color: white;
 }
