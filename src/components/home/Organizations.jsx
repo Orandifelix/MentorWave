@@ -66,7 +66,7 @@ function Organizations() {
         <div>
           <img
             className="logos"
-            src="https://www.jobinkenya.com/sites/default/files/styles/medium/public/employer_logos/logo_1725305539.png?itok=kBbUYO3O"
+            src="https://github.com/Orandifelix/MentorWave/blob/main/public/strathmore.png?raw=true"
             alt="strathmore-logo"
           />
         </div>
