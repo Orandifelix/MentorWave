@@ -73,7 +73,8 @@ function Organizations() {
         <div>
           <img
             className="logos"
-            src="../public/mastercard.svg"
+            src="https://raw.githubusercontent.com/Donvine254/MentorWave/f46e002ca32077e134aae17148920dba5645010c/public/mastercard.svg"
+            alt="mastercard"
           />
         </div>
       </div>

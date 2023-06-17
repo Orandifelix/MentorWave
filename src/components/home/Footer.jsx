@@ -30,16 +30,16 @@ function Footer() {
   }
   return (
     <>
-      <div className="main">
-        <div className="links stackable">
-          <div className="row-links">
-            <h5>ABOUT</h5>
+      <footer className="footer">
+        <div className="main-footer">
+          <div className="footer-column">
+            <h5>About</h5>
             <ul>
               <li>
-                <a href="#">Help Center</a>
+                <a href="#">About MentorWave</a>
               </li>
               <li>
-                <a href="#">Become a Partner </a>
+                <a href="#">Become a Partner</a>
               </li>
               <li>
                 <a href="#">Blog</a>
@@ -48,18 +48,18 @@ function Footer() {
                 <a href="#">Our Team</a>
               </li>
               <li>
-                <a href="#">Investors relations</a>
+                <a href="#">Investor Relations</a>
               </li>
             </ul>
           </div>
-          <div className="row-links">
-            <h5>USEFUL LINKS</h5>
+          <div className="footer-column">
+            <h5>Useful Links</h5>
             <ul>
               <li>
                 <a href="#">Sign up</a>
               </li>
               <li>
-                <a href="#">Career</a>
+                <a href="#">Careers</a>
               </li>
               <li>
                 <a href="#">FAQ</a>
@@ -72,62 +72,33 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="row-links">
-            <h5>FOLLOW US</h5>
-            <div className="text-icon">
-              <a
-                href="https://www.facebook.com/mentorwave/"
-                target="_blank"
-                rel="noreferrer">
-                <Icon name="facebook" size="large" color="blue" />
-              </a>
-            </div>
-            <div className="text-icon">
-              <a
-                href="https://www.youtube.com/mentorwave/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-white">
-                <Icon name="youtube" size="large" color="red" />
-              </a>
-            </div>
-            <div className="text-icon">
-              <a
-                href="https://twitter.com/mentorwave"
-                target="_blank"
-                rel="noreferrer">
-                <Icon name="twitter square" size="large"color="blue" />
-              </a>
-            </div>
-            <div className="text-icon">
-              <a
-                href="https://www.instagram.com/mentorwave/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-white">
-                <Icon name="instagram" size="large" color="pink"/>
-              </a>
-            </div>
-          </div>
-          <div className="row-links">
-            <h5>CONTACT US</h5>
+          <div className="footer-column">
+            <h5>Contact Us</h5>
             <ul>
               <li>
-                <a href="#">020-3430-2330</a>
+                <a href="#">
+                  <i className="tty icon"></i>020-3430-2330
+                </a>
               </li>
               <li>
-                <a href="#">+254-711-111-111 </a>
+                <a href="#">
+                  <i className="phone icon"></i>+254-711-111-111
+                </a>
               </li>
               <li>
-                <a href="#">mentorwave@gmail.com</a>
+                <a href="#">
+                  <i className="mail icon"></i>support@mentorwave.com
+                </a>
               </li>
               <li>
-                <a href="#">mentorwave.com</a>
+                <a href="#">
+                  <i className="globe icon"></i>mentorwave.com
+                </a>
               </li>
             </ul>
           </div>
-          <div className="row-links">
-            <h5>NEWSLETTER</h5>
+          <div className="footer-column">
+            <h5>Newsletter</h5>
             <p>Subscribe to our newsletter</p>
             <form>
               <input
@@ -145,12 +116,35 @@ function Footer() {
             </form>
           </div>
         </div>
-      </div>
+
+        {/* social media links */}
+        <div className="socials">
+          <div>
+            <a href="https://www.facebook.com/mentorwave/" target="_blank">
+              <Icon name="facebook" size="large" color="blue" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.youtube.com/mentorwave/" target="_blank">
+              <Icon name="youtube" size="large" color="red" />
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com/mentorwave" target="_blank">
+              <Icon name="twitter square" size="large" color="blue" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/mentorwave/" target="_blank">
+              <Icon name="instagram" size="large" color="pink" />
+            </a>
+          </div>
+        </div>
+      </footer>
+
       <div className="copyright">
-        <hr/>
-        <p className="footer">
-          &copy; 2023 MentorWave. All rights reserved
-        </p>
+        <hr />
+        <p>&copy; 2023 MentorWave. All rights reserved</p>
       </div>
     </>
   );
