@@ -1,9 +1,8 @@
-
 .custom-select {
   border-radius: 5px;
   border: none;
   outline: none;
-  background-color:ghostwhite;
+  background-color: ghostwhite;
   width: fit-content;
   min-width: 200px;
   height: 40px;
@@ -31,12 +30,12 @@
   padding: 5px;
   margin: 5px;
   font-size: 20px;
-  color: #16163F;
+  color: #16163f;
   font-weight: bold;
   border-bottom: 8px solid #640fb9;
 }
 .custom-header {
-  color: #16163F;
+  color: #16163f;
   font-weight: 900;
 }
 .row.custom-bg {
@@ -46,7 +45,7 @@
     repeating-radial-gradient(
       circle at center center,
       #ffffff,
-      #925CC4,
+      #925cc4,
       10px,
       transparent 20px,
       transparent 10px
@@ -69,7 +68,7 @@
 }
 .mentor-content h3 span {
   font-weight: bold;
-  color: #16163F;
+  color: #16163f;
 }
 .ui.medium.circular.image {
   border-color: #fefefe;
@@ -81,7 +80,7 @@
   font-weight: 900;
   letter-spacing: -0.03em;
   font-family: futura-pt;
-  color:black;
+  color: black;
 }
 
 input {
@@ -101,6 +100,57 @@ input:hover {
   font-weight: bold;
   color: white;
 }
-label{
-  color:#16163F
+label {
+  color: #16163f;
+}
+@media screen and (max-width: 880px) {
+  .custom-select {
+    width: 100%;
+  }
+  .ui.header.bold {
+    font-size: 2em;
+  }
+  .ui.colored.header {
+    font-size: 1em;
+  }
+}
+.column.mentor-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ui.fluid.buttons {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ui.button.primary,
+.ui.teal.button {
+  margin: 5px;
+  min-width: 100px;
+}
+
+@media (max-width: 400px) {
+  .ui.button.primary,
+  .ui.teal.button {
+    min-width: auto;
+    width: 100%;
+  }
+  .large.header {
+    font-size: 2em;
+    color:black;
+  }
+}
+@media (min-width: 768px) {
+  .ui.button.primary,
+  .ui.teal.button {
+    min-width: 100px;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #mentor-image {
+    margin: auto;
+  }
 }

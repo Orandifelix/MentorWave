@@ -81,7 +81,6 @@ const MyAccount = () => {
               <label htmlFor="mentee-bio">Mentee Bio:</label>
               <textarea
                 id="mentee-bio"
-                className="ui fluid container"
                 value={menteeBio}
                 onChange={(e) => setMenteeBio(e.target.value)}></textarea>
             </div>

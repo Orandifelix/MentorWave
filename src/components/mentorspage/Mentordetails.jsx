@@ -45,6 +45,7 @@ const Mentordetails = ({ handleClick, mentor, handleLoginClick }) => {
               src={mentor.image}
               alt="mentor image"
               className="ui medium circular image"
+              id="mentor-image"
             />
           </div>
           <div className="column mentor-content">
