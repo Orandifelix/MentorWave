@@ -31,14 +31,14 @@ function Organizations() {
         <div>
           <img
             className="logos"
-            src="https://www.mentor-pro.com/wp-content/uploads/2020/11/apple.jpg"
+            src="https://cdn.freebiesupply.com/images/large/2x/apple-logo-transparent.png"
             alt="apple-logo"
           />
         </div>
         <div>
           <img
             className="logos"
-            src="https://www.mentor-pro.com/wp-content/uploads/2020/11/microsoft.jpg"
+            src="https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
             alt="microsoft-logo"
           />
         </div>
@@ -52,7 +52,7 @@ function Organizations() {
         <div>
           <img
             className="logos"
-            src="https://www.mentor-pro.com/wp-content/uploads/2020/11/paypal.jpg"
+            src="https://static.vecteezy.com/system/resources/previews/020/190/502/original/paypal-logo-paypal-logo-free-free-vector.jpg"
             alt="paypal-logo"
           />
         </div>
@@ -73,7 +73,7 @@ function Organizations() {
         <div>
           <img
             className="logos"
-            src="https://raw.githubusercontent.com/Donvine254/MentorWave/f46e002ca32077e134aae17148920dba5645010c/public/mastercard.svg"
+            src=""
             alt="mastercard"
           />
         </div>
