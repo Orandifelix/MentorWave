@@ -31,7 +31,6 @@
 #organizations div img {
   height: 160px;
   width: 160px;
-  vertical-align: middle;
   margin: 10px 50px;
 }
 
@@ -89,4 +88,50 @@
   text-align: center;
   margin: 20px;
   font-size: 3em;
+}
+/* media querries */
+@media (max-width: 900px) {
+  .quote blockquote,
+  .quote h2 {
+    text-align: start;
+    font-size: 1em;
+    margin: 0;
+  }
+  #organizations h1{
+    font-size: 2em;
+  }
+ 
+
+  .quote img {
+    margin: auto;
+  }
+  .testimonials h1, .emphasis, .ourmentors h1 {
+    font-size: 2em;
+  }
+  .number {
+    height: 100px;
+    width: 100px;
+    margin:auto;
+  }
+ .number.first, .number.second, .number.third, .number.fourth{
+  font-size: 1.4em;
+ }
+ .column h3{
+  text-align: center;
+ }
+}
+@media (max-width: 770px){
+  #organizations div img{
+    object-fit: contain;
+    width:auto;
+    height:auto;
+    max-width:160px;
+  }
+  #organizations div{
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+
+  }
 }

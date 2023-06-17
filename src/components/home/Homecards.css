@@ -101,3 +101,8 @@
   background-color:#F7F3FE;
   margin-top: 10px;
 }
+@media (max-width: 768px){
+  .steps-container .ui.centered.header{
+    font-size: 2em;
+  }
+}

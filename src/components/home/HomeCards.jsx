@@ -1,6 +1,7 @@
 
 import CustomeCard from "./CustomeCard";
 import { Icon } from "semantic-ui-react";
+import "./Homecards.css"
 
 function HomeCards() {
  
