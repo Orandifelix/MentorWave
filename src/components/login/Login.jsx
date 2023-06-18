@@ -28,7 +28,7 @@ function Login({ handleLogin, handleClick }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (userData.length === 0) {
-      // Data is still being fetched, show a loading indicator or handle the case
+      
       return;
     }
     const foundUser = userData.find(

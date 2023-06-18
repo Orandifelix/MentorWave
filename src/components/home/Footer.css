@@ -44,7 +44,7 @@
 }
 
 .footer-column form input {
-  background-color:#BCADFA;
+  background-color:#c9b6a9;
   color:white;
   border-radius: 20px;
   border:1px solid rgb(121, 38, 199);
@@ -54,7 +54,7 @@
 
 
 .footer-column form button {
-  background-color: rgb(121, 38, 199);
+  background-color: #E26310;
   border-radius: 24px;
   position: absolute;
   top: 0;

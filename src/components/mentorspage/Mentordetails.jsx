@@ -4,13 +4,11 @@ const Mentordetails = ({ handleClick, mentor, handleLoginClick }) => {
   function handleConversation() {
     Swal.fire({
       title: "<b>Sign in Required</b>",
-      icon: "warning",
+      icon: "error",
       text: "Only registered users can perform this action.",
       showCloseButton: true,
       confirmButtonText: "Sign In",
       confirmButtonColor: "#0F73BD",
-      showCancelButton: true,
-      cancelButtonColor: "red",
       footer: "Not a registered user?  <a href='#'>Join MentorWave today!</a>",
     }).then((result) => {
       if (result.isConfirmed) {
@@ -21,13 +19,11 @@ const Mentordetails = ({ handleClick, mentor, handleLoginClick }) => {
   function handleBooking() {
     Swal.fire({
       title: "<b>Sign in Required</b>",
-      icon: "warning",
+      icon: "error",
       text: "Only registered users can perform this action.",
       showCloseButton: true,
       confirmButtonText: "Sign In",
       confirmButtonColor: "#0F73BD",
-      showCancelButton: true,
-      cancelButtonColor: "red",
       footer: "Not a registered user?  <a href='#'>Join MentorWave today!</a>",
     }).then((result) => {
       if (result.isConfirmed) {

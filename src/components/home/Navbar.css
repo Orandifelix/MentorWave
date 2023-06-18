@@ -86,7 +86,7 @@
   font-size: 1.5em;
 }
 .navbar-logo span {
-  color: goldenrod;
+  color:#E26310;
   font-family: cursive;
 }
 
@@ -94,7 +94,7 @@
   background-color: #16163f;
 }
 .sign-in.btn {
-  background-color: rgb(146, 92, 196);
+  background-color: #E26310;
   margin: 20px;
   padding: 10px;
   font-size: 1.2em;
