@@ -10,6 +10,7 @@
 }
 body{
   background-color: #F7F3FE;
+  transition: all 0.4s ;
 }
 :root {
   color-scheme: light dark;

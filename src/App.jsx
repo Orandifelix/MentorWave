@@ -8,6 +8,7 @@ import LoginRegistration from "./components/login/LoginRegistration";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import MyAccount from "./components/account/MyAccount";
+import Blog from "./components/blog/Blog";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -31,6 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home handleClick={handleLoginClick} />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/mentors" element={<Mentors handleLoginClick={handleLoginClick} />} />
         <Route path="/account" element={<MyAccount />} />
       </Routes>

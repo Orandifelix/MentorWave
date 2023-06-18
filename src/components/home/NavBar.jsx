@@ -39,6 +39,12 @@ const Navbar = ({ handleClick }) => {
           <b><i className="info circle icon navbar-icon" id="about-icon"></i>About</b>
         </NavLink>
         <NavLink
+          to="/blog"
+          className="ui header item"
+          onClick={handleNavLinkClick}>
+          <b><i className="blogger icon"id="blog-icon"></i>Blog</b>
+        </NavLink>
+        <NavLink
           to="/mentors"
           className="ui header item"
           onClick={handleNavLinkClick}>

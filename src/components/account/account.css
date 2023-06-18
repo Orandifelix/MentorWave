@@ -49,8 +49,11 @@
 } 
 .ui.form {
   border: 0.5px solid rgb(236, 228, 228);
-  background-color: #F7F3FE;
+  
 } 
+#account-container {
+  background-color: #F7F3FE;
+}
 .form-group input, textarea, select{
   background-color: #f8f6fa !important;
 }

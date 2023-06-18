@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   margin: auto 5%;
+  transition: 0.4s;
 }
 
 
@@ -14,7 +15,7 @@
 #home-icon,
 #about-icon,
 #mentors-icon,
-#account-icon {
+#account-icon, #blog-icon {
   display: none;
 }
 
@@ -33,7 +34,6 @@
   top: 0;
   right: 0;
   width: 70%;
-  transition: transform 0.3s;
   padding: 20px;
   z-index: 999;
   .ui.header.item:hover {
@@ -68,7 +68,7 @@
   #home-icon,
   #about-icon,
   #mentors-icon,
-  #account-icon {
+  #account-icon, #blog-icon {
     display: inline-block;
   }
 
