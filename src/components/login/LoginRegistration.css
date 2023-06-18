@@ -59,3 +59,8 @@
   margin-top: 20px;
   height: 100%;
 }
+.field span {
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+}

@@ -1,44 +1,52 @@
-/* eslint-disable react/prop-types */
-// import { useState } from "react";
-// import './Registration.css'
+import { useState } from "react";
+import "./LoginRegistration.css";
 import Swal from "sweetalert2";
+import { Checkbox } from "semantic-ui-react";
+import { Axios } from "axios";
+import { baseUrl } from "./LoginRegistration";
 
-// eslint-disable-next-line react/prop-types
-function Registration({
-  handleRegister,
-  handleLoginForm,
-  userData,
-  setUserData,
-}) {
+function Registration({ handleLoginForm, userData, setUserData, handleRegister }) {
+  const [showPassword, setShowPassword] = useState(false);
+
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, type, checked } = event.target;
+    const value = type === 'checkbox' ? checked : event.target.value;
     setUserData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: name === 'agreedToTerms' ? checked : value,
     }));
-    console.log(userData);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const isRegistered = handleRegister();
-    if (isRegistered) {
-      Swal.fire({
-        icon: "success",
-        title: "Registration Successful",
-        text: "Thank you for registering!",
+  
+    Axios.post(baseUrl, userData)
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Registration Successful",
+          text: "Thank you for registering!",
+        });
+        setUserData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          password: "",
+          role: "",
+          agreedToTerms: false,
+        });
+        handleRegister();
+      })
+      .catch((error) => {
+        console.error("Registration failed:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Registration Failed",
+          text: "Sorry, an error occurred during registration.",
+        });
       });
-      setUserData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
-        role: "",
-        agreedToTerms: false,
-      });
-    }
   };
+  
   return (
     <div className="ui padded container" id="registerForm">
       <div className="ui attached message">
@@ -73,10 +81,6 @@ function Registration({
           </div>
         </div>
         <div className="field">
-          <label>Username</label>
-          <input placeholder="Username" type="text" required />
-        </div>
-        <div className="field">
           <label>Email</label>
           <input
             placeholder="Username"
@@ -90,27 +94,26 @@ function Registration({
         <div className="field">
           <label>Password</label>
           <input
-            type="password"
+            type={!showPassword ? "password" : "text"}
             name="password"
             minLength={8}
             value={userData.password}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="field">
-          <label>Confirm Password</label>
-          <input
-            type="password"
-            name="confirmPassword"
-            value={userData.confirmPassword}
-            onChange={handleChange}
-          />
+          <Checkbox
+            value={showPassword}
+            onChange={() => setShowPassword(!showPassword)}
+          />{" "}
+          <span> {!showPassword ? "Show" : "Hide"} Password</span>
         </div>
         <div className="field">
           <select name="role" value={userData.role} onChange={handleChange}>
             <option value="">Role</option>
-            <option value="1">Mentee</option>
-            <option value="0">Mentor</option>
+            <option value="mentee">Mentee</option>
+            <option value="mentor">Mentor</option>
           </select>
         </div>
         <div className="inline field">
@@ -119,8 +122,10 @@ function Registration({
               type="checkbox"
               id="terms"
               className="hidden"
+              name="agreedToTerms"
               value={userData.agreedToTerms}
               onChange={handleChange}
+              required
             />
             <label htmlFor="terms">I agree to the terms and conditions</label>
           </div>

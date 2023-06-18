@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Checkbox } from "semantic-ui-react";
 
 function Login({ handleLogin, handleClick }) {
+  const [showPassword, setShowPassword] = useState(false);
   const [loginData, setLoginData] = useState({
     username: "",
     password: "",
@@ -24,7 +26,7 @@ function Login({ handleLogin, handleClick }) {
       password: "",
     });
   };
-
+ 
   return (
     <div className="login-page">
       <div className="ui placeholder segment center-content" id="login-page">
@@ -35,9 +37,9 @@ function Login({ handleLogin, handleClick }) {
                 <label>Username</label>
                 <div className="ui left icon input">
                   <input
-                    type="text"
-                    name="username"
-                    placeholder="Username"
+                    type="email"
+                    name="email"
+                    placeholder="yourname@example.com"
                     value={loginData.username}
                     onChange={handleChange}
                     required
@@ -49,7 +51,7 @@ function Login({ handleLogin, handleClick }) {
                 <label>Password</label>
                 <div className="ui left icon input">
                   <input
-                    type="password"
+                    type={!showPassword? "password" : "text"}
                     name="password"
                     placeholder="********"
                     value={loginData.password}
@@ -58,6 +60,9 @@ function Login({ handleLogin, handleClick }) {
                   />
                   <i className="lock icon"></i>
                 </div>
+              </div>
+              <div className="field">
+                <Checkbox value={showPassword} onChange={()=>setShowPassword(!showPassword)} /> <span> {!showPassword? "Show":"Hide"} Password</span>
               </div>
               <button className="ui fluid blue submit button" type="submit">
                 <i className="key icon"></i>Login
@@ -74,10 +79,9 @@ function Login({ handleLogin, handleClick }) {
             <h3 className="inquiry">Don't have an account?</h3>
             <div
               className="ui big secondary positive button"
-              onClick={handleClick}
-            >
+              onClick={handleClick}>
               <i className="signup icon"></i>
-              Sign Up
+              Register
             </div>
           </div>
         </div>

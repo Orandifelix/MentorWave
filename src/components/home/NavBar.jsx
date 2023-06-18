@@ -31,39 +31,39 @@ const Navbar = ({ handleClick }) => {
           className="ui header item"
           activeClassName="active"
           onClick={handleNavLinkClick}>
-          <b>Home</b>
+          <b><i className="home icon" id="home-icon"></i>Home</b>
         </NavLink>
         <NavLink
           to="/about"
           className="ui header item"
           activeClassName="active"
           onClick={handleNavLinkClick}>
-          <b>About</b>
+          <b><i className="info circle icon navbar-icon" id="about-icon"></i>About</b>
         </NavLink>
         <NavLink
           to="/mentors"
           className="ui header item"
           activeClassName="active"
           onClick={handleNavLinkClick}>
-          <b>Mentors</b>
+          <b><i className="users icon navbar-icon" id="mentors-icon"></i>Mentors</b>
         </NavLink>
         <NavLink
           to="/account"
           className="ui header item"
           activeClassName="active"
           onClick={handleNavLinkClick}>
-          <b>My Account</b>
+          <b><i class="user circle icon navbar-icon" id="account-icon"></i>My Account</b>
         </NavLink>
         {menuOpen ? (
           <NavLink
             onClick={handleClick}
             className="ui header item"
             id="login-link">
-            <b>Sign In</b>
+            <b><i className="sign in icon"></i>Sign In</b>
           </NavLink>
         ) : (
           <button onClick={handleClick} className="sign-in btn">
-            <i className="lock icon"></i>Sign In
+            <i className="sign in icon"></i>Sign In
           </button>
         )}
 
