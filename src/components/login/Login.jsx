@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Checkbox } from "semantic-ui-react";
 import { baseUrl } from "./LoginRegistration";
 import Axios from "axios";
+import Swal from "sweetalert2";
 
 function Login({ handleLogin, handleClick }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -36,7 +37,17 @@ function Login({ handleLogin, handleClick }) {
     );
     if (!foundUser) {
       console.log(loginData.email, loginData.password);
-      alert("Invalid email or password");
+      Swal.fire({
+        icon:"error",
+        title:"Authentication Failed",
+        text:"The provided username or password are incorrect. Please try again",
+        showCloseButton:"true",
+
+      })
+      setLoginData({
+        email: "",
+        password: "",
+      });
       return;
     }
     handleLogin();
