@@ -9,7 +9,7 @@ const AccountDetails = ({ details, avatar }) => {
         </h1>
       </div>
       {/* parent container for the two divs */}
-      <div className="flex container custom-container">
+      <div className="flex container custom-container" style={{backgroundColor:"#F7F3FE"}}>
         {/* first column for the grid */}
         <div className="custom-column">
           <div className="image-bio">

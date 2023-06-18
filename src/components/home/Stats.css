@@ -3,8 +3,6 @@
   background-color: #16163f;
   padding: 30px;
   margin: 0;
-  position: sticky;
-  top:0;
 }
 .emphasis {
   text-align: center;
@@ -53,8 +51,7 @@
   color: white;
   border: none;
   padding: 40px;
-  position: sticky;
-  top:0;
+ 
 }
 .testimonials h1 {
   text-align: center;
@@ -87,8 +84,6 @@
   padding: 50px;
   background-color: #720e9e;
   color: white;
-  position: sticky;
-  top:0;
 }
 
 .ourmentors h1 {

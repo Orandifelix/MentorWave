@@ -1,5 +1,4 @@
 .step-cards {
-  /* display: flex; */
   margin: 10px;
   padding: 10px;
   justify-content: space-around;
@@ -98,8 +97,9 @@
 }
 
 .steps-container{
-  background-color:#F7F3FE;
+  background-color:inherit;
   margin-top: 10px;
+ 
 }
 @media (max-width: 768px){
   .steps-container .ui.centered.header{

@@ -40,7 +40,7 @@ const MyAccount = () => {
             <h3>Tell us more about yourself. Kindly fill this form to continue</h3>
           </div>
         
-          <form className="ui form" onSubmit={handleSubmit}>
+          <form className="ui form"id="account-container" onSubmit={handleSubmit}>
             <div className="custom-account-form">
             <div className="form-group">
               {avatar ? (

@@ -32,7 +32,6 @@
 }
 @media (max-width: 768px) {
   .landing {
-    height: 80vh;
     padding:30px;
     background-size: cover; 
   }
@@ -40,6 +39,16 @@
     font-size: 4em;
   }
   .landing-content p{
-    font-size: 1.8em;
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 458px) {
+  .landing-content p{
+    width:100%;
+  }
+}
+@media (max-width: 358px) {
+  .landing-content h1 {
+    font-size: 3em;
   }
 }
