@@ -1,5 +1,22 @@
 {
-    "users":[
-
-    ]
+  "users": [
+    {
+      "id": 1,
+      "firstName": "donvine",
+      "lastName": "mugendi",
+      "email": "donvinemugendi@gmail.com",
+      "password": "donvine2030",
+      "role": "mentee",
+      "agreedToTerms": true
+    },
+    {
+      "id": "a6fbe8b3-73b9-440e-b13d-cdce3f39109a",
+      "firstName": "diamond",
+      "lastName": "degesh",
+      "email": "diamonddegesh@gmail.com",
+      "password": "platinumz",
+      "role": "mentee",
+      "agreedToTerms": true
+    }
+  ]
 }

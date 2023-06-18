@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Checkbox } from "semantic-ui-react";
+import { baseUrl } from "./LoginRegistration";
+import Axios from "axios";
 
 function Login({ handleLogin, handleClick }) {
   const [showPassword, setShowPassword] = useState(false);
+  const [userData, setUserData] = useState([]);
   const [loginData, setLoginData] = useState({
-    username: "",
+    email: "",
     password: "",
   });
+  useEffect(() => {
+    Axios.get(baseUrl).then((response) => setUserData(response.data));
+    console.log(userData)
+    return () => {};
+  }, []);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -18,15 +26,27 @@ function Login({ handleLogin, handleClick }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Perform login action with loginData
+    if (userData.length === 0) {
+      // Data is still being fetched, show a loading indicator or handle the case
+      return;
+    }
+    const foundUser = userData.find(
+      (user) =>
+        user.email === loginData.email && user.password === loginData.password
+    );
+    if (!foundUser) {
+      console.log(loginData.email, loginData.password);
+      alert("Invalid email or password");
+      return;
+    }
     handleLogin();
-    // Reset the form after submission
     setLoginData({
-      username: "",
+      email: "",
       password: "",
     });
   };
- 
+  
+
   return (
     <div className="login-page">
       <div className="ui placeholder segment center-content" id="login-page">
@@ -34,7 +54,7 @@ function Login({ handleLogin, handleClick }) {
           <div className="column login-column">
             <form className="ui form" onSubmit={handleSubmit}>
               <div className="field">
-                <label>Username</label>
+                <label>Email</label>
                 <div className="ui left icon input">
                   <input
                     type="email"
@@ -51,7 +71,7 @@ function Login({ handleLogin, handleClick }) {
                 <label>Password</label>
                 <div className="ui left icon input">
                   <input
-                    type={!showPassword? "password" : "text"}
+                    type={!showPassword ? "password" : "text"}
                     name="password"
                     placeholder="********"
                     value={loginData.password}
@@ -62,7 +82,11 @@ function Login({ handleLogin, handleClick }) {
                 </div>
               </div>
               <div className="field">
-                <Checkbox value={showPassword} onChange={()=>setShowPassword(!showPassword)} /> <span> {!showPassword? "Show":"Hide"} Password</span>
+                <Checkbox
+                  value={showPassword}
+                  onChange={() => setShowPassword(!showPassword)}
+                />{" "}
+                <span> {!showPassword ? "Show" : "Hide"} Password</span>
               </div>
               <button className="ui fluid blue submit button" type="submit">
                 <i className="key icon"></i>Login

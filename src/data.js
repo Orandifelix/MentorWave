@@ -31,4 +31,4 @@ export const teamMembers = [
     image:"https://d2win24dv6pngl.cloudfront.net/media/generated/profile-photos/profile-1416014/513e93905cbbef7c.d88c6442a8a9.jpg"
   },
 ];
-export default user;
+

@@ -22,7 +22,8 @@
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
     "slick-carousel": "^1.8.1",
-    "sweetalert2": "^11.4.8"
+    "sweetalert2": "^11.4.8",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.8",

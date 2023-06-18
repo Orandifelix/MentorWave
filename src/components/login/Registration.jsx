@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./LoginRegistration.css";
 import Swal from "sweetalert2";
 import { Checkbox } from "semantic-ui-react";
-import { Axios } from "axios";
+import Axios  from "axios";
+import { v4 as uuidv4 } from 'uuid';
 import { baseUrl } from "./LoginRegistration";
 
 function Registration({ handleLoginForm, userData, setUserData, handleRegister }) {
@@ -19,7 +20,6 @@ function Registration({ handleLoginForm, userData, setUserData, handleRegister }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
     Axios.post(baseUrl, userData)
       .then(() => {
         Swal.fire({
@@ -28,6 +28,7 @@ function Registration({ handleLoginForm, userData, setUserData, handleRegister }
           text: "Thank you for registering!",
         });
         setUserData({
+          id:uuidv4(),
           firstName: "",
           lastName: "",
           email: "",
@@ -136,7 +137,7 @@ function Registration({ handleLoginForm, userData, setUserData, handleRegister }
       </form>
       <div className="ui bottom attached warning message">
         <i className="icon large help"></i>
-        Already signed up ? <a href="#">Login here</a> instead.
+        Already signed up ? <a onClick={handleRegister}>Login here</a> instead.
       </div>
     </div>
   );
