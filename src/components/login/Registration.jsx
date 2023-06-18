@@ -13,7 +13,7 @@ function Registration({ handleLoginForm, userData, setUserData, handleRegister }
     const { name, type, checked } = event.target;
     const value = type === 'checkbox' ? checked : event.target.value;
     setUserData((prevData) => ({
-      ...prevData,
+      ...prevData,id:uuidv4(),
       [name]: name === 'agreedToTerms' ? checked : value,
     }));
   };
@@ -28,7 +28,6 @@ function Registration({ handleLoginForm, userData, setUserData, handleRegister }
           text: "Thank you for registering!",
         });
         setUserData({
-          id:uuidv4(),
           firstName: "",
           lastName: "",
           email: "",
