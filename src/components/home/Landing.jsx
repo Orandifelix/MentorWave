@@ -10,7 +10,7 @@ function Landing({ handleClick }) {
       <p>Unleash your potential through mentorship. MentorWave takes you through a journey of self-advancement and fulfillment.</p>
       {/* <p>MentorWave helps connect you with mentors that share your passion!</p> */}
       <button className="sign-up" onClick={handleClick}>
-        <b> <i className="sign up icon"></i>Join Now!</b>
+        <b> <i className="signup icon"></i>Join Now!</b>
       </button>
       </div>
     </div>
