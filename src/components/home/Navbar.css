@@ -5,6 +5,7 @@
   margin: auto 5%;
 }
 
+
 #menu-icon,
 .close.icon {
   display: none;
@@ -101,4 +102,28 @@
   border: none;
   border-radius: 10px;
   color: white;
+}
+#menu a {
+  position: relative;
+ 
+}
+
+#menu a::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  display:none;
+  height: 5px;
+  background-color: #E26310;
+  display: none;
+  border-radius: 10px;
+}
+
+#menu a.active::after {
+  display: block;
+}
+#menu.open a::after {
+  display: none;
 }

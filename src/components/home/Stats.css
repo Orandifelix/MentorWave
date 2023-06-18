@@ -3,6 +3,8 @@
   background-color: #16163f;
   padding: 30px;
   margin: 0;
+  position: sticky;
+  top:0;
 }
 .emphasis {
   text-align: center;
@@ -46,10 +48,13 @@
   margin: auto 25%;
 }
 .testimonials {
-  background-color: #640fb9;
+  background-color: #720e9e;
+  background-image: linear-gradient(315deg, #6e72fc 0%, #720e9e 74%);
   color: white;
   border: none;
   padding: 40px;
+  position: sticky;
+  top:0;
 }
 .testimonials h1 {
   text-align: center;
@@ -80,8 +85,10 @@
 }
 .ourmentors {
   padding: 50px;
-  background-color: #640fb9;
+  background-color: #720e9e;
   color: white;
+  position: sticky;
+  top:0;
 }
 
 .ourmentors h1 {
@@ -97,41 +104,44 @@
     font-size: 1em;
     margin: 0;
   }
-  #organizations h1{
+  #organizations h1 {
     font-size: 2em;
   }
- 
 
   .quote img {
     margin: auto;
   }
-  .testimonials h1, .emphasis, .ourmentors h1 {
+  .testimonials h1,
+  .emphasis,
+  .ourmentors h1 {
     font-size: 2em;
   }
   .number {
     height: 100px;
     width: 100px;
-    margin:auto;
+    margin: auto;
   }
- .number.first, .number.second, .number.third, .number.fourth{
-  font-size: 1.4em;
- }
- .column h3{
-  text-align: center;
- }
+  .number.first,
+  .number.second,
+  .number.third,
+  .number.fourth {
+    font-size: 1.4em;
+  }
+  .column h3 {
+    text-align: center;
+  }
 }
-@media (max-width: 770px){
-  #organizations div img{
+@media (max-width: 770px) {
+  #organizations div img {
     object-fit: contain;
-    width:auto;
-    height:auto;
-    max-width:160px;
+    width: auto;
+    height: auto;
+    max-width: 160px;
   }
-  #organizations div{
-    margin:auto;
+  #organizations div {
+    margin: auto;
     justify-content: center;
     align-items: center;
-    display:flex;
-
+    display: flex;
   }
 }

@@ -28,6 +28,7 @@
 .landing-content p {
   font-size: 2em;
   font-family: "Times New Roman", Times, serif;
+  width:50%;
 }
 @media (max-width: 768px) {
   .landing {

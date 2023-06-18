@@ -46,15 +46,14 @@ class Carousel extends React.Component {
             MentorWave has been a game-changer for me. Our mentoring sessions
             were transformative. My mentor went above and beyond to provide
             personalized guidance, offer constructive feedback, and share
-            invaluable resources. I am grateful for Mentor Wave's commitment to
-            fostering meaningful mentor-mentee relationships.{" "}
+            invaluable resources. Undoubtedly, MentorWave has helped unlock my potential{" "}
             <i className="quote right red icon centered"></i>
           </blockquote>
           <h2>- John</h2>
         </div>
         <div className="quote">
           <img
-            src="https://kenyanwallstreet.com/wp-content/uploads/2022/06/unnamed.png"
+            src="https://media.licdn.com/dms/image/D4D03AQG7UwFNE_uAEA/profile-displayphoto-shrink_800_800/0/1668692752907?e=2147483647&v=beta&t=fBZufw20QIF_HvcNu1nJBK05pA60ofUKQhB13x09L8E"
             alt="Michael"
             className="ui circular image image"
           />
