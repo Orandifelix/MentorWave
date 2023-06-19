@@ -97,6 +97,7 @@ function Registration({ handleLoginForm, userData, setUserData, handleRegister }
             type={!showPassword ? "password" : "text"}
             name="password"
             minLength={8}
+            placeholder="********"
             value={userData.password}
             onChange={handleChange}
             required
