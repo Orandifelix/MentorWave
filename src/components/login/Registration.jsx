@@ -25,7 +25,7 @@ function Registration({ handleLoginForm, userData, setUserData, handleRegister }
         Swal.fire({
           icon: "success",
           title: "Registration Successful",
-          text: "Thank you for registering!",
+          text: "Thank you for registering! Proceed to log in with your new credentials",
         });
         setUserData({
           firstName: "",
@@ -83,7 +83,7 @@ function Registration({ handleLoginForm, userData, setUserData, handleRegister }
         <div className="field">
           <label>Email</label>
           <input
-            placeholder="Username"
+            placeholder="email"
             type="email"
             name="email"
             value={userData.email}

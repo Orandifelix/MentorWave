@@ -71,7 +71,7 @@ function Login({ handleLogin, handleClick }) {
                     type="email"
                     name="email"
                     placeholder="yourname@example.com"
-                    value={loginData.username}
+                    value={loginData.email}
                     onChange={handleChange}
                     required
                   />
