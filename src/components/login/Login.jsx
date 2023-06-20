@@ -1,19 +1,20 @@
 import { useState, useEffect } from "react";
-import { Checkbox } from "semantic-ui-react";
 import { baseUrl } from "./LoginRegistration";
+import { Checkbox } from "semantic-ui-react";
 import Axios from "axios";
 import Swal from "sweetalert2";
+import "./login.css";
 
 function Login({ handleLogin, handleClick }) {
-  const [showPassword, setShowPassword] = useState(false);
   const [userData, setUserData] = useState([]);
+  const [showPassword, setShowPassword] = useState(false);
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
   });
   useEffect(() => {
     Axios.get(baseUrl).then((response) => setUserData(response.data));
-    console.log(userData)
+    console.log(userData);
     return () => {};
   }, []);
 
@@ -28,7 +29,6 @@ function Login({ handleLogin, handleClick }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (userData.length === 0) {
-      
       return;
     }
     const foundUser = userData.find(
@@ -38,12 +38,11 @@ function Login({ handleLogin, handleClick }) {
     if (!foundUser) {
       console.log(loginData.email, loginData.password);
       Swal.fire({
-        icon:"error",
-        title:"Authentication Failed",
-        text:"The provided username or password are incorrect. Please try again",
-        showCloseButton:"true",
-
-      })
+        icon: "error",
+        title: "Authentication Failed",
+        text: "The provided username or password are incorrect. Please try again",
+        showCloseButton: "true",
+      });
       setLoginData({
         email: "",
         password: "",
@@ -56,71 +55,59 @@ function Login({ handleLogin, handleClick }) {
       password: "",
     });
   };
-  
-
   return (
-    <div className="login-page">
-      <div className="ui placeholder segment center-content" id="login-page">
-        <div className="ui two column stackable grid">
-          <div className="column login-column">
-            <form className="ui form" onSubmit={handleSubmit}>
-              <div className="field">
-                <label>Email</label>
-                <div className="ui left icon input">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="yourname@example.com"
-                    value={loginData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                  <i className="user icon"></i>
-                </div>
-              </div>
-              <div className="field">
-                <label>Password</label>
-                <div className="ui left icon input">
-                  <input
-                    type={!showPassword ? "password" : "text"}
-                    name="password"
-                    placeholder="********"
-                    value={loginData.password}
-                    onChange={handleChange}
-                    required
-                  />
-                  <i className="lock icon"></i>
-                </div>
-              </div>
-              <div className="field">
-                <Checkbox
-                  value={showPassword}
-                  onChange={() => setShowPassword(!showPassword)}
-                />{" "}
-                <span> {!showPassword ? "Show" : "Hide"} Password</span>
-              </div>
-              <button className="ui fluid blue submit button" type="submit">
-                <i className="key icon"></i>Login
-              </button>
-              <br />
-              <div className="field">
-                <p className="ui small header">
-                  Forgot password? <a href="#reset">Click here</a>
-                </p>
-              </div>
-            </form>
+    <div className="login-container">
+      <div id="login-page">
+        <h1>Login</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="input-field">
+            <label htmlFor="email">Email</label>
+            <br></br>
+            <input
+              type="email"
+              name="email"
+              value={loginData.email}
+              onChange={handleChange}
+              placeholder="Type your email"
+              required
+            />
+            <i className="mail icon" id="email-icon"></i>
           </div>
-          <div className="middle aligned column">
-            <h3 className="inquiry">Don't have an account?</h3>
-            <div
-              className="ui big secondary positive button"
-              onClick={handleClick}>
-              <i className="signup icon"></i>
-              Register
-            </div>
+          <div className="input-field">
+            <label htmlFor="password">Password</label>
+            <br></br>
+            <input
+              type={!showPassword ? "password" : "text"}
+              name="password"
+              value={loginData.password}
+              onChange={handleChange}
+              placeholder="Type your password"
+              minLength={8}
+              required
+            />
+            <i className="lock icon" id="password-icon"></i>
           </div>
-        </div>
-        <div className="ui vertical divider">OR</div>
+          <Checkbox
+            value={showPassword}
+            onChange={() => setShowPassword(!showPassword)}
+          />{" "}
+          <span> {!showPassword ? "Show" : "Hide"} Password</span>
+         
+          <p>
+          <br></br>
+            Forgot Password? <a>Click here</a>
+          </p>
+          <button
+            type="submit"
+            className="ui fluid primary button"
+            id="sign-in-btn">
+            <i className="sign in icon"></i>LOGIN
+          </button>
+        </form>
+        <h3 className="centered">Or</h3>
+        <p className="inquiry">
+          New Member? <a onClick={handleClick}>Register Here</a>
+        </p>
       </div>
     </div>
   );

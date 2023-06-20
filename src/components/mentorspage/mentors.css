@@ -84,7 +84,7 @@
   color: black;
 }
 
-input {
+.book-mentor input {
   padding: 8px;
   color: black;
   background-color: #4adfda;
@@ -94,7 +94,7 @@ input {
   border: none;
   outline: none;
 }
-input:hover {
+.book-mentor input:hover {
   background-color: #009e99;
 }
 .ui.colored.header {

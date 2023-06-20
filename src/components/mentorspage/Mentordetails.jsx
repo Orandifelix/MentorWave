@@ -74,14 +74,14 @@ const Mentordetails = ({ handleClick, mentor, handleLoginClick }) => {
               </button>
             </div>
             <div className="ui padded segment centered">
-              <div>
+              <div className="book-mentor">
                 <label htmlFor="date">Date: </label>
                 <input type="date" name="date" />
               </div>
               <div>
                 <br></br>
               </div>
-              <div>
+              <div className="book-mentor">
                 <label htmlFor="time">Time: </label>
                 <input type="time" name="time" />
               </div>
