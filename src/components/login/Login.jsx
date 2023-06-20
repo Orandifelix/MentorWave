@@ -4,6 +4,7 @@ import { Checkbox } from "semantic-ui-react";
 import Axios from "axios";
 import Swal from "sweetalert2";
 import "./login.css";
+import { BsSoundwave } from "react-icons/bs";
 
 function Login({ handleLogin, handleClick }) {
   const [userData, setUserData] = useState([]);
@@ -57,6 +58,13 @@ function Login({ handleLogin, handleClick }) {
   };
   return (
     <div className="login-container">
+      <div className="navbar-logo">
+        {" "}
+        <h1 className="ui large header">
+          Mentor<span>Wave</span>
+          <BsSoundwave />
+        </h1>
+      </div>
       <div id="login-page">
         <h1>Welcome Back</h1>
         <form onSubmit={handleSubmit}>
@@ -92,9 +100,8 @@ function Login({ handleLogin, handleClick }) {
             onChange={() => setShowPassword(!showPassword)}
           />{" "}
           <span> {!showPassword ? "Show" : "Hide"} Password</span>
-         
           <p>
-          <br></br>
+            <br></br>
             Forgot Password? <a>Click here</a>
           </p>
           <button
@@ -104,10 +111,11 @@ function Login({ handleLogin, handleClick }) {
             <i className="sign in icon"></i>LOGIN
           </button>
         </form>
-        <h3 className="centered">Or</h3>
-        <p className="inquiry">
-          New Member? <a onClick={handleClick}>Register Here</a>
-        </p>
+        <br></br>
+        <div className="ui bottom attached welcome message" id="register-message">
+        <i className="icon large help"></i>
+        Don't have an account ? <a onClick={handleClick}>Register Here</a> 
+      </div>
       </div>
     </div>
   );
