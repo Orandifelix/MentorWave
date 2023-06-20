@@ -9,13 +9,13 @@ import { BsSoundwave } from "react-icons/bs";
 function Login({ handleLogin, handleClick }) {
   const [userData, setUserData] = useState([]);
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
   });
   useEffect(() => {
     Axios.get(baseUrl).then((response) => setUserData(response.data));
-    console.log(userData);
     return () => {};
   }, []);
 
@@ -37,7 +37,6 @@ function Login({ handleLogin, handleClick }) {
         user.email === loginData.email && user.password === loginData.password
     );
     if (!foundUser) {
-      console.log(loginData.email, loginData.password);
       Swal.fire({
         icon: "error",
         title: "Authentication Failed",
@@ -48,6 +47,7 @@ function Login({ handleLogin, handleClick }) {
         email: "",
         password: "",
       });
+      setLoading(false)
       return;
     }
     handleLogin();
@@ -65,7 +65,7 @@ function Login({ handleLogin, handleClick }) {
           <BsSoundwave />
         </h1>
       </div>
-      <div id="login-page">
+      <div className="custom-login" id="login-page">
         <h1>Welcome Back</h1>
         <form onSubmit={handleSubmit}>
           <div className="input-field">
@@ -105,17 +105,21 @@ function Login({ handleLogin, handleClick }) {
             Forgot Password? <a>Click here</a>
           </p>
           <button
+            onClick={() => {
+              setLoading(true);
+            }}
             type="submit"
-            className="ui fluid primary button"
+            className={!loading?"login-btn": "ui loading fluid primary button"}
             id="sign-in-btn">
-            <i className="sign in icon"></i>LOGIN
+            <i className="sign in icon"></i>Login
           </button>
         </form>
         <br></br>
-        <div className="ui bottom attached welcome message" id="register-message">
-        <i className="icon large help"></i>
-        Don't have an account ? <a onClick={handleClick}>Register Here</a> 
-      </div>
+        <div
+          className="ui bottom attached welcome message"
+          id="register-message">
+          Don't have an account ? <a onClick={handleClick}>Register Here</a>
+        </div>
       </div>
     </div>
   );
