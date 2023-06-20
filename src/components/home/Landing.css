@@ -11,7 +11,7 @@
 }
 .landing {
   height: 100vh;
-  background-image: url(../../../public/hero-section.png);
+  background-image: url("https://github.com/Orandifelix/MentorWave/blob/main/public/hero-background.png?raw=true");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
