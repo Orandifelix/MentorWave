@@ -49,10 +49,7 @@
   border-bottom: 1px solid black !important;
   outline: none !important;
 }
-.error-message{
-  color:white;
-  background-color: red;
-}
+
 #email-icon,
 #password-icon,
 #user-icon {

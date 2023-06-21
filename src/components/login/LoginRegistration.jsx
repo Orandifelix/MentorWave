@@ -3,10 +3,9 @@ import Login from "./Login";
 import Registration from "./Registration";
 import Home from "../home/Home";
 import "semantic-ui-css/semantic.min.css";
-// import { v4 as uuidv4 } from 'uuid';
 export const baseUrl="https://basalt-equatorial-paw.glitch.me/users"
 
-// eslint-disable-next-line react/prop-types
+
 const LoginRegistration = ({handleLoginForm}) => {
   const [userIsRegistered, setUserIsRegistered] = useState(true)
   const [userIsLoggedIn, setUserIsLoggedIn] = useState(false)
@@ -15,9 +14,9 @@ const LoginRegistration = ({handleLoginForm}) => {
     fullName: "",
     email: "",
     password: "",
-    role: "",
-    agreedToTerms: false,
+    role: "mentee"
   });
+  
 
   const handleClick = () => {
     setUserIsRegistered(false);
