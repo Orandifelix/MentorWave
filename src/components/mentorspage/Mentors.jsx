@@ -1,31 +1,17 @@
-import { useState, useEffect, useMemo } from "react";
-import Axios from "axios";
+import { useState, useContext, useMemo } from "react";
+import { AppContext } from "../../context/Context";
 import "./mentors.css";
 import Mentorscard from "./Mentorscard";
 import Mentordetails from "./Mentordetails";
 import Filter from "./Filter";
 
-const baseUrl = "https://api.jsonbin.io/v3/b/6481e2bf8e4aa6225eab25c4";
 
 const Mentors = ({ handleLoginClick }) => {
-  const [mentors, setMentors] = useState([]);
+  const { mentors } = useContext(AppContext);
   const [selectedMentor, setSelectedMentor] = useState(null);
   const [search, setSearch] = useState("");
   const [selectedExpertise, setSelectedExpertise] = useState("All");
   const [selectedIndustry, setSelectedIndustry] = useState("All");
-  //fetch mentors data
-  useEffect(() => {
-    try {
-      (async () => {
-        const response = await Axios.get(baseUrl);
-        if (response.status === 200) {
-          setMentors(response.data.record.mentors);
-        } else throw new Error("Fetch failed with status " + response.status);
-      })();
-    } catch (error) {
-      console.error(error);
-    }
-  }, []);
 
   const mentorsToDisplay = useMemo(() => {
     switch (true) {
@@ -63,7 +49,9 @@ const Mentors = ({ handleLoginClick }) => {
   }
   return (
     <div className="ui raised segment ">
-      <div className="ui inverted segment" style={{backgroundColor:"#16163F"}}>
+      <div
+        className="ui inverted segment"
+        style={{ backgroundColor: "#16163F" }}>
         <h1 className="ui header bold">Find Mentors and Connect</h1>
         <h3 className="ui text">
           We have sorted these search results based on your profile. If you see
@@ -78,7 +66,9 @@ const Mentors = ({ handleLoginClick }) => {
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search for mentors........."
         />
-        <i className="circular search link icon" style={{backgroundColor:"#16163F", color:"white"}}></i>
+        <i
+          className="circular search link icon"
+          style={{ backgroundColor: "#16163F", color: "white" }}></i>
       </div>
       <Filter
         selectedExpertise={selectedExpertise}
