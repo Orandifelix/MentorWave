@@ -21,13 +21,6 @@ function Registration({ userData, setUserData, handleRegister }) {
   function handleLoading(){
     const isEmpty = Object.values(userData).some((value) => value === "");
     if(isEmpty){
-      Swal.fire({
-        title: "An error occurred",
-        icon: "error",
-        text: "Please fill out all fields before submitting!",
-        showCloseButton: true,
-        timer: 3000,
-      });
       setLoading(false);
     }
     else setLoading(true);
