@@ -147,7 +147,7 @@ function Registration({
               I agree to the <a>terms and conditions</a>
             </span>
           </div>
-           {!isValid && <p className="error-message">Please agree to the terms and conditions.</p>}
+           {!isValid && <p className="error-message">Please accept the terms and conditions to continue.</p>}
           <button
             onClick={() => {
               setLoading(true);
