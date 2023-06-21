@@ -31,8 +31,12 @@ function Registration({
   const handleSubmit = async (event) => {
     event.preventDefault();
      const passwordIsValid = await validatePassword(userData.password);
-    if(!passwordIsValid || !userData.agreedToTerms){
+    if(!passwordIsValid){
       setIsValid(false);
+      setLoading(false);
+      return false;
+    }
+    else if(!userData.agreedToTerms){
       setLoading(false);
       return false;
     }
@@ -147,7 +151,7 @@ function Registration({
               I agree to the <a>terms and conditions</a>
             </span>
           </div>
-           {!isValid && <p className="error-message">Please accept the terms and conditions to continue.</p>}
+           {!userData.agreedToTerms && <p className="error-message">Please accept the terms and conditions to continue.</p>}
           <button
             onClick={() => {
               setLoading(true);
