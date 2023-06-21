@@ -9,12 +9,21 @@ export const usersApi="https://basalt-equatorial-paw.glitch.me/users";
 function ContextProvider({ children }) {
 const [mentors, setMentors] = useState([]);
 const [userData, setUserData] = useState([]);
+const [loggedInUser, setLoggedInUser] = useState(null);
+const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 
 //function to handle login
 useEffect(() => {
   Axios.get(usersApi).then((response) => setUserData(response.data));
   return () => {};
 }, []);
+useEffect(() => {
+  console.log(loggedInUser);
+
+  return () => {
+  }
+}, [loggedInUser])
 
 
 // function to fetch mentors on load
@@ -35,7 +44,11 @@ useEffect(() => {
     mentors,
     setMentors,
     userData,
-    setUserData
+    setUserData,
+    loggedInUser, 
+    setLoggedInUser,
+    isLoggedIn,
+    setIsLoggedIn
   }
 
   return (

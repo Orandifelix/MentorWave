@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AppContext } from "../../context/Context";
 import { NavLink } from "react-router-dom";
 import { BsSoundwave } from "react-icons/bs";
 import "./Navbar.css";
 
 const Navbar = ({ handleClick }) => {
+  const {isLoggedIn}= useContext(AppContext)
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -54,18 +56,18 @@ const Navbar = ({ handleClick }) => {
           to="/account"
           className="ui header item"
           onClick={handleNavLinkClick}>
-          <b><i className="user circle icon navbar-icon" id="account-icon"></i>My Account</b>
+          <b><i className="user circle icon navbar-icon" id="account-icon"></i>My Account </b>
         </NavLink>
         {menuOpen ? (
           <NavLink
             onClick={handleClick}
             className="ui header item"
             id="login-link">
-            <b><i className="sign in icon"></i>Sign In</b>
+            <b><i className="sign in icon"></i>{!isLoggedIn? "Sign In": "Sign Out"}</b>
           </NavLink>
         ) : (
           <button onClick={handleClick} className="sign-in btn">
-            <i className="sign in icon"></i>Sign In
+            <i className="sign in icon"></i>{!isLoggedIn? "Sign In": "Sign Out"}
           </button>
         )}
 

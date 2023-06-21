@@ -6,7 +6,7 @@ import "./login.css";
 import { BsSoundwave } from "react-icons/bs";
 
 function Login({ handleLogin, handleClick, showPassword, setShowPassword }) {
-  const { userData } = useContext(AppContext);
+  const { userData, setLoggedInUser, setIsLoggedIn} = useContext(AppContext);
   const [loading, setLoading] = useState(false);
 
   const [loginData, setLoginData] = useState({
@@ -42,11 +42,12 @@ function Login({ handleLogin, handleClick, showPassword, setShowPassword }) {
         email: "",
         password: "",
       });
-      console.log(userData);
       setLoading(false);
       return;
     }
     handleLogin();
+    setLoggedInUser(foundUser);
+    setIsLoggedIn(true);
     setLoginData({
       email: "",
       password: "",
