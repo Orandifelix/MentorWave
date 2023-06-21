@@ -7,6 +7,7 @@ import { baseUrl } from "./LoginRegistration";
 import { BsSoundwave } from "react-icons/bs";
 
 function Registration({ userData, setUserData, handleRegister }) {
+  
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -16,7 +17,6 @@ function Registration({ userData, setUserData, handleRegister }) {
       ...prevData,
       [name]: value,
     }));
-    console.log(userData);
   };
 
   const handleSubmit = (event) => {
@@ -32,11 +32,9 @@ function Registration({ userData, setUserData, handleRegister }) {
           fullName: "",
           email: "",
           password: "",
-          role: "",
-          terms: false,
+          role: "mentee",
         });
         handleRegister();
-        console.log(userData);
         setLoading(false);
       })
       .catch((error) => {
@@ -113,9 +111,6 @@ function Registration({ userData, setUserData, handleRegister }) {
               className="ui select dropdown register-select"
               value={userData.role}
               onChange={handleChange}>
-              <option value="" hidden>
-                Role
-              </option>
               <option value="mentee">Mentee</option>
               <option value="mentor">Mentor</option>
             </select>
@@ -123,7 +118,7 @@ function Registration({ userData, setUserData, handleRegister }) {
           <div className="input-field">
             <span>
               {" "}
-             By continuing, You agree to the <a>terms and conditions</a>
+             By continuing, you agree to the <a>terms and conditions</a>
             </span>
           </div>
           <button

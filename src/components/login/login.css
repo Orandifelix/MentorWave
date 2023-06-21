@@ -120,3 +120,12 @@ form p a {
     padding:60px 20px;
   }
 }
+@media(max-width:500px){
+  .login-container{
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+  #login-page{
+    margin-top:20px;
+  }
+}
