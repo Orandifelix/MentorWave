@@ -134,7 +134,7 @@ function Registration({ userData, setUserData, handleRegister }) {
             className={
               !loading ? "register-btn" : "ui fluid loading primary button"
             }>
-            Register
+           <i className="signup icon"></i> Register
           </button>
         </form>
         <div className="ui bottom attached message" id="register-message">
