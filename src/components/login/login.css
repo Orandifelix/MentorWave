@@ -102,6 +102,11 @@ form p a {
   border: none;
   cursor: pointer;
 }
+#login-page form .ui.fluid.loading.primary.button{
+  width:100% !important;
+  margin: 10px 0!important;
+  padding: 15px !important;
+}
 
 .register-btn:hover, .login-btn:hover {
   background-color: rgb(4, 13, 79);

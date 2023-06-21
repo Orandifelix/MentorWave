@@ -7,7 +7,7 @@ import { baseUrl } from "./LoginRegistration";
 import { BsSoundwave } from "react-icons/bs";
 
 function Registration({ userData, setUserData, handleRegister }) {
-  
+
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -18,6 +18,20 @@ function Registration({ userData, setUserData, handleRegister }) {
       [name]: value,
     }));
   };
+  function handleLoading(){
+    const isEmpty = Object.values(userData).some((value) => value === "");
+    if(isEmpty){
+      Swal.fire({
+        title: "An error occurred",
+        icon: "error",
+        text: "Please fill out all fields before submitting!",
+        showCloseButton: true,
+        timer: 3000,
+      });
+      setLoading(false);
+    }
+    else setLoading(true);
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -122,9 +136,7 @@ function Registration({ userData, setUserData, handleRegister }) {
             </span>
           </div>
           <button
-            onClick={() => {
-              setLoading(true);
-            }}
+            onClick={handleLoading}
             type="submit"
             className={
               !loading ? "register-btn" : "ui fluid loading primary button"
