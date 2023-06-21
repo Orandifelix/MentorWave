@@ -23,7 +23,7 @@ class Carousel extends React.Component {
           <img
             src="https://media.licdn.com/dms/image/C4D03AQHnKjkiFjj_UA/profile-displayphoto-shrink_800_800/0/1618228243299?e=2147483647&v=beta&t=WN5lpWQXU-kVug0035UmkJ8IzuH9kYTSBnT5aJ64jko"
             alt="Sarah"
-            className="ui circular image image"
+            className="ui small circular image"
           />
           <blockquote>
             <i className="quote left large blue icon centered"></i>I had the
@@ -39,7 +39,7 @@ class Carousel extends React.Component {
           <img
             src="https://media.licdn.com/dms/image/C4D03AQFcDcYxlhryWA/profile-displayphoto-shrink_800_800/0/1579422164659?e=2147483647&v=beta&t=Dl4MTnr6C8U-EWBQ08fW8qQWWXqgLywT3Oz1rurLxvs"
             alt="John"
-            className="ui circular image image"
+            className="ui small circular image"
           />
           <blockquote>
             <i className="quote left icon large red centered"></i>
@@ -55,7 +55,7 @@ class Carousel extends React.Component {
           <img
             src="https://media.licdn.com/dms/image/D4D03AQG7UwFNE_uAEA/profile-displayphoto-shrink_800_800/0/1668692752907?e=2147483647&v=beta&t=fBZufw20QIF_HvcNu1nJBK05pA60ofUKQhB13x09L8E"
             alt="Michael"
-            className="ui circular image image"
+            className="ui small circular image"
           />
           <blockquote>
             <i className="quote left icon pink large centered"></i>Being part of
