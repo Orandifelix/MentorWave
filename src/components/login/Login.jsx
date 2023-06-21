@@ -1,23 +1,18 @@
-import { useState, useEffect } from "react";
-import { baseUrl } from "./LoginRegistration";
+import { useState, useContext } from "react";
+import { AppContext } from "../../context/Context";
 import { Checkbox } from "semantic-ui-react";
-import Axios from "axios";
 import Swal from "sweetalert2";
 import "./login.css";
 import { BsSoundwave } from "react-icons/bs";
 
-function Login({ handleLogin, handleClick }) {
-  const [userData, setUserData] = useState([]);
-  const [showPassword, setShowPassword] = useState(false);
+function Login({ handleLogin, handleClick, showPassword, setShowPassword }) {
+  const { userData } = useContext(AppContext);
   const [loading, setLoading] = useState(false);
+
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
   });
-  useEffect(() => {
-    Axios.get(baseUrl).then((response) => setUserData(response.data));
-    return () => {};
-  }, []);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -47,7 +42,8 @@ function Login({ handleLogin, handleClick }) {
         email: "",
         password: "",
       });
-      setLoading(false)
+      console.log(userData);
+      setLoading(false);
       return;
     }
     handleLogin();
@@ -109,7 +105,9 @@ function Login({ handleLogin, handleClick }) {
               setLoading(true);
             }}
             type="submit"
-            className={!loading?"login-btn": "ui loading fluid primary button"}
+            className={
+              !loading ? "login-btn" : "ui loading fluid primary button"
+            }
             id="sign-in-btn">
             <i className="sign in icon"></i>Login
           </button>

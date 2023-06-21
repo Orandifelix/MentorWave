@@ -4,9 +4,20 @@ import Axios from "axios";
 const AppContext = createContext();
 const baseUrl = "https://api.jsonbin.io/v3/b/6481e2bf8e4aa6225eab25c4";
 
-function ContextProvider({ children }) {
-  const [mentors, setMentors] = useState([]);
+export const usersApi="https://basalt-equatorial-paw.glitch.me/users";
 
+function ContextProvider({ children }) {
+const [mentors, setMentors] = useState([]);
+const [userData, setUserData] = useState([]);
+
+//function to handle login
+useEffect(() => {
+  Axios.get(usersApi).then((response) => setUserData(response.data));
+  return () => {};
+}, []);
+
+
+// function to fetch mentors on load
   useEffect(() => {
     try {
       (async () => {
@@ -22,7 +33,9 @@ function ContextProvider({ children }) {
 
   const context= {
     mentors,
-    setMentors
+    setMentors,
+    userData,
+    setUserData
   }
 
   return (

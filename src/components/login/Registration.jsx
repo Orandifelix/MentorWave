@@ -1,41 +1,47 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AppContext } from "../../context/Context";
 import "./login.css";
 import Swal from "sweetalert2";
 import { Checkbox } from "semantic-ui-react";
 import Axios from "axios";
-import { baseUrl } from "./LoginRegistration";
 import { BsSoundwave } from "react-icons/bs";
 
-function Registration({ userData, setUserData, handleRegister }) {
+function Registration({ handleRegister, showPassword, setShowPassword }) {
+  const { setUserData } = useContext(AppContext);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    role: "mentee",
+  });
 
-  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setUserData((prevData) => ({
+    setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
-  function handleLoading(){
-    const isEmpty = Object.values(userData).some((value) => value === "");
-    if(isEmpty){
+  function handleLoading() {
+    const isEmpty = Object.values(formData).some((value) => value === "");
+    if (isEmpty) {
       setLoading(false);
-    }
-    else setLoading(true);
+    } else setLoading(true);
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    Axios.post(baseUrl, userData)
-      .then(() => {
+    Axios.post("https://basalt-equatorial-paw.glitch.me/users", formData)
+      .then((response) => {
+        setUserData(response.data);
         Swal.fire({
           icon: "success",
           title: "Registration Successful",
           text: "Thank you for registering! Proceed to log in with your new credentials",
         });
-        setUserData({
+        setFormData({
           fullName: "",
           email: "",
           password: "",
@@ -72,7 +78,7 @@ function Registration({ userData, setUserData, handleRegister }) {
               name="fullName"
               placeholder="Enter your full names"
               type="text"
-              value={userData.fullName}
+              value={formData.fullName}
               onChange={handleChange}
               required
             />
@@ -84,7 +90,7 @@ function Registration({ userData, setUserData, handleRegister }) {
               placeholder="Enter your email"
               type="email"
               name="email"
-              value={userData.email}
+              value={formData.email}
               onChange={handleChange}
               required
             />
@@ -98,7 +104,7 @@ function Registration({ userData, setUserData, handleRegister }) {
               minLength={8}
               placeholder="********"
               title="password must contain numbers and letters"
-              value={userData.password}
+              value={formData.password}
               onChange={handleChange}
               required
             />
@@ -116,7 +122,7 @@ function Registration({ userData, setUserData, handleRegister }) {
             <select
               name="role"
               className="ui select dropdown register-select"
-              value={userData.role}
+              value={formData.role}
               onChange={handleChange}>
               <option value="mentee">Mentee</option>
               <option value="mentor">Mentor</option>
@@ -125,7 +131,7 @@ function Registration({ userData, setUserData, handleRegister }) {
           <div className="input-field">
             <span>
               {" "}
-             By continuing, you agree to the <a>terms and conditions</a>
+              By continuing, you agree to the <a>terms and conditions</a>
             </span>
           </div>
           <button
@@ -134,7 +140,7 @@ function Registration({ userData, setUserData, handleRegister }) {
             className={
               !loading ? "register-btn" : "ui fluid loading primary button"
             }>
-           <i className="signup icon"></i> Register
+            <i className="signup icon"></i> Register
           </button>
         </form>
         <div className="ui bottom attached message" id="register-message">
