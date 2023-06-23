@@ -105,13 +105,18 @@
 }
 #menu a {
   position: relative;
+  padding: 8px;
  
 }
-
+#menu a:hover{
+  background-color: #E26310;
+  border-radius: 5px;
+  color: white;
+}
 #menu a::after {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 28px;
   left: 0;
   width: 100%;
   display:none;
