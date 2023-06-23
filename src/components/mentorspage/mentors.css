@@ -20,10 +20,12 @@
   display: flex;
   align-items: center;
 }
+.flex-container img {
+  width: 100px !important;
+  height: 100px !important;
+}
 
 .ui.circular.image {
-  width: 100px;
-  height: 100px;
   border: 5px solid #e6eded;
 }
 .centered-text {
@@ -64,6 +66,10 @@
   line-height: 1.8em;
   margin: 0px;
 }
+.column.mentordetails{
+  display:flex !important;
+  align-items: center !important;
+}
 .mentor-content {
   padding-top: 80px;
 }
@@ -71,6 +77,7 @@
   font-weight: bold;
   color: #16163f;
 }
+
 .ui.medium.circular.image {
   border-color: #fefefe;
   border-width: 12px;
@@ -81,13 +88,13 @@
   font-weight: 900;
   letter-spacing: -0.03em;
   font-family: futura-pt;
-  color: black;
+  color: #16163f;
 }
 
 .book-mentor input {
   padding: 8px;
   color: black;
-  background-color: #4adfda;
+  background-color: #16163f;
   border-radius: 5px;
   font-size: 14px;
   width: 200px;
@@ -140,8 +147,9 @@ label {
   }
   .large.header {
     font-size: 2em;
-    color:black;
+    color: black;
   }
+  
 }
 @media (min-width: 768px) {
   .ui.button.primary,
@@ -155,4 +163,9 @@ label {
     margin: auto;
   }
 }
-
+@media (max-width: 578px) {
+  .column.mentor-content {
+    display: flex !important;
+    align-items: center;
+  }
+}

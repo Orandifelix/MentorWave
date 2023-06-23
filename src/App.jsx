@@ -26,7 +26,7 @@ function App() {
   };
   if (login) {
     return <LoginRegistration handleLoginForm={handleLoginForm} />;
-  }
+  } 
   return (
     <>
       <NavBar handleClick={handleLoginClick} />

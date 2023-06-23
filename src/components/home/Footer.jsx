@@ -36,16 +36,16 @@ function Footer() {
             <h5>About</h5>
             <ul>
               <li>
-                <a href="#">About MentorWave</a>
+                <a href="/about">About MentorWave</a>
               </li>
               <li>
                 <a href="#">Become a Partner</a>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <a href="/blog">Blog</a>
               </li>
               <li>
-                <a href="#">Our Team</a>
+                <a href="/about">Our Team</a>
               </li>
               <li>
                 <a href="#">Investor Relations</a>

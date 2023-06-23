@@ -36,7 +36,7 @@ const Mentordetails = ({ handleClick, mentor, handleLoginClick }) => {
     <div className="ui fluid segment">
       <div className="ui three column centered stackable padded grid">
         <div className="row custom-bg">
-          <div className="column">
+          <div className="column mentordetails">
             <img
               src={mentor.image}
               alt="mentor image"
