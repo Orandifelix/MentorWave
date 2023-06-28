@@ -18,6 +18,7 @@ const Navbar = ({ handleClick }) => {
   };
 
   return (
+    <div className="navbar-container">
     <nav className="navbar">
       {/* logo item */}
       <div className="navbar-logo">
@@ -76,6 +77,7 @@ const Navbar = ({ handleClick }) => {
 
       <i className="bars icon large" id="menu-icon" onClick={toggleMenu}></i>
     </nav>
+    </div>
   );
 };
 

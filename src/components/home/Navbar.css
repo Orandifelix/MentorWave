@@ -1,3 +1,10 @@
+.navbar-container{
+  background-color:#F7F3FE;
+  position:sticky;
+  top:0;
+  z-index: 999;
+}
+
 .navbar {
   display: flex;
   align-items: center;
