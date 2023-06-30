@@ -21,8 +21,8 @@
   align-items: center;
 }
 .flex-container img {
-  width: 100px !important;
-  height: 100px !important;
+ width: 100px !important;
+ height: 100px !important;
 }
 
 .ui.circular.image {
@@ -102,7 +102,19 @@
   outline: none;
 }
 .book-mentor input:hover {
-  background-color: #009e99;
+  background-color: #E26310;
+}
+#conversation-btn{
+  background-color: #E26310; 
+}
+#conversation-btn:hover{
+  background-color: #16163f;
+}
+#meeting{
+  background-color: #16163f;
+}
+#meeting:hover{
+  background-color:#E26310;
 }
 .ui.colored.header {
   font-weight: bold;

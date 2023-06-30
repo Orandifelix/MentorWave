@@ -68,7 +68,7 @@
   margin-right: 20px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 955px) {
   #menu {
     display: none;
   }
@@ -92,14 +92,15 @@
   font-weight: bolder;
   color: white;
   font-size: 1.5em;
+  font-family: Roboto;
 }
 .navbar-logo span {
   color:#E26310;
   font-family: cursive;
 }
 
-.sign-in:hover {
-  background-color: #16163f;
+.sign-in.btn:hover {
+  background-color: #AD6FFD;
 }
 .sign-in.btn {
   background-color: #E26310;

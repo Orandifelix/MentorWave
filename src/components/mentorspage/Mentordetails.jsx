@@ -64,12 +64,13 @@ const Mentordetails = ({ handleClick, mentor, handleLoginClick }) => {
           <div className="column mentor-content">
             <div className="ui fluid buttons">
               <button
-                className="ui button primary"
+                className="ui button"
+                id="conversation-btn"
                 onClick={handleConversation}>
                 <b className="ui colored header">Start a Conversation</b>
               </button>
               <button className="or"></button>
-              <button className="ui teal button" onClick={handleBooking}>
+              <button className="ui button" id="meeting" onClick={handleBooking}>
                 <b className="ui colored header">Book a Meeting</b>
               </button>
             </div>
